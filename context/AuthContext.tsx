@@ -4,6 +4,8 @@ import {
     User, 
     onAuthStateChanged, 
     signInWithPopup, 
+    signInWithRedirect,
+    getRedirectResult,
     signInWithEmailAndPassword, 
     createUserWithEmailAndPassword, 
     signOut, 
@@ -43,12 +45,33 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return () => unsubscribe();
   }, []);
 
+  useEffect(() => {
+    getRedirectResult(auth).then((res) => {
+      if (res && res.user) {
+        setUser(res.user);
+      }
+    }).catch(() => {});
+  }, []);
+
   const signInWithGoogle = async (): Promise<boolean> => {
     try {
         await signInWithPopup(auth, googleProvider);
         return true;
-    } catch (error) {
-        console.error("Google Sign In Error:", error);
+    } catch (error: any) {
+        const code = error?.code || '';
+        if (
+          code === 'auth/popup-blocked' ||
+          code === 'auth/cancelled-popup-request' ||
+          code === 'auth/popup-closed-by-user' ||
+          code === 'auth/operation-not-supported-in-this-environment'
+        ) {
+          try {
+            await signInWithRedirect(auth, googleProvider);
+            return true;
+          } catch {
+            return false;
+          }
+        }
         return false;
     }
   };
