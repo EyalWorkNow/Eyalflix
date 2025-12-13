@@ -1,0 +1,24 @@
+
+{
+  "name": "EyalAtiaTV",
+  "short_name": "EyalAtiaTV",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#22d3ee",
+  "orientation": "landscape",
+  "categories": ["entertainment", "movies", "tv"],
+  "description": "EyalAtiaTV - Next Gen Streaming",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2503/2503508.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2503/2503508.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
