@@ -33,7 +33,8 @@ const generateAttributesFromGenre = (genres: string[] = []): ContentAttributes =
 const RAW_LIBRARY: Movie[] = [...ALL_MOVIES, ...ALL_SERIES];
 const CONTENT_LIBRARY: Movie[] = RAW_LIBRARY.map(m => ({
     ...m,
-    attributes: m.attributes || generateAttributesFromGenre(m.genre)
+    attributes: m.attributes || generateAttributesFromGenre(m.genre),
+    ...(m.type === 'movie' ? { introStart: m.introStart ?? 3, introEnd: m.introEnd ?? 7 } : {})
 }));
 
 // ==========================================

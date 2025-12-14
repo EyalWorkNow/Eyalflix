@@ -80,8 +80,8 @@ export const STRANGER_THINGS: Movie = {
           duration: '48 דק׳',
           videoUrl: ytLink(YT_TRAILERS.STRANGER_THINGS),
           thumbnailUrl: ytPoster(YT_TRAILERS.STRANGER_THINGS),
-          introStart: 10, // Starts at 10s for demo
-          introEnd: 60    // Ends at 60s
+          introStart: 3, // Starts at 10s for demo
+          introEnd: 7    // Ends at 60s
         },
         {
           id: 'st-s1e2',
