@@ -1,4 +1,3 @@
-
 import { Movie } from '../types';
 
 export const PROXY_VIDEO_URL = 'https://proxy.example.com/video?url=';
@@ -10,7 +9,6 @@ export const YT_TRAILERS: Record<string, string> = {
 export const ytPoster = (id: string) => `https://img.youtube.com/vi/${id}/mqdefault.jpg`;
 export const ytBackdrop = (id: string) => `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
 export const ytLink = (id: string) => `https://www.youtube.com/watch?v=${id}`;
-
 
 // ============== DUNGEON NI DEAI WO MOTOMERU NO WA MACHIGATTEIRU DAROU KA ==============
 export const DUNGEON_NI_DEAI_WO_MOTOMERU_NO_WA_MACHIGATTEIRU_DAROU_KA: Movie = {
@@ -158,8 +156,142 @@ export const DUNGEON_NI_DEAI_WO_MOTOMERU_NO_WA_MACHIGATTEIRU_DAROU_KA: Movie = {
   ]
 };
 
-
-
+// ============== ONEPUNCHMAN3 ==============
+export const ONEPUNCHMAN3: Movie = {
+  "id": "one-punch-man-3",
+  "type": "series",
+  "title": "איש האגרוף הבודד עונה 3",
+  "description": "איש האגרוף הבודד עונה 3",
+  "thumbnailUrl": "1757055857745127108l[1].jpg",
+  "backdropUrl": "1757055857745127108l[1].jpg",
+  "rating": "12",
+  "year": "2025",
+  "genre": [],
+  "cast": [],
+  "source": {
+    "site": "aniplus.co",
+    "seriesUrl": "https://aniplus.co/anime/1440",
+    "animeId": 1440,
+    "generatedAt": "2026-01-02T22:21:56.808709Z"
+  },
+  "seasons": [
+    {
+      "id": "one-punch-man-3-s1",
+      "number": 1,
+      "title": "עונה 1",
+      "episodes": [
+        {
+          "id": "one-punch-man-3-e0",
+          "number": 0,
+          "title": "פרק 0: 0",
+          "description": "איש האגרוף הבודד עונה 3",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1SaVar3XtBYy_e2LLipo_Pr9aeNPFUCcZ/preview",
+          "thumbnailUrl": "1757055857745127108l[1].jpg"
+        },
+        {
+          "id": "one-punch-man-3-e1",
+          "number": 1,
+          "title": "פרק 1: 1",
+          "description": "איש האגרוף הבודד עונה 3",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1HwPfZ1U2fsvlKURkOjAm0vs0pyfHIAHg/preview",
+          "thumbnailUrl": "1757055857745127108l[1].jpg"
+        },
+        {
+          "id": "one-punch-man-3-e2",
+          "number": 2,
+          "title": "פרק 2: 2",
+          "description": "איש האגרוף הבודד עונה 3",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1t58RUS3zwSC09cWC1rU5eWKn0H_ljW3g/preview",
+          "thumbnailUrl": "1757055857745127108l[1].jpg"
+        },
+        {
+          "id": "one-punch-man-3-e3",
+          "number": 3,
+          "title": "פרק 3: מתרגם עצמאי - jerovh",
+          "description": "איש האגרוף הבודד עונה 3",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/11jNhuq-lf-I4Dgc9G_yPCJg_BzYpJlFI/preview",
+          "thumbnailUrl": "1757055857745127108l[1].jpg"
+        },
+        {
+          "id": "one-punch-man-3-e4",
+          "number": 4,
+          "title": "פרק 4: מתרגם עצמאי jerovh ",
+          "description": "איש האגרוף הבודד עונה 3",
+          "duration": "24 דק׳",
+          "videoUrl": "https://cname.streamup.cc/0Oqf4jma3ctuY",
+          "thumbnailUrl": "1757055857745127108l[1].jpg"
+        },
+        {
+          "id": "one-punch-man-3-e5",
+          "number": 5,
+          "title": "פרק 5: 5",
+          "description": "איש האגרוף הבודד עונה 3",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1vMUkRombSTXGqYMUgETbrSTvxg30rOrR/preview",
+          "thumbnailUrl": "1757055857745127108l[1].jpg"
+        },
+        {
+          "id": "one-punch-man-3-e6",
+          "number": 6,
+          "title": "פרק 6: 6",
+          "description": "איש האגרוף הבודד עונה 3",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1rr-k7oHqB4qeJsdZO1kugLZjbCIs9heF/preview",
+          "thumbnailUrl": "1757055857745127108l[1].jpg"
+        },
+        {
+          "id": "one-punch-man-3-e7",
+          "number": 7,
+          "title": "פרק 7: 7",
+          "description": "איש האגרוף הבודד עונה 3",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1il_R1fTyIk90vrRGFivZCC4AvdpdKgoF/preview",
+          "thumbnailUrl": "1757055857745127108l[1].jpg"
+        },
+        {
+          "id": "one-punch-man-3-e8",
+          "number": 8,
+          "title": "פרק 8: 8",
+          "description": "איש האגרוף הבודד עונה 3",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1JOJpl5ose18wgObvbTn182oDlArMHI6f/preview",
+          "thumbnailUrl": "1757055857745127108l[1].jpg"
+        },
+        {
+          "id": "one-punch-man-3-e9",
+          "number": 9,
+          "title": "פרק 9: 9",
+          "description": "איש האגרוף הבודד עונה 3",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1L1Ufc15X3iDZS-HUpUGjSBos1UJjhwLF/preview",
+          "thumbnailUrl": "1757055857745127108l[1].jpg"
+        },
+        {
+          "id": "one-punch-man-3-e10",
+          "number": 10,
+          "title": "פרק 10: 10",
+          "description": "איש האגרוף הבודד עונה 3",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1Hf5G0HP0RW4iwSaPGbRf2Y7tQgxMSjaO/preview",
+          "thumbnailUrl": "1757055857745127108l[1].jpg"
+        },
+        {
+          "id": "one-punch-man-3-e11",
+          "number": 11,
+          "title": "פרק 11: 11",
+          "description": "איש האגרוף הבודד עונה 3",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1IYmI6_l-pzHqSlGjCk30drtJw9JyHwW8/preview",
+          "thumbnailUrl": "1757055857745127108l[1].jpg"
+        }
+      ]
+    }
+  ]
+};
 
 // ============== ONE PUNCH MAN 3 ==============
 export const ONE_PUNCH_MAN_3: Movie = {
@@ -303,7 +435,6 @@ export const ONE_PUNCH_MAN_3: Movie = {
   ]
 };
 
-
 // ============== SHINJITEITA NAKAMATACHI NI DUNGEON OKUCHI DE KOROSAREKAKETA GA GIFT MUGEN GACHA DE LEVEL 9999 NO ==============
 export const SHINJITEITA_NAKAMATACHI_NI_DUNGEON_OKUCHI_DE_KOROSAREKAKETA_GA_GIFT_MUGEN_GACHA_DE_LEVEL_9999_NO: Movie = {
   "id": "shinjiteita-nakama-tachi-ni-dungeon-okuchi-de-korosarekaketa-ga-gift-mugen-gacha-de-level-9999-no",
@@ -445,7 +576,6 @@ export const SHINJITEITA_NAKAMATACHI_NI_DUNGEON_OKUCHI_DE_KOROSAREKAKETA_GA_GIFT
     }
   ]
 };
-
 
 // ============== OVERLORD IV ==============
 export const OVERLORD_IV: Movie = {
@@ -599,7 +729,6 @@ export const OVERLORD_IV: Movie = {
   ]
 };
 
-
 // ============== KUN TUN TIANXIA ZHI ZHANG MEN GUILAI ==============
 export const KUN_TUN_TIANXIA_ZHI_ZHANG_MEN_GUILAI: Movie = {
   "id": "kun-tun-tianxia-zhi-zhang-men-guilai",
@@ -742,7 +871,6 @@ export const KUN_TUN_TIANXIA_ZHI_ZHANG_MEN_GUILAI: Movie = {
   ]
 };
 
-
 // ============== ORE WA SEIKAN KOKKA NO AKUTOKU RYOUSHU ==============
 export const ORE_WA_SEIKAN_KOKKA_NO_AKUTOKU_RYOUSHU: Movie = {
   "id": "ore-wa-seikan-kokka-no-akutoku-ryoushu",
@@ -884,7 +1012,6 @@ export const ORE_WA_SEIKAN_KOKKA_NO_AKUTOKU_RYOUSHU: Movie = {
     }
   ]
 };
-
 
 // ============== TU BIAN YINGXIONG X ==============
 export const TU_BIAN_YINGXIONG_X: Movie = {
@@ -1111,7 +1238,6 @@ export const TU_BIAN_YINGXIONG_X: Movie = {
   ]
 };
 
-
 // ============== KATAINAKA NO OSSAN KENSEI NI NARU ==============
 export const KATAINAKA_NO_OSSAN_KENSEI_NI_NARU: Movie = {
   "id": "katainaka-no-ossan-kensei-ni-naru",
@@ -1255,7 +1381,6 @@ export const KATAINAKA_NO_OSSAN_KENSEI_NI_NARU: Movie = {
   ]
 };
 
-
 // ============== ISSHUN DE CHIRYOU SHITEITA NONI YAKUTATAZU TO TSUIHOU SARETA TENSAI CHIYUSHI YAMI HEALER TOSHITE TA ==============
 export const ISSHUN_DE_CHIRYOU_SHITEITA_NONI_YAKUTATAZU_TO_TSUIHOU_SARETA_TENSAI_CHIYUSHI_YAMI_HEALER_TOSHITE_TA: Movie = {
   "id": "isshun-de-chiryou-shiteita-noni-yakutatazu-to-tsuihou-sareta-tensai-chiyushi-yami-healer-toshite-ta",
@@ -1396,7 +1521,6 @@ export const ISSHUN_DE_CHIRYOU_SHITEITA_NONI_YAKUTATAZU_TO_TSUIHOU_SARETA_TENSAI
     }
   ]
 };
-
 
 // ============== SAIKYOU NO OUSAMA NIDOME NO JINSEI WA NANI WO SURU ==============
 export const SAIKYOU_NO_OUSAMA_NIDOME_NO_JINSEI_WA_NANI_WO_SURU: Movie = {
@@ -1543,7 +1667,6 @@ export const SAIKYOU_NO_OUSAMA_NIDOME_NO_JINSEI_WA_NANI_WO_SURU: Movie = {
   ]
 };
 
-
 // ============== CHAO NENG LIFANG CHAOFAN PIAN ==============
 export const CHAO_NENG_LIFANG_CHAOFAN_PIAN: Movie = {
   "id": "chao-neng-lifang-chaofan-pian",
@@ -1687,7 +1810,6 @@ export const CHAO_NENG_LIFANG_CHAOFAN_PIAN: Movie = {
   ]
 };
 
-
 // ============== SAKAMOTO DAYS ==============
 export const SAKAMOTO_DAYS: Movie = {
   "id": "sakamoto-days",
@@ -1820,7 +1942,6 @@ export const SAKAMOTO_DAYS: Movie = {
     }
   ]
 };
-
 
 // ============== BEL BLATT ==============
 export const BEL_BLATT: Movie = {
@@ -1965,7 +2086,6 @@ export const BEL_BLATT: Movie = {
   ]
 };
 
-
 // ============== MAGIC MAKER ISEKAI MAHOU NO TSUKURIKATA ==============
 export const MAGIC_MAKER_ISEKAI_MAHOU_NO_TSUKURIKATA: Movie = {
   "id": "magic-maker-isekai-mahou-no-tsukurikata",
@@ -2106,7 +2226,6 @@ export const MAGIC_MAKER_ISEKAI_MAHOU_NO_TSUKURIKATA: Movie = {
     }
   ]
 };
-
 
 // ============== FUGUUSHOKU KANTEISHI GA JITSU WA SAIKYOU DATTA ==============
 export const FUGUUSHOKU_KANTEISHI_GA_JITSU_WA_SAIKYOU_DATTA: Movie = {
@@ -2251,7 +2370,6 @@ export const FUGUUSHOKU_KANTEISHI_GA_JITSU_WA_SAIKYOU_DATTA: Movie = {
   ]
 };
 
-
 // ============== BOTSURAKU YOTEI NO KIZOKU DAKEDO HIMA DATTA KARA MAHOU WO KIWAMETEMITA ==============
 export const BOTSURAKU_YOTEI_NO_KIZOKU_DAKEDO_HIMA_DATTA_KARA_MAHOU_WO_KIWAMETEMITA: Movie = {
   "id": "botsuraku-yotei-no-kizoku-dakedo-hima-datta-kara-mahou-wo-kiwametemita",
@@ -2393,7 +2511,6 @@ export const BOTSURAKU_YOTEI_NO_KIZOKU_DAKEDO_HIMA_DATTA_KARA_MAHOU_WO_KIWAMETEM
     }
   ]
 };
-
 
 // ============== PARTY KARA TSUIHOU SARETA SONO CHIYUSHI JITSU WA SAIKYOU NI TSUKI ==============
 export const PARTY_KARA_TSUIHOU_SARETA_SONO_CHIYUSHI_JITSU_WA_SAIKYOU_NI_TSUKI: Movie = {
@@ -2538,7 +2655,6 @@ export const PARTY_KARA_TSUIHOU_SARETA_SONO_CHIYUSHI_JITSU_WA_SAIKYOU_NI_TSUKI: 
   ]
 };
 
-
 // ============== TENSEI KIZOKU KANTEI SKILL DE NARIAGARU 2ND SEASON ==============
 export const TENSEI_KIZOKU_KANTEI_SKILL_DE_NARIAGARU_2ND_SEASON: Movie = {
   "id": "tensei-kizoku-kantei-skill-de-nariagaru-2nd-season",
@@ -2680,7 +2796,6 @@ export const TENSEI_KIZOKU_KANTEI_SKILL_DE_NARIAGARU_2ND_SEASON: Movie = {
     }
   ]
 };
-
 
 // ============== ISEKAI SHIKKAKU ==============
 export const ISEKAI_SHIKKAKU: Movie = {
@@ -2824,7 +2939,6 @@ export const ISEKAI_SHIKKAKU: Movie = {
     }
   ]
 };
-
 
 // ============== KAMI NO TOU OUJI NO KIKAN ==============
 export const KAMI_NO_TOU_OUJI_NO_KIKAN: Movie = {
@@ -2980,7 +3094,6 @@ export const KAMI_NO_TOU_OUJI_NO_KIKAN: Movie = {
   ]
 };
 
-
 // ============== FAIRY TAIL 100NEN QUEST ==============
 export const FAIRY_TAIL_100NEN_QUEST: Movie = {
   "id": "fairy-tail-100-nen-quest",
@@ -3078,7 +3191,6 @@ export const FAIRY_TAIL_100NEN_QUEST: Movie = {
     }
   ]
 };
-
 
 // ============== ORE WA SUBETE WO PARRY SURU GYAKU KANCHIGAI NO SEKAI SAIKYOU WA BOUKENSHA NI NARITAI ==============
 export const ORE_WA_SUBETE_WO_PARRY_SURU_GYAKU_KANCHIGAI_NO_SEKAI_SAIKYOU_WA_BOUKENSHA_NI_NARITAI: Movie = {
@@ -3222,7 +3334,6 @@ export const ORE_WA_SUBETE_WO_PARRY_SURU_GYAKU_KANCHIGAI_NO_SEKAI_SAIKYOU_WA_BOU
     }
   ]
 };
-
 
 // ============== SATSURIKU NO TENSHI ==============
 export const SATSURIKU_NO_TENSHI: Movie = {
@@ -3402,7 +3513,6 @@ export const SATSURIKU_NO_TENSHI: Movie = {
   ]
 };
 
-
 // ============== MY HOME HERO ==============
 export const MY_HOME_HERO: Movie = {
   "id": "my-home-hero",
@@ -3543,7 +3653,6 @@ export const MY_HOME_HERO: Movie = {
     }
   ]
 };
-
 
 // ============== TENSEI SHITARA SLIME DATTA KEN 3RD SEASON ==============
 export const TENSEI_SHITARA_SLIME_DATTA_KEN_3RD_SEASON: Movie = {
@@ -3698,7 +3807,6 @@ export const TENSEI_SHITARA_SLIME_DATTA_KEN_3RD_SEASON: Movie = {
   ]
 };
 
-
 // ============== TENSEI SHITARA DAINANA OUJI DATTA NODE KIMAMA NI MAJUTSU WO KIWAMEMASU ==============
 export const TENSEI_SHITARA_DAINANA_OUJI_DATTA_NODE_KIMAMA_NI_MAJUTSU_WO_KIWAMEMASU: Movie = {
   "id": "tensei-shitara-dainana-ouji-datta-node-kimama-ni-majutsu-wo-kiwamemasu",
@@ -3840,7 +3948,6 @@ export const TENSEI_SHITARA_DAINANA_OUJI_DATTA_NODE_KIMAMA_NI_MAJUTSU_WO_KIWAMEM
     }
   ]
 };
-
 
 // ============== WIND BREAKER ==============
 export const WIND_BREAKER: Movie = {
@@ -3992,7 +4099,6 @@ export const WIND_BREAKER: Movie = {
   ]
 };
 
-
 // ============== KIMETSU NO YAIBA HASHIRA GEIKOHEN ==============
 export const KIMETSU_NO_YAIBA_HASHIRA_GEIKOHEN: Movie = {
   "id": "kimetsu-no-yaiba-hashira-geiko-hen",
@@ -4099,7 +4205,6 @@ export const KIMETSU_NO_YAIBA_HASHIRA_GEIKOHEN: Movie = {
   ]
 };
 
-
 // ============== ORE DAKE LEVEL UP NA KEN HOW TO GET STRONGER ==============
 export const ORE_DAKE_LEVEL_UP_NA_KEN_HOW_TO_GET_STRONGER: Movie = {
   "id": "ore-dake-level-up-na-ken-how-to-get-stronger",
@@ -4143,7 +4248,6 @@ export const ORE_DAKE_LEVEL_UP_NA_KEN_HOW_TO_GET_STRONGER: Movie = {
     }
   ]
 };
-
 
 // ============== DEKISOKONAI TO YOBARETA MOTOEIYUU WA JIKKA KARA TSUIHOU SARETA NODE SUKIKATTE NI IKIRU KOTO NI SHITA ==============
 export const DEKISOKONAI_TO_YOBARETA_MOTOEIYUU_WA_JIKKA_KARA_TSUIHOU_SARETA_NODE_SUKIKATTE_NI_IKIRU_KOTO_NI_SHITA: Movie = {
@@ -4269,7 +4373,6 @@ export const DEKISOKONAI_TO_YOBARETA_MOTOEIYUU_WA_JIKKA_KARA_TSUIHOU_SARETA_NODE
     }
   ]
 };
-
 
 // ============== MASHLE SHINKAKUSHA KOUHO SENBATSU SHIKENHEN ==============
 export const MASHLE_SHINKAKUSHA_KOUHO_SENBATSU_SHIKENHEN: Movie = {
@@ -4413,7 +4516,6 @@ export const MASHLE_SHINKAKUSHA_KOUHO_SENBATSU_SHIKENHEN: Movie = {
     }
   ]
 };
-
 
 // ============== CHIYU MAHOU NO MACHIGATTA TSUKAIKATA ==============
 export const CHIYU_MAHOU_NO_MACHIGATTA_TSUKAIKATA: Movie = {
@@ -4566,7 +4668,6 @@ export const CHIYU_MAHOU_NO_MACHIGATTA_TSUKAIKATA: Movie = {
   ]
 };
 
-
 // ============== SOLO LEVELING ==============
 export const SOLO_LEVELING: Movie = {
   "id": "solo-leveling",
@@ -4710,7 +4811,6 @@ export const SOLO_LEVELING: Movie = {
   ]
 };
 
-
 // ============== DR STONE NEW WORLD PART 2 ==============
 export const DR_STONE_NEW_WORLD_PART_2: Movie = {
   "id": "dr-stone-new-world-part-2",
@@ -4790,7 +4890,6 @@ export const DR_STONE_NEW_WORLD_PART_2: Movie = {
   ]
 };
 
-
 // ============== ATTACK ON TITAN FINAL SEASON  THE FINAL CHAPTERS ==============
 export const ATTACK_ON_TITAN_FINAL_SEASON__THE_FINAL_CHAPTERS: Movie = {
   "id": "attack-on-titan-final-season---the-final-chapters",
@@ -4832,7 +4931,6 @@ export const ATTACK_ON_TITAN_FINAL_SEASON__THE_FINAL_CHAPTERS: Movie = {
     }
   ]
 };
-
 
 // ============== SAIHATE NO PALADIN TETSUSABI NO YAMA NO OU ==============
 export const SAIHATE_NO_PALADIN_TETSUSABI_NO_YAMA_NO_OU: Movie = {
@@ -4976,7 +5074,6 @@ export const SAIHATE_NO_PALADIN_TETSUSABI_NO_YAMA_NO_OU: Movie = {
     }
   ]
 };
-
 
 // ============== TOKYO REVENGERS TENJIKUHEN ==============
 export const TOKYO_REVENGERS_TENJIKUHEN: Movie = {
@@ -5128,7 +5225,6 @@ export const TOKYO_REVENGERS_TENJIKUHEN: Movie = {
     }
   ]
 };
-
 
 // ============== SHANGRILA FRONTIER KUSOGE HUNTER KAMIGE NI IDOMAN TO SU ==============
 export const SHANGRILA_FRONTIER_KUSOGE_HUNTER_KAMIGE_NI_IDOMAN_TO_SU: Movie = {
@@ -5390,7 +5486,6 @@ export const SHANGRILA_FRONTIER_KUSOGE_HUNTER_KAMIGE_NI_IDOMAN_TO_SU: Movie = {
   ]
 };
 
-
 // ============== JUJUTSU KAISEN 2ND SEASON ==============
 export const JUJUTSU_KAISEN_2ND_SEASON: Movie = {
   "id": "jujutsu-kaisen-2nd-season",
@@ -5632,7 +5727,6 @@ export const JUJUTSU_KAISEN_2ND_SEASON: Movie = {
   ]
 };
 
-
 // ============== ISEKAI DE CHEAT SKILL WO TE NI SHITA ORE WA GENJITSU SEKAI WO MO MUSOU SURU LEVEL UP WA JINSEI WO ==============
 export const ISEKAI_DE_CHEAT_SKILL_WO_TE_NI_SHITA_ORE_WA_GENJITSU_SEKAI_WO_MO_MUSOU_SURU_LEVEL_UP_WA_JINSEI_WO: Movie = {
   "id": "isekai-de-cheat-skill-wo-te-ni-shita-ore-wa-genjitsu-sekai-wo-mo-musou-suru-level-up-wa-jinsei-wo",
@@ -5785,7 +5879,6 @@ export const ISEKAI_DE_CHEAT_SKILL_WO_TE_NI_SHITA_ORE_WA_GENJITSU_SEKAI_WO_MO_MU
   ]
 };
 
-
 // ============== KIMETSU NO YAIBA KATANAKAJI NO SATOHEN ==============
 export const KIMETSU_NO_YAIBA_KATANAKAJI_NO_SATOHEN: Movie = {
   "id": "kimetsu-no-yaiba-katanakaji-no-sato-hen",
@@ -5918,7 +6011,6 @@ export const KIMETSU_NO_YAIBA_KATANAKAJI_NO_SATOHEN: Movie = {
     }
   ]
 };
-
 
 // ============== HIGH CARD ==============
 export const HIGH_CARD: Movie = {
@@ -6062,7 +6154,6 @@ export const HIGH_CARD: Movie = {
   ]
 };
 
-
 // ============== CHAINSAW MAN ==============
 export const CHAINSAW_MAN: Movie = {
   "id": "chainsaw-man",
@@ -6204,7 +6295,6 @@ export const CHAINSAW_MAN: Movie = {
     }
   ]
 };
-
 
 // ============== BLEACH SENNEN KESSENHEN ==============
 export const BLEACH_SENNEN_KESSENHEN: Movie = {
@@ -6357,7 +6447,6 @@ export const BLEACH_SENNEN_KESSENHEN: Movie = {
     }
   ]
 };
-
 
 // ============== LONG ZU ==============
 export const LONG_ZU: Movie = {
@@ -6537,7 +6626,6 @@ export const LONG_ZU: Movie = {
   ]
 };
 
-
 // ============== DR STONE RYUUSUI ==============
 export const DR_STONE_RYUUSUI: Movie = {
   "id": "dr-stone-ryuusui",
@@ -6581,7 +6669,6 @@ export const DR_STONE_RYUUSUI: Movie = {
     }
   ]
 };
-
 
 // ============== SEKAI SAIKOU NO ANSATSUSHA ISEKAI KIZOKU NI TENSEI SURU ==============
 export const SEKAI_SAIKOU_NO_ANSATSUSHA_ISEKAI_KIZOKU_NI_TENSEI_SURU: Movie = {
@@ -6726,7 +6813,6 @@ export const SEKAI_SAIKOU_NO_ANSATSUSHA_ISEKAI_KIZOKU_NI_TENSEI_SURU: Movie = {
   ]
 };
 
-
 // ============== ISEKAI MAOU TO SHOUKAN SHOUJO NO DOREI MAJUTSU ==============
 export const ISEKAI_MAOU_TO_SHOUKAN_SHOUJO_NO_DOREI_MAJUTSU: Movie = {
   "id": "isekai-maou-to-shoukan-shoujo-no-dorei-majutsu",
@@ -6868,7 +6954,6 @@ export const ISEKAI_MAOU_TO_SHOUKAN_SHOUJO_NO_DOREI_MAJUTSU: Movie = {
     }
   ]
 };
-
 
 // ============== HUNTER X HUNTER 2011 ==============
 export const HUNTER_X_HUNTER_2011: Movie = {
@@ -8237,7 +8322,6 @@ export const HUNTER_X_HUNTER_2011: Movie = {
   ]
 };
 
-
 // ============== SWORD ART ONLINE ==============
 export const SWORD_ART_ONLINE: Movie = {
   "id": "sword-art-online",
@@ -8499,7 +8583,6 @@ export const SWORD_ART_ONLINE: Movie = {
   ]
 };
 
-
 // ============== SWORD ART ONLINE II ==============
 export const SWORD_ART_ONLINE_II: Movie = {
   "id": "sword-art-online-ii",
@@ -8752,7 +8835,6 @@ export const SWORD_ART_ONLINE_II: Movie = {
   ]
 };
 
-
 // ============== BREAK BLADE ==============
 export const BREAK_BLADE: Movie = {
   "id": "break-blade",
@@ -8840,7 +8922,6 @@ export const BREAK_BLADE: Movie = {
     }
   ]
 };
-
 
 // ============== MUSHOKU TENSEI II ISEKAI ITTARA HONKI DASU ==============
 export const MUSHOKU_TENSEI_II_ISEKAI_ITTARA_HONKI_DASU: Movie = {
@@ -8993,7 +9074,6 @@ export const MUSHOKU_TENSEI_II_ISEKAI_ITTARA_HONKI_DASU: Movie = {
   ]
 };
 
-
 // ============== ORIENT ==============
 export const ORIENT: Movie = {
   "id": "orient",
@@ -9137,7 +9217,6 @@ export const ORIENT: Movie = {
   ]
 };
 
-
 // ============== ORIENT AWAJISHIMA GEKITOUHEN ==============
 export const ORIENT_AWAJISHIMA_GEKITOUHEN: Movie = {
   "id": "orient-awajishima-gekitou-hen",
@@ -9280,7 +9359,6 @@ export const ORIENT_AWAJISHIMA_GEKITOUHEN: Movie = {
     }
   ]
 };
-
 
 // ============== IS IT WRONG TO TRY TO PICK UP GIRLS IN A DUNGEON SEASON 4 ==============
 export const IS_IT_WRONG_TO_TRY_TO_PICK_UP_GIRLS_IN_A_DUNGEON_SEASON_4: Movie = {
@@ -9515,7 +9593,6 @@ export const IS_IT_WRONG_TO_TRY_TO_PICK_UP_GIRLS_IN_A_DUNGEON_SEASON_4: Movie = 
   ]
 };
 
-
 // ============== SUPPOSE A KID FROM THE LAST DUNGEON BOONIES MOVED TO A STARTER TOWN ==============
 export const SUPPOSE_A_KID_FROM_THE_LAST_DUNGEON_BOONIES_MOVED_TO_A_STARTER_TOWN: Movie = {
   "id": "suppose-a-kid-from-the-last-dungeon-boonies-moved-to-a-starter-town",
@@ -9657,7 +9734,6 @@ export const SUPPOSE_A_KID_FROM_THE_LAST_DUNGEON_BOONIES_MOVED_TO_A_STARTER_TOWN
     }
   ]
 };
-
 
 // ============== TOWER OF GOD ==============
 export const TOWER_OF_GOD: Movie = {
@@ -9812,7 +9888,6 @@ export const TOWER_OF_GOD: Movie = {
     }
   ]
 };
-
 
 // ============== BLACK CLOVER ==============
 export const BLACK_CLOVER: Movie = {
@@ -11378,7 +11453,6 @@ export const BLACK_CLOVER: Movie = {
     }
   ]
 };
-
 
 // ============== NARUTO ==============
 export const NARUTO: Movie = {
@@ -13395,7 +13469,6 @@ export const NARUTO: Movie = {
   ]
 };
 
-
 // ============== KIMETSU NO YAIBA MUGEN RESSHAHEN ==============
 export const KIMETSU_NO_YAIBA_MUGEN_RESSHAHEN: Movie = {
   "id": "kimetsu-no-yaiba-mugen-ressha-hen",
@@ -13493,7 +13566,6 @@ export const KIMETSU_NO_YAIBA_MUGEN_RESSHAHEN: Movie = {
   ]
 };
 
-
 // ============== KIMETSU NO YAIBA MOVIE MUGEN RESSHAHEN ==============
 export const KIMETSU_NO_YAIBA_MOVIE_MUGEN_RESSHAHEN: Movie = {
   "id": "kimetsu-no-yaiba-movie-mugen-ressha-hen",
@@ -13536,7 +13608,6 @@ export const KIMETSU_NO_YAIBA_MOVIE_MUGEN_RESSHAHEN: Movie = {
     }
   ]
 };
-
 
 // ============== KIMETSU NO YAIBA YUUKAKUHEN ==============
 export const KIMETSU_NO_YAIBA_YUUKAKUHEN: Movie = {
@@ -13670,7 +13741,6 @@ export const KIMETSU_NO_YAIBA_YUUKAKUHEN: Movie = {
     }
   ]
 };
-
 
 // ============== GATE JIEITAI KANOCHI NITE KAKU TATAKAERI ==============
 export const GATE_JIEITAI_KANOCHI_NITE_KAKU_TATAKAERI: Movie = {
@@ -13815,7 +13885,6 @@ export const GATE_JIEITAI_KANOCHI_NITE_KAKU_TATAKAERI: Movie = {
   ]
 };
 
-
 // ============== MUSHOKU TENSEI ISEKAI ITTARA HONKI DASU  ERIS NO GOBLIN TOUBATSU ==============
 export const MUSHOKU_TENSEI_ISEKAI_ITTARA_HONKI_DASU__ERIS_NO_GOBLIN_TOUBATSU: Movie = {
   "id": "mushoku-tensei-isekai-ittara-honki-dasu---eris-no-goblin-toubatsu",
@@ -13858,7 +13927,6 @@ export const MUSHOKU_TENSEI_ISEKAI_ITTARA_HONKI_DASU__ERIS_NO_GOBLIN_TOUBATSU: M
     }
   ]
 };
-
 
 // ============== OVERLORD PLE PLE PLEIADES  NAZARICK SAIDAI NO KIKI ==============
 export const OVERLORD_PLE_PLE_PLEIADES__NAZARICK_SAIDAI_NO_KIKI: Movie = {
@@ -13903,7 +13971,6 @@ export const OVERLORD_PLE_PLE_PLEIADES__NAZARICK_SAIDAI_NO_KIKI: Movie = {
     }
   ]
 };
-
 
 // ============== OVERLORD II ==============
 export const OVERLORD_II: Movie = {
@@ -14057,7 +14124,6 @@ export const OVERLORD_II: Movie = {
   ]
 };
 
-
 // ============== OVERLORD III ==============
 export const OVERLORD_III: Movie = {
   "id": "overlord-iii",
@@ -14210,7 +14276,6 @@ export const OVERLORD_III: Movie = {
   ]
 };
 
-
 // ============== GOD EATER ==============
 export const GOD_EATER: Movie = {
   "id": "god-eater",
@@ -14361,7 +14426,6 @@ export const GOD_EATER: Movie = {
     }
   ]
 };
-
 
 // ============== REZERO KARA HAJIMERU ISEKAI SEIKATSU ==============
 export const REZERO_KARA_HAJIMERU_ISEKAI_SEIKATSU: Movie = {
@@ -14622,7 +14686,6 @@ export const REZERO_KARA_HAJIMERU_ISEKAI_SEIKATSU: Movie = {
   ]
 };
 
-
 // ============== SEIKEN TSUKAI NO WORLD BREAK ==============
 export const SEIKEN_TSUKAI_NO_WORLD_BREAK: Movie = {
   "id": "seiken-tsukai-no-world-break",
@@ -14766,7 +14829,6 @@ export const SEIKEN_TSUKAI_NO_WORLD_BREAK: Movie = {
   ]
 };
 
-
 // ============== NO GAME NO LIFE ==============
 export const NO_GAME_NO_LIFE: Movie = {
   "id": "no-game-no-life",
@@ -14909,7 +14971,6 @@ export const NO_GAME_NO_LIFE: Movie = {
   ]
 };
 
-
 // ============== NO GAME NO LIFE ZERO ==============
 export const NO_GAME_NO_LIFE_ZERO: Movie = {
   "id": "no-game-no-life-zero",
@@ -14953,7 +15014,6 @@ export const NO_GAME_NO_LIFE_ZERO: Movie = {
     }
   ]
 };
-
 
 // ============== KNIGHTS  MAGIC ==============
 export const KNIGHTS__MAGIC: Movie = {
@@ -15105,7 +15165,6 @@ export const KNIGHTS__MAGIC: Movie = {
     }
   ]
 };
-
 
 // ============== LOG HORIZON ==============
 export const LOG_HORIZON: Movie = {
@@ -15367,7 +15426,6 @@ export const LOG_HORIZON: Movie = {
   ]
 };
 
-
 // ============== BLEACH SENNEN KESSENHEN  KETSUBETSUTAN ==============
 export const BLEACH_SENNEN_KESSENHEN__KETSUBETSUTAN: Movie = {
   "id": "bleach-sennen-kessen-hen---ketsubetsu-tan",
@@ -15520,7 +15578,6 @@ export const BLEACH_SENNEN_KESSENHEN__KETSUBETSUTAN: Movie = {
   ]
 };
 
-
 // ============== MAGI SINBAD NO BOUKEN TV ==============
 export const MAGI_SINBAD_NO_BOUKEN_TV: Movie = {
   "id": "magi-sinbad-no-bouken-tv",
@@ -15672,7 +15729,6 @@ export const MAGI_SINBAD_NO_BOUKEN_TV: Movie = {
     }
   ]
 };
-
 
 // ============== MAGI THE KINGDOM OF MAGIC ==============
 export const MAGI_THE_KINGDOM_OF_MAGIC: Movie = {
@@ -15934,7 +15990,6 @@ export const MAGI_THE_KINGDOM_OF_MAGIC: Movie = {
   ]
 };
 
-
 // ============== MAGI THE LABYRINTH OF MAGIC ==============
 export const MAGI_THE_LABYRINTH_OF_MAGIC: Movie = {
   "id": "magi-the-labyrinth-of-magic",
@@ -16195,7 +16250,6 @@ export const MAGI_THE_LABYRINTH_OF_MAGIC: Movie = {
   ]
 };
 
-
 // ============== KOUTETSUJOU NO KABANERI ==============
 export const KOUTETSUJOU_NO_KABANERI: Movie = {
   "id": "koutetsujou-no-kabaneri",
@@ -16338,7 +16392,6 @@ export const KOUTETSUJOU_NO_KABANERI: Movie = {
     }
   ]
 };
-
 
 // ============== OTOME GAME SEKAI WA MOB NI KIBISHII SEKAI DESU ==============
 export const OTOME_GAME_SEKAI_WA_MOB_NI_KIBISHII_SEKAI_DESU: Movie = {
@@ -16483,7 +16536,6 @@ export const OTOME_GAME_SEKAI_WA_MOB_NI_KIBISHII_SEKAI_DESU: Movie = {
   ]
 };
 
-
 // ============== HACHINAN TTE SORE WA NAI DESHOU ==============
 export const HACHINAN_TTE_SORE_WA_NAI_DESHOU: Movie = {
   "id": "hachi-nan-tte-sore-wa-nai-deshou",
@@ -16626,7 +16678,6 @@ export const HACHINAN_TTE_SORE_WA_NAI_DESHOU: Movie = {
     }
   ]
 };
-
 
 // ============== GACHIAKUTA ==============
 export const GACHIAKUTA: Movie = {
@@ -16877,7 +16928,6 @@ export const GACHIAKUTA: Movie = {
     }
   ]
 };
-
 
 // ============== FULLMETAL ALCHEMIST BROTHERHOOD ==============
 export const FULLMETAL_ALCHEMIST_BROTHERHOOD: Movie = {
@@ -17491,7 +17541,6 @@ export const FULLMETAL_ALCHEMIST_BROTHERHOOD: Movie = {
   ]
 };
 
-
 // ============== CLEVATESS MAJUU NO OU TO AKAGO TO SHIKABANE NO YUUSHA ==============
 export const CLEVATESS_MAJUU_NO_OU_TO_AKAGO_TO_SHIKABANE_NO_YUUSHA: Movie = {
   "id": "clevatess-majuu-no-ou-to-akago-to-shikabane-no-yuusha",
@@ -17633,7 +17682,6 @@ export const CLEVATESS_MAJUU_NO_OU_TO_AKAGO_TO_SHIKABANE_NO_YUUSHA: Movie = {
     }
   ]
 };
-
 
 // ============== TSUYOKUTE NEW SAGA ==============
 export const TSUYOKUTE_NEW_SAGA: Movie = {
@@ -17777,7 +17825,6 @@ export const TSUYOKUTE_NEW_SAGA: Movie = {
   ]
 };
 
-
 // ============== GUIMI ZHI ZHU XIAOCHOU PIAN ==============
 export const GUIMI_ZHI_ZHU_XIAOCHOU_PIAN: Movie = {
   "id": "guimi-zhi-zhu-xiaochou-pian",
@@ -17902,7 +17949,6 @@ export const GUIMI_ZHI_ZHU_XIAOCHOU_PIAN: Movie = {
     }
   ]
 };
-
 
 // ============== KAIJUU 8GOU 2ND SEASON ==============
 export const KAIJUU_8GOU_2ND_SEASON: Movie = {
@@ -18036,7 +18082,6 @@ export const KAIJUU_8GOU_2ND_SEASON: Movie = {
     }
   ]
 };
-
 
 // ============== ANSATSUSHA DE ARU ORE NO STATUS GA YUUSHA YORI MO AKIRAKA NI TSUYOI NO DA GA ==============
 export const ANSATSUSHA_DE_ARU_ORE_NO_STATUS_GA_YUUSHA_YORI_MO_AKIRAKA_NI_TSUYOI_NO_DA_GA: Movie = {
@@ -18181,7 +18226,6 @@ export const ANSATSUSHA_DE_ARU_ORE_NO_STATUS_GA_YUUSHA_YORI_MO_AKIRAKA_NI_TSUYOI
   ]
 };
 
-
 // ============== FULLMETAL ALCHEMIST BROTHERHOOD SPECIALS ==============
 export const FULLMETAL_ALCHEMIST_BROTHERHOOD_SPECIALS: Movie = {
   "id": "fullmetal-alchemist-brotherhood-specials",
@@ -18253,7 +18297,6 @@ export const FULLMETAL_ALCHEMIST_BROTHERHOOD_SPECIALS: Movie = {
     }
   ]
 };
-
 
 // ============== TO YOUR ETERNITY ==============
 export const TO_YOUR_ETERNITY: Movie = {
@@ -18469,7 +18512,6 @@ export const TO_YOUR_ETERNITY: Movie = {
   ]
 };
 
-
 // ============== TO YOUR ETERNITY SEASON 2 ==============
 export const TO_YOUR_ETERNITY_SEASON_2: Movie = {
   "id": "to-your-eternity-season-2",
@@ -18684,7 +18726,6 @@ export const TO_YOUR_ETERNITY_SEASON_2: Movie = {
   ]
 };
 
-
 // ============== PERSONA 4 THE ANIMATION NO ONE IS ALONE ==============
 export const PERSONA_4_THE_ANIMATION_NO_ONE_IS_ALONE: Movie = {
   "id": "persona-4-the-animation-no-one-is-alone",
@@ -18728,7 +18769,6 @@ export const PERSONA_4_THE_ANIMATION_NO_ONE_IS_ALONE: Movie = {
   ]
 };
 
-
 // ============== LONG ZU EPISODE 0 ==============
 export const LONG_ZU_EPISODE_0: Movie = {
   "id": "long-zu-episode-0",
@@ -18771,7 +18811,6 @@ export const LONG_ZU_EPISODE_0: Movie = {
     }
   ]
 };
-
 
 // ============== ONE PUNCH MAN SEASON 2 ==============
 export const ONE_PUNCH_MAN_SEASON_2: Movie = {
@@ -18915,7 +18954,6 @@ export const ONE_PUNCH_MAN_SEASON_2: Movie = {
   ]
 };
 
-
 // ============== ONE PUNCH MAN OVA ==============
 export const ONE_PUNCH_MAN_OVA: Movie = {
   "id": "one-punch-man-ova",
@@ -19013,7 +19051,6 @@ export const ONE_PUNCH_MAN_OVA: Movie = {
   ]
 };
 
-
 // ============== ONE PUNCH MAN OVA SEASON 2 ==============
 export const ONE_PUNCH_MAN_OVA_SEASON_2: Movie = {
   "id": "one-punch-man-ova-season-2",
@@ -19101,7 +19138,6 @@ export const ONE_PUNCH_MAN_OVA_SEASON_2: Movie = {
     }
   ]
 };
-
 
 // ============== MOB PSYCHO 100 ==============
 export const MOB_PSYCHO_100: Movie = {
@@ -19245,7 +19281,6 @@ export const MOB_PSYCHO_100: Movie = {
   ]
 };
 
-
 // ============== OWARANAI SERAPH ==============
 export const OWARANAI_SERAPH: Movie = {
   "id": "owaranai-seraph",
@@ -19360,7 +19395,6 @@ export const OWARANAI_SERAPH: Movie = {
   ]
 };
 
-
 // ============== OWARANAI SERAPH NAGOYAHEN ==============
 export const OWARANAI_SERAPH_NAGOYAHEN: Movie = {
   "id": "owaranai-seraph-nagoya-hen",
@@ -19431,7 +19465,6 @@ export const OWARANAI_SERAPH_NAGOYAHEN: Movie = {
     }
   ]
 };
-
 
 // ============== DR STONE STONE WARS ==============
 export const DR_STONE_STONE_WARS: Movie = {
@@ -19565,7 +19598,6 @@ export const DR_STONE_STONE_WARS: Movie = {
     }
   ]
 };
-
 
 // ============== DA WANG RAO MING ==============
 export const DA_WANG_RAO_MING: Movie = {
@@ -19711,7 +19743,6 @@ export const DA_WANG_RAO_MING: Movie = {
   ]
 };
 
-
 // ============== SAKAMOTO DAYS PART 2 ==============
 export const SAKAMOTO_DAYS_PART_2: Movie = {
   "id": "sakamoto-days-part-2",
@@ -19844,7 +19875,6 @@ export const SAKAMOTO_DAYS_PART_2: Movie = {
     }
   ]
 };
-
 
 // ============== JIDOU HANBAIKI NI UMAREKAWATTA ORE WA MEIKYUU WO SAMAYOU ==============
 export const JIDOU_HANBAIKI_NI_UMAREKAWATTA_ORE_WA_MEIKYUU_WO_SAMAYOU: Movie = {
@@ -19988,7 +20018,6 @@ export const JIDOU_HANBAIKI_NI_UMAREKAWATTA_ORE_WA_MEIKYUU_WO_SAMAYOU: Movie = {
   ]
 };
 
-
 // ============== BUNGOU STRAY DOGS ==============
 export const BUNGOU_STRAY_DOGS: Movie = {
   "id": "bungou-stray-dogs",
@@ -20130,7 +20159,6 @@ export const BUNGOU_STRAY_DOGS: Movie = {
     }
   ]
 };
-
 
 // ============== BUNGOU STRAY DOGS 2ND SEASON ==============
 export const BUNGOU_STRAY_DOGS_2ND_SEASON: Movie = {
@@ -20274,7 +20302,6 @@ export const BUNGOU_STRAY_DOGS_2ND_SEASON: Movie = {
   ]
 };
 
-
 // ============== BUNGOU STRAY DOGS DEAD APPLE ==============
 export const BUNGOU_STRAY_DOGS_DEAD_APPLE: Movie = {
   "id": "bungou-stray-dogs-dead-apple",
@@ -20317,7 +20344,6 @@ export const BUNGOU_STRAY_DOGS_DEAD_APPLE: Movie = {
     }
   ]
 };
-
 
 // ============== BUNGOU STRAY DOGS 3RD SEASON ==============
 export const BUNGOU_STRAY_DOGS_3RD_SEASON: Movie = {
@@ -20461,7 +20487,6 @@ export const BUNGOU_STRAY_DOGS_3RD_SEASON: Movie = {
   ]
 };
 
-
 // ============== BOKU DAKE GA INAI MACHI ==============
 export const BOKU_DAKE_GA_INAI_MACHI: Movie = {
   "id": "boku-dake-ga-inai-machi",
@@ -20603,7 +20628,6 @@ export const BOKU_DAKE_GA_INAI_MACHI: Movie = {
   ]
 };
 
-
 // ============== DARWINS GAME ==============
 export const DARWINS_GAME: Movie = {
   "id": "darwins-game",
@@ -20736,7 +20760,6 @@ export const DARWINS_GAME: Movie = {
     }
   ]
 };
-
 
 // ============== IDINVADED ==============
 export const IDINVADED: Movie = {
@@ -20889,7 +20912,6 @@ export const IDINVADED: Movie = {
   ]
 };
 
-
 // ============== YAKUSOKU NO NEVERLAND ==============
 export const YAKUSOKU_NO_NEVERLAND: Movie = {
   "id": "yakusoku-no-neverland",
@@ -21033,7 +21055,6 @@ export const YAKUSOKU_NO_NEVERLAND: Movie = {
   ]
 };
 
-
 // ============== YAKUSOKU NO NEVERLAND 2ND SEASON ==============
 export const YAKUSOKU_NO_NEVERLAND_2ND_SEASON: Movie = {
   "id": "yakusoku-no-neverland-2nd-season",
@@ -21167,7 +21188,6 @@ export const YAKUSOKU_NO_NEVERLAND_2ND_SEASON: Movie = {
     }
   ]
 };
-
 
 // ============== HIKARU GA SHINDA NATSU ==============
 export const HIKARU_GA_SHINDA_NATSU: Movie = {
@@ -21310,7 +21330,6 @@ export const HIKARU_GA_SHINDA_NATSU: Movie = {
     }
   ]
 };
-
 
 // ============== SWORD ART ONLINE ALICIZATION ==============
 export const SWORD_ART_ONLINE_ALICIZATION: Movie = {
@@ -21563,7 +21582,6 @@ export const SWORD_ART_ONLINE_ALICIZATION: Movie = {
   ]
 };
 
-
 // ============== SWORD ART ONLINE MOVIE ORDINAL SCALE ==============
 export const SWORD_ART_ONLINE_MOVIE_ORDINAL_SCALE: Movie = {
   "id": "sword-art-online-movie-ordinal-scale",
@@ -21607,7 +21625,6 @@ export const SWORD_ART_ONLINE_MOVIE_ORDINAL_SCALE: Movie = {
     }
   ]
 };
-
 
 // ============== SWORD ART ONLINE ALICIZATION  WAR OF UNDERWORLD ==============
 export const SWORD_ART_ONLINE_ALICIZATION__WAR_OF_UNDERWORLD: Movie = {
@@ -21752,7 +21769,6 @@ export const SWORD_ART_ONLINE_ALICIZATION__WAR_OF_UNDERWORLD: Movie = {
   ]
 };
 
-
 // ============== SWORD ART ONLINE PROGRESSIVE MOVIE  HOSHI NAKI YORU NO ARIA ==============
 export const SWORD_ART_ONLINE_PROGRESSIVE_MOVIE__HOSHI_NAKI_YORU_NO_ARIA: Movie = {
   "id": "sword-art-online-progressive-movie---hoshi-naki-yoru-no-aria",
@@ -21796,7 +21812,6 @@ export const SWORD_ART_ONLINE_PROGRESSIVE_MOVIE__HOSHI_NAKI_YORU_NO_ARIA: Movie 
     }
   ]
 };
-
 
 // ============== SWORD ART ONLINE ALTERNATIVE GUN GALE ONLINE ==============
 export const SWORD_ART_ONLINE_ALTERNATIVE_GUN_GALE_ONLINE: Movie = {
@@ -21939,6 +21954,1221 @@ export const SWORD_ART_ONLINE_ALTERNATIVE_GUN_GALE_ONLINE: Movie = {
   ]
 };
 
+// ============== SHINGEKI NO KYOJIN SEASON 3 PART 2 ==============
+
+export const SHINGEKI_NO_KYOJIN_SEASON_3_PART_2: Movie = {
+  "id": "shingeki-no-kyojin-season-3-part-2",
+  "englishName": "Shingeki no Kyojin Season 3 Part 2",
+  "type": "series",
+  "title": "מתקפת הטיטאנים עונה 3 חלק 2",
+  "description": "מתקפת הטיטאנים עונה 3 חלק 2",
+  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1690283662773100633l[1].jpg",
+  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1690283662773100633l[1].jpg",
+  "rating": "18+",
+  "matchScore": 95,
+  "year": 2019,
+  "genre": [
+    "אקשן",
+    "דרמה"
+  ],
+  "cast": [],
+  "source": {
+    "site": "aniplus.co",
+    "seriesUrl": "https://aniplus.co/anime/79",
+    "animeId": 79,
+    "generatedAt": "2026-01-03T16:31:28.254498Z"
+  },
+  "seasons": [
+    {
+      "id": "shingeki-no-kyojin-season-3-part-2-s1",
+      "number": 1,
+      "title": "עונה 1",
+      "episodes": [
+        {
+          "id": "shingeki-no-kyojin-season-3-part-2-e1",
+          "number": 1,
+          "title": "פרק 1: 1",
+          "description": "מתקפת הטיטאנים עונה 3 חלק 2",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1nMCM-aSOPTwjVMnp7yqKllocBBqhZiKA/preview",
+          "thumbnailUrl": "1690283662773100633l[1].jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-3-part-2-e2",
+          "number": 2,
+          "title": "פרק 2: 2",
+          "description": "מתקפת הטיטאנים עונה 3 חלק 2",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1XZ_xYW0mnfBuyslDnXatVAHlvbzPgoNZ/preview",
+          "thumbnailUrl": "1690283662773100633l[1].jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-3-part-2-e3",
+          "number": 3,
+          "title": "פרק 3: 3",
+          "description": "מתקפת הטיטאנים עונה 3 חלק 2",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1Nlf__WMoG4Yb1bRyGuOxHLvt2Uwe7T3u/preview",
+          "thumbnailUrl": "1690283662773100633l[1].jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-3-part-2-e4",
+          "number": 4,
+          "title": "פרק 4: 4",
+          "description": "מתקפת הטיטאנים עונה 3 חלק 2",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/18rp4F9i6SnPgWNuyN1QtQ7nyawE0gd_V/preview",
+          "thumbnailUrl": "1690283662773100633l[1].jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-3-part-2-e5",
+          "number": 5,
+          "title": "פרק 5: 5",
+          "description": "מתקפת הטיטאנים עונה 3 חלק 2",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1lfrfHjTtgAg93KLNLsF_QQBUyCSxJ7BU/preview",
+          "thumbnailUrl": "1690283662773100633l[1].jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-3-part-2-e6",
+          "number": 6,
+          "title": "פרק 6: 6",
+          "description": "מתקפת הטיטאנים עונה 3 חלק 2",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1Vq3qVSlh50lhkmeWCe4CpuvaqSTrTpct/preview",
+          "thumbnailUrl": "1690283662773100633l[1].jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-3-part-2-e7",
+          "number": 7,
+          "title": "פרק 7: 7",
+          "description": "מתקפת הטיטאנים עונה 3 חלק 2",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/15xApvVBpdbkP2W4fov2lT2_hHQe2ELKK/preview",
+          "thumbnailUrl": "1690283662773100633l[1].jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-3-part-2-e8",
+          "number": 8,
+          "title": "פרק 8: 8",
+          "description": "מתקפת הטיטאנים עונה 3 חלק 2",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1L8kIw-hbPimrMGUR4qLkZ5O9dKjcPR3t/preview",
+          "thumbnailUrl": "1690283662773100633l[1].jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-3-part-2-e9",
+          "number": 9,
+          "title": "פרק 9: 9",
+          "description": "מתקפת הטיטאנים עונה 3 חלק 2",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1_UaC_DX7smnGl1bPXuATE1uxnEBhoT2R/preview",
+          "thumbnailUrl": "1690283662773100633l[1].jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-3-part-2-e10",
+          "number": 10,
+          "title": "פרק 10: 10",
+          "description": "מתקפת הטיטאנים עונה 3 חלק 2",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1PW9d97Z0jB0Lnv-88I8qvXXnoFwxbNOo/preview",
+          "thumbnailUrl": "1690283662773100633l[1].jpg"
+        }
+      ]
+    }
+  ]
+};
+
+// ============== SHINGEKI NO KYOJIN OVA ==============
+
+export const SHINGEKI_NO_KYOJIN_OVA: Movie = {
+  "id": "shingeki-no-kyojin-ova",
+  "englishName": "Shingeki no Kyojin OVA",
+  "type": "series",
+  "title": "מתקפת הטיטאנים - אובות",
+  "description": "שלשה פרקי ביניים המתרחשים בזמן טירונותם של ארן ושל אחיו לנשק, כאשר כל אובה מתמקדת באירוע שונה בתכלית מקודמו:\n\nאובה 1 - המקרה שהביא להשבת תוכנית לכידת הטיטאנים וחקירתם.\nאובה 2 - ג'אן, שרוצה להוכיח את יכולותיו האישיות המרשימות, מוצא את עצמו בדו-קרב ביזארי מול סשה.\nאובה 3 - משימת האימון שהוטלה על ארן וחבורתו משובשת ע\"י גורם זר ובלתי צפוי.",
+  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1696751206432Shingeki no Kyojin OVA.jpg",
+  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1696751206432Shingeki no Kyojin OVA.jpg",
+  "rating": "12+",
+  "matchScore": 95,
+  "year": 2013,
+  "genre": [
+    "אקשן",
+    "דרמה"
+  ],
+  "cast": [],
+  "source": {
+    "site": "aniplus.co",
+    "seriesUrl": "https://aniplus.co/anime/344",
+    "animeId": 344,
+    "generatedAt": "2026-01-03T16:31:44.012983Z"
+  },
+  "seasons": [
+    {
+      "id": "shingeki-no-kyojin-ova-s1",
+      "number": 1,
+      "title": "עונה 1",
+      "episodes": [
+        {
+          "id": "shingeki-no-kyojin-ova-e1",
+          "number": 1,
+          "title": "פרק 1: 1",
+          "description": "שלשה פרקי ביניים המתרחשים בזמן טירונותם של ארן ושל אחיו לנשק, כאשר כל אובה מתמקדת באירוע שונה בתכלית מקודמו:\n\nאובה 1 - המקרה שהביא להשבת תוכנית לכידת הטיטאנים וחקירתם.\nאובה 2 - ג'אן, שרוצה להוכיח את יכולותיו האישיות המרשימות, מוצא את עצמו בדו-קרב ביזארי מול סשה.\nאובה 3 - משימת האימון שהוטלה על ארן וחבורתו משובשת ע\"י גורם זר ובלתי צפוי.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1o0K6LHbpkktUdLzLMcKqGlusEp1WQj7x/preview",
+          "thumbnailUrl": "1696751206432Shingeki no Kyojin OVA.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-ova-e2",
+          "number": 2,
+          "title": "פרק 2: 2",
+          "description": "שלשה פרקי ביניים המתרחשים בזמן טירונותם של ארן ושל אחיו לנשק, כאשר כל אובה מתמקדת באירוע שונה בתכלית מקודמו:\n\nאובה 1 - המקרה שהביא להשבת תוכנית לכידת הטיטאנים וחקירתם.\nאובה 2 - ג'אן, שרוצה להוכיח את יכולותיו האישיות המרשימות, מוצא את עצמו בדו-קרב ביזארי מול סשה.\nאובה 3 - משימת האימון שהוטלה על ארן וחבורתו משובשת ע\"י גורם זר ובלתי צפוי.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1AhF7bU-yivy7j-D9j-xKyB3cU93b09kE/preview",
+          "thumbnailUrl": "1696751206432Shingeki no Kyojin OVA.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-ova-e3",
+          "number": 3,
+          "title": "פרק 3: 3",
+          "description": "שלשה פרקי ביניים המתרחשים בזמן טירונותם של ארן ושל אחיו לנשק, כאשר כל אובה מתמקדת באירוע שונה בתכלית מקודמו:\n\nאובה 1 - המקרה שהביא להשבת תוכנית לכידת הטיטאנים וחקירתם.\nאובה 2 - ג'אן, שרוצה להוכיח את יכולותיו האישיות המרשימות, מוצא את עצמו בדו-קרב ביזארי מול סשה.\nאובה 3 - משימת האימון שהוטלה על ארן וחבורתו משובשת ע\"י גורם זר ובלתי צפוי.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1j3hgAEoFHLF1LJTxxY6k8oxNz6HiyEo9/preview",
+          "thumbnailUrl": "1696751206432Shingeki no Kyojin OVA.jpg"
+        }
+      ]
+    }
+  ]
+};
+
+// ============== SHINGEKI NO KYOJIN KUINAKI SENTAKU ==============
+
+export const SHINGEKI_NO_KYOJIN_KUINAKI_SENTAKU: Movie = {
+  "id": "shingeki-no-kyojin-kuinaki-sentaku",
+  "englishName": "Shingeki no Kyojin: Kuinaki Sentaku",
+  "type": "series",
+  "title": "מתקפת הטיטאנים: בלי חרטות",
+  "description": "פריקוול לאנימה \"מתקפה הטיטאנים\", המגולל את סיפור המקור של ליווי. באובה זו נגלה כיצד ליווי הפך מעבריין בשכונות העוני שבין החומות לקפטן חייל הסיור החזק ביותר שידעה האנושות, את מקור היחסים בינו לבין מפקד חייל הסיור הצעיר וחדור המטרה, ארווין סמית', ואת נסיבות הגעתו של ארווין להיות למנהיג הדגול, המחושב והסוחף שאנחנו מכירים.\n\nהערה:\nאובה זו יצאה תחילה כשני חלקי אובה נפרדים, אך לאחר זמן שוחררה האובה בשנית בגרסה מאוחדת ובאיכות HD.",
+  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1696751249718Shingeki no Kyojin: Kuinaki Sentaku.jpg",
+  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1696751249718Shingeki no Kyojin: Kuinaki Sentaku.jpg",
+  "rating": "12+",
+  "matchScore": 95,
+  "year": 2014,
+  "genre": [
+    "אקשן"
+  ],
+  "cast": [],
+  "source": {
+    "site": "aniplus.co",
+    "seriesUrl": "https://aniplus.co/anime/345",
+    "animeId": 345,
+    "generatedAt": "2026-01-03T16:31:45.406001Z"
+  },
+  "seasons": [
+    {
+      "id": "shingeki-no-kyojin-kuinaki-sentaku-s1",
+      "number": 1,
+      "title": "עונה 1",
+      "episodes": [
+        {
+          "id": "shingeki-no-kyojin-kuinaki-sentaku-e1",
+          "number": 1,
+          "title": "פרק 1: 1",
+          "description": "פריקוול לאנימה \"מתקפה הטיטאנים\", המגולל את סיפור המקור של ליווי. באובה זו נגלה כיצד ליווי הפך מעבריין בשכונות העוני שבין החומות לקפטן חייל הסיור החזק ביותר שידעה האנושות, את מקור היחסים בינו לבין מפקד חייל הסיור הצעיר וחדור המטרה, ארווין סמית', ואת נסיבות הגעתו של ארווין להיות למנהיג הדגול, המחושב והסוחף שאנחנו מכירים.\n\nהערה:\nאובה זו יצאה תחילה כשני חלקי אובה נפרדים, אך לאחר זמן שוחררה האובה בשנית בגרסה מאוחדת ובאיכות HD.",
+          "duration": "27 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1wa-Ly8masWW_KTC-BKNO-UTr_Wa22Vhd/preview",
+          "thumbnailUrl": "1696751249718Shingeki no Kyojin: Kuinaki Sentaku.jpg"
+        }
+      ]
+    }
+  ]
+};
+
+// ============== SHINGEKI NO KYOJIN SEASON 2 ==============
+
+export const SHINGEKI_NO_KYOJIN_SEASON_2: Movie = {
+  "id": "shingeki-no-kyojin-season-2",
+  "englishName": "Shingeki no Kyojin Season 2",
+  "type": "series",
+  "title": "מתקפת הטיטאנים עונה 2",
+  "description": "בעולם בו טיטאנים ענקיים אוכלי אדם מאיימים על עצם קיומה של האנושות, בני האדם נאלצו לבצר עצמם בחומות אדירות על מנת להבטיח את הישרדותם. אומנם החומות רק דחו את הבלתי נמנע, ולאחר מאה שנים ארוכות של שקט יחסי הצליחו הטיטאנים לפרוץ את חומת המגן החיצונה. בין הנספים באירוע נמנו אמו ואביו של ארן ייגר, ילד שחזה באמו נאכלת ממש לנגד עיניו. ארן, שנשבע לנקום בטיטאנים ולגאול את האנושות מייסוריה, התגייס לצבא במטרה לממש את שבועתו. אך חלומו השאפתני נגוז למול אימת הטיטאנים, עד שהתגלית המופלאה, לפיה שוכן בגופו של ארן כוח אדיר ומסתורי - הכוח להפוך את עצמו לטיטאן, טרפה את הקלפים עבור ארן המבולבל, ולראשונה מזה עידנים, גם עבור גורל האנושות כולה.\nבסוף העונה הקודמת, סערה האנושות לנוכח גילוי טיטאן בתוך החומה עצמה. יותר ויותר שאלות צצות ועולות בדבר זהותם ומקורם של הטיטאנים האימתניים. אם אכן ישנן תשובות כלשהן, נראה שכולן נמצאות במרתף ביתו של ארן, בין חורבות העיר שאליה פרצו הטיטאנים בראשונה.",
+  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1696751364404Shingeki no Kyojin Season 2.jpg",
+  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1696751364404Shingeki no Kyojin Season 2.jpg",
+  "rating": "12+",
+  "matchScore": 95,
+  "year": 2017,
+  "genre": [
+    "אקשן",
+    "דרמה"
+  ],
+  "cast": [],
+  "source": {
+    "site": "aniplus.co",
+    "seriesUrl": "https://aniplus.co/anime/347",
+    "animeId": 347,
+    "generatedAt": "2026-01-03T16:31:52.107540Z"
+  },
+  "seasons": [
+    {
+      "id": "shingeki-no-kyojin-season-2-s1",
+      "number": 1,
+      "title": "עונה 1",
+      "episodes": [
+        {
+          "id": "shingeki-no-kyojin-season-2-e1",
+          "number": 1,
+          "title": "פרק 1: 1",
+          "description": "בעולם בו טיטאנים ענקיים אוכלי אדם מאיימים על עצם קיומה של האנושות, בני האדם נאלצו לבצר עצמם בחומות אדירות על מנת להבטיח את הישרדותם. אומנם החומות רק דחו את הבלתי נמנע, ולאחר מאה שנים ארוכות של שקט יחסי הצליחו הטיטאנים לפרוץ את חומת המגן החיצונה. בין הנספים באירוע נמנו אמו ואביו של ארן ייגר, ילד שחזה באמו נאכלת ממש לנגד עיניו. ארן, שנשבע לנקום בטיטאנים ולגאול את האנושות מייסוריה, התגייס לצבא במטרה לממש את שבועתו. אך חלומו השאפתני נגוז למול אימת הטיטאנים, עד שהתגלית המופלאה, לפיה שוכן בגופו של ארן כוח אדיר ומסתורי - הכוח להפוך את עצמו לטיטאן, טרפה את הקלפים עבור ארן המבולבל, ולראשונה מזה עידנים, גם עבור גורל האנושות כולה.\nבסוף העונה הקודמת, סערה האנושות לנוכח גילוי טיטאן בתוך החומה עצמה. יותר ויותר שאלות צצות ועולות בדבר זהותם ומקורם של הטיטאנים האימתניים. אם אכן ישנן תשובות כלשהן, נראה שכולן נמצאות במרתף ביתו של ארן, בין חורבות העיר שאליה פרצו הטיטאנים בראשונה.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1CdKCZdy-meW9OsZsO38vwm2TcNn37H2H/preview",
+          "thumbnailUrl": "1696751364404Shingeki no Kyojin Season 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-2-e2",
+          "number": 2,
+          "title": "פרק 2: 2",
+          "description": "בעולם בו טיטאנים ענקיים אוכלי אדם מאיימים על עצם קיומה של האנושות, בני האדם נאלצו לבצר עצמם בחומות אדירות על מנת להבטיח את הישרדותם. אומנם החומות רק דחו את הבלתי נמנע, ולאחר מאה שנים ארוכות של שקט יחסי הצליחו הטיטאנים לפרוץ את חומת המגן החיצונה. בין הנספים באירוע נמנו אמו ואביו של ארן ייגר, ילד שחזה באמו נאכלת ממש לנגד עיניו. ארן, שנשבע לנקום בטיטאנים ולגאול את האנושות מייסוריה, התגייס לצבא במטרה לממש את שבועתו. אך חלומו השאפתני נגוז למול אימת הטיטאנים, עד שהתגלית המופלאה, לפיה שוכן בגופו של ארן כוח אדיר ומסתורי - הכוח להפוך את עצמו לטיטאן, טרפה את הקלפים עבור ארן המבולבל, ולראשונה מזה עידנים, גם עבור גורל האנושות כולה.\nבסוף העונה הקודמת, סערה האנושות לנוכח גילוי טיטאן בתוך החומה עצמה. יותר ויותר שאלות צצות ועולות בדבר זהותם ומקורם של הטיטאנים האימתניים. אם אכן ישנן תשובות כלשהן, נראה שכולן נמצאות במרתף ביתו של ארן, בין חורבות העיר שאליה פרצו הטיטאנים בראשונה.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1dDdH0NkSu7VHfXbBdSq4OSD1xnf1N3hy/preview",
+          "thumbnailUrl": "1696751364404Shingeki no Kyojin Season 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-2-e3",
+          "number": 3,
+          "title": "פרק 3: 3",
+          "description": "בעולם בו טיטאנים ענקיים אוכלי אדם מאיימים על עצם קיומה של האנושות, בני האדם נאלצו לבצר עצמם בחומות אדירות על מנת להבטיח את הישרדותם. אומנם החומות רק דחו את הבלתי נמנע, ולאחר מאה שנים ארוכות של שקט יחסי הצליחו הטיטאנים לפרוץ את חומת המגן החיצונה. בין הנספים באירוע נמנו אמו ואביו של ארן ייגר, ילד שחזה באמו נאכלת ממש לנגד עיניו. ארן, שנשבע לנקום בטיטאנים ולגאול את האנושות מייסוריה, התגייס לצבא במטרה לממש את שבועתו. אך חלומו השאפתני נגוז למול אימת הטיטאנים, עד שהתגלית המופלאה, לפיה שוכן בגופו של ארן כוח אדיר ומסתורי - הכוח להפוך את עצמו לטיטאן, טרפה את הקלפים עבור ארן המבולבל, ולראשונה מזה עידנים, גם עבור גורל האנושות כולה.\nבסוף העונה הקודמת, סערה האנושות לנוכח גילוי טיטאן בתוך החומה עצמה. יותר ויותר שאלות צצות ועולות בדבר זהותם ומקורם של הטיטאנים האימתניים. אם אכן ישנן תשובות כלשהן, נראה שכולן נמצאות במרתף ביתו של ארן, בין חורבות העיר שאליה פרצו הטיטאנים בראשונה.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1yzXQ7OhbrnZLwcvisihpK0xyortDzBVl/preview",
+          "thumbnailUrl": "1696751364404Shingeki no Kyojin Season 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-2-e4",
+          "number": 4,
+          "title": "פרק 4: 4",
+          "description": "בעולם בו טיטאנים ענקיים אוכלי אדם מאיימים על עצם קיומה של האנושות, בני האדם נאלצו לבצר עצמם בחומות אדירות על מנת להבטיח את הישרדותם. אומנם החומות רק דחו את הבלתי נמנע, ולאחר מאה שנים ארוכות של שקט יחסי הצליחו הטיטאנים לפרוץ את חומת המגן החיצונה. בין הנספים באירוע נמנו אמו ואביו של ארן ייגר, ילד שחזה באמו נאכלת ממש לנגד עיניו. ארן, שנשבע לנקום בטיטאנים ולגאול את האנושות מייסוריה, התגייס לצבא במטרה לממש את שבועתו. אך חלומו השאפתני נגוז למול אימת הטיטאנים, עד שהתגלית המופלאה, לפיה שוכן בגופו של ארן כוח אדיר ומסתורי - הכוח להפוך את עצמו לטיטאן, טרפה את הקלפים עבור ארן המבולבל, ולראשונה מזה עידנים, גם עבור גורל האנושות כולה.\nבסוף העונה הקודמת, סערה האנושות לנוכח גילוי טיטאן בתוך החומה עצמה. יותר ויותר שאלות צצות ועולות בדבר זהותם ומקורם של הטיטאנים האימתניים. אם אכן ישנן תשובות כלשהן, נראה שכולן נמצאות במרתף ביתו של ארן, בין חורבות העיר שאליה פרצו הטיטאנים בראשונה.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1zgqZ33ohI_S3uOfhsO-bydFnzmhBmsQH/preview",
+          "thumbnailUrl": "1696751364404Shingeki no Kyojin Season 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-2-e5",
+          "number": 5,
+          "title": "פרק 5: 5",
+          "description": "בעולם בו טיטאנים ענקיים אוכלי אדם מאיימים על עצם קיומה של האנושות, בני האדם נאלצו לבצר עצמם בחומות אדירות על מנת להבטיח את הישרדותם. אומנם החומות רק דחו את הבלתי נמנע, ולאחר מאה שנים ארוכות של שקט יחסי הצליחו הטיטאנים לפרוץ את חומת המגן החיצונה. בין הנספים באירוע נמנו אמו ואביו של ארן ייגר, ילד שחזה באמו נאכלת ממש לנגד עיניו. ארן, שנשבע לנקום בטיטאנים ולגאול את האנושות מייסוריה, התגייס לצבא במטרה לממש את שבועתו. אך חלומו השאפתני נגוז למול אימת הטיטאנים, עד שהתגלית המופלאה, לפיה שוכן בגופו של ארן כוח אדיר ומסתורי - הכוח להפוך את עצמו לטיטאן, טרפה את הקלפים עבור ארן המבולבל, ולראשונה מזה עידנים, גם עבור גורל האנושות כולה.\nבסוף העונה הקודמת, סערה האנושות לנוכח גילוי טיטאן בתוך החומה עצמה. יותר ויותר שאלות צצות ועולות בדבר זהותם ומקורם של הטיטאנים האימתניים. אם אכן ישנן תשובות כלשהן, נראה שכולן נמצאות במרתף ביתו של ארן, בין חורבות העיר שאליה פרצו הטיטאנים בראשונה.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1bgYZSQaQ7xWiFxLWHbQT5H7RtiGc7U6Y/preview",
+          "thumbnailUrl": "1696751364404Shingeki no Kyojin Season 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-2-e6",
+          "number": 6,
+          "title": "פרק 6: 6",
+          "description": "בעולם בו טיטאנים ענקיים אוכלי אדם מאיימים על עצם קיומה של האנושות, בני האדם נאלצו לבצר עצמם בחומות אדירות על מנת להבטיח את הישרדותם. אומנם החומות רק דחו את הבלתי נמנע, ולאחר מאה שנים ארוכות של שקט יחסי הצליחו הטיטאנים לפרוץ את חומת המגן החיצונה. בין הנספים באירוע נמנו אמו ואביו של ארן ייגר, ילד שחזה באמו נאכלת ממש לנגד עיניו. ארן, שנשבע לנקום בטיטאנים ולגאול את האנושות מייסוריה, התגייס לצבא במטרה לממש את שבועתו. אך חלומו השאפתני נגוז למול אימת הטיטאנים, עד שהתגלית המופלאה, לפיה שוכן בגופו של ארן כוח אדיר ומסתורי - הכוח להפוך את עצמו לטיטאן, טרפה את הקלפים עבור ארן המבולבל, ולראשונה מזה עידנים, גם עבור גורל האנושות כולה.\nבסוף העונה הקודמת, סערה האנושות לנוכח גילוי טיטאן בתוך החומה עצמה. יותר ויותר שאלות צצות ועולות בדבר זהותם ומקורם של הטיטאנים האימתניים. אם אכן ישנן תשובות כלשהן, נראה שכולן נמצאות במרתף ביתו של ארן, בין חורבות העיר שאליה פרצו הטיטאנים בראשונה.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1UTAOjP88fWbvXNedoLgoHg9wsts-YZMh/preview",
+          "thumbnailUrl": "1696751364404Shingeki no Kyojin Season 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-2-e7",
+          "number": 7,
+          "title": "פרק 7: 7",
+          "description": "בעולם בו טיטאנים ענקיים אוכלי אדם מאיימים על עצם קיומה של האנושות, בני האדם נאלצו לבצר עצמם בחומות אדירות על מנת להבטיח את הישרדותם. אומנם החומות רק דחו את הבלתי נמנע, ולאחר מאה שנים ארוכות של שקט יחסי הצליחו הטיטאנים לפרוץ את חומת המגן החיצונה. בין הנספים באירוע נמנו אמו ואביו של ארן ייגר, ילד שחזה באמו נאכלת ממש לנגד עיניו. ארן, שנשבע לנקום בטיטאנים ולגאול את האנושות מייסוריה, התגייס לצבא במטרה לממש את שבועתו. אך חלומו השאפתני נגוז למול אימת הטיטאנים, עד שהתגלית המופלאה, לפיה שוכן בגופו של ארן כוח אדיר ומסתורי - הכוח להפוך את עצמו לטיטאן, טרפה את הקלפים עבור ארן המבולבל, ולראשונה מזה עידנים, גם עבור גורל האנושות כולה.\nבסוף העונה הקודמת, סערה האנושות לנוכח גילוי טיטאן בתוך החומה עצמה. יותר ויותר שאלות צצות ועולות בדבר זהותם ומקורם של הטיטאנים האימתניים. אם אכן ישנן תשובות כלשהן, נראה שכולן נמצאות במרתף ביתו של ארן, בין חורבות העיר שאליה פרצו הטיטאנים בראשונה.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/17oLpFczegjGAEvedKTuUvwJ9P8_WDThW/preview",
+          "thumbnailUrl": "1696751364404Shingeki no Kyojin Season 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-2-e8",
+          "number": 8,
+          "title": "פרק 8: 8",
+          "description": "בעולם בו טיטאנים ענקיים אוכלי אדם מאיימים על עצם קיומה של האנושות, בני האדם נאלצו לבצר עצמם בחומות אדירות על מנת להבטיח את הישרדותם. אומנם החומות רק דחו את הבלתי נמנע, ולאחר מאה שנים ארוכות של שקט יחסי הצליחו הטיטאנים לפרוץ את חומת המגן החיצונה. בין הנספים באירוע נמנו אמו ואביו של ארן ייגר, ילד שחזה באמו נאכלת ממש לנגד עיניו. ארן, שנשבע לנקום בטיטאנים ולגאול את האנושות מייסוריה, התגייס לצבא במטרה לממש את שבועתו. אך חלומו השאפתני נגוז למול אימת הטיטאנים, עד שהתגלית המופלאה, לפיה שוכן בגופו של ארן כוח אדיר ומסתורי - הכוח להפוך את עצמו לטיטאן, טרפה את הקלפים עבור ארן המבולבל, ולראשונה מזה עידנים, גם עבור גורל האנושות כולה.\nבסוף העונה הקודמת, סערה האנושות לנוכח גילוי טיטאן בתוך החומה עצמה. יותר ויותר שאלות צצות ועולות בדבר זהותם ומקורם של הטיטאנים האימתניים. אם אכן ישנן תשובות כלשהן, נראה שכולן נמצאות במרתף ביתו של ארן, בין חורבות העיר שאליה פרצו הטיטאנים בראשונה.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1zd2GBTsMxBahJCDo5ssKeqXpQD65ZrIL/preview",
+          "thumbnailUrl": "1696751364404Shingeki no Kyojin Season 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-2-e9",
+          "number": 9,
+          "title": "פרק 9: 9",
+          "description": "בעולם בו טיטאנים ענקיים אוכלי אדם מאיימים על עצם קיומה של האנושות, בני האדם נאלצו לבצר עצמם בחומות אדירות על מנת להבטיח את הישרדותם. אומנם החומות רק דחו את הבלתי נמנע, ולאחר מאה שנים ארוכות של שקט יחסי הצליחו הטיטאנים לפרוץ את חומת המגן החיצונה. בין הנספים באירוע נמנו אמו ואביו של ארן ייגר, ילד שחזה באמו נאכלת ממש לנגד עיניו. ארן, שנשבע לנקום בטיטאנים ולגאול את האנושות מייסוריה, התגייס לצבא במטרה לממש את שבועתו. אך חלומו השאפתני נגוז למול אימת הטיטאנים, עד שהתגלית המופלאה, לפיה שוכן בגופו של ארן כוח אדיר ומסתורי - הכוח להפוך את עצמו לטיטאן, טרפה את הקלפים עבור ארן המבולבל, ולראשונה מזה עידנים, גם עבור גורל האנושות כולה.\nבסוף העונה הקודמת, סערה האנושות לנוכח גילוי טיטאן בתוך החומה עצמה. יותר ויותר שאלות צצות ועולות בדבר זהותם ומקורם של הטיטאנים האימתניים. אם אכן ישנן תשובות כלשהן, נראה שכולן נמצאות במרתף ביתו של ארן, בין חורבות העיר שאליה פרצו הטיטאנים בראשונה.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1reGH0QlLvjSAmrF1KapGrE7h1xs1TGqH/preview",
+          "thumbnailUrl": "1696751364404Shingeki no Kyojin Season 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-2-e10",
+          "number": 10,
+          "title": "פרק 10: 10",
+          "description": "בעולם בו טיטאנים ענקיים אוכלי אדם מאיימים על עצם קיומה של האנושות, בני האדם נאלצו לבצר עצמם בחומות אדירות על מנת להבטיח את הישרדותם. אומנם החומות רק דחו את הבלתי נמנע, ולאחר מאה שנים ארוכות של שקט יחסי הצליחו הטיטאנים לפרוץ את חומת המגן החיצונה. בין הנספים באירוע נמנו אמו ואביו של ארן ייגר, ילד שחזה באמו נאכלת ממש לנגד עיניו. ארן, שנשבע לנקום בטיטאנים ולגאול את האנושות מייסוריה, התגייס לצבא במטרה לממש את שבועתו. אך חלומו השאפתני נגוז למול אימת הטיטאנים, עד שהתגלית המופלאה, לפיה שוכן בגופו של ארן כוח אדיר ומסתורי - הכוח להפוך את עצמו לטיטאן, טרפה את הקלפים עבור ארן המבולבל, ולראשונה מזה עידנים, גם עבור גורל האנושות כולה.\nבסוף העונה הקודמת, סערה האנושות לנוכח גילוי טיטאן בתוך החומה עצמה. יותר ויותר שאלות צצות ועולות בדבר זהותם ומקורם של הטיטאנים האימתניים. אם אכן ישנן תשובות כלשהן, נראה שכולן נמצאות במרתף ביתו של ארן, בין חורבות העיר שאליה פרצו הטיטאנים בראשונה.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1jB0kY4_sRAYiAEVybEQ6LT1bQWDILv8D/preview",
+          "thumbnailUrl": "1696751364404Shingeki no Kyojin Season 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-2-e11",
+          "number": 11,
+          "title": "פרק 11: 11",
+          "description": "בעולם בו טיטאנים ענקיים אוכלי אדם מאיימים על עצם קיומה של האנושות, בני האדם נאלצו לבצר עצמם בחומות אדירות על מנת להבטיח את הישרדותם. אומנם החומות רק דחו את הבלתי נמנע, ולאחר מאה שנים ארוכות של שקט יחסי הצליחו הטיטאנים לפרוץ את חומת המגן החיצונה. בין הנספים באירוע נמנו אמו ואביו של ארן ייגר, ילד שחזה באמו נאכלת ממש לנגד עיניו. ארן, שנשבע לנקום בטיטאנים ולגאול את האנושות מייסוריה, התגייס לצבא במטרה לממש את שבועתו. אך חלומו השאפתני נגוז למול אימת הטיטאנים, עד שהתגלית המופלאה, לפיה שוכן בגופו של ארן כוח אדיר ומסתורי - הכוח להפוך את עצמו לטיטאן, טרפה את הקלפים עבור ארן המבולבל, ולראשונה מזה עידנים, גם עבור גורל האנושות כולה.\nבסוף העונה הקודמת, סערה האנושות לנוכח גילוי טיטאן בתוך החומה עצמה. יותר ויותר שאלות צצות ועולות בדבר זהותם ומקורם של הטיטאנים האימתניים. אם אכן ישנן תשובות כלשהן, נראה שכולן נמצאות במרתף ביתו של ארן, בין חורבות העיר שאליה פרצו הטיטאנים בראשונה.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1hXs-B6p-g5SbcWfzj24Q3SFYEi9xlAFx/preview",
+          "thumbnailUrl": "1696751364404Shingeki no Kyojin Season 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-season-2-e12",
+          "number": 12,
+          "title": "פרק 12: 12",
+          "description": "בעולם בו טיטאנים ענקיים אוכלי אדם מאיימים על עצם קיומה של האנושות, בני האדם נאלצו לבצר עצמם בחומות אדירות על מנת להבטיח את הישרדותם. אומנם החומות רק דחו את הבלתי נמנע, ולאחר מאה שנים ארוכות של שקט יחסי הצליחו הטיטאנים לפרוץ את חומת המגן החיצונה. בין הנספים באירוע נמנו אמו ואביו של ארן ייגר, ילד שחזה באמו נאכלת ממש לנגד עיניו. ארן, שנשבע לנקום בטיטאנים ולגאול את האנושות מייסוריה, התגייס לצבא במטרה לממש את שבועתו. אך חלומו השאפתני נגוז למול אימת הטיטאנים, עד שהתגלית המופלאה, לפיה שוכן בגופו של ארן כוח אדיר ומסתורי - הכוח להפוך את עצמו לטיטאן, טרפה את הקלפים עבור ארן המבולבל, ולראשונה מזה עידנים, גם עבור גורל האנושות כולה.\nבסוף העונה הקודמת, סערה האנושות לנוכח גילוי טיטאן בתוך החומה עצמה. יותר ויותר שאלות צצות ועולות בדבר זהותם ומקורם של הטיטאנים האימתניים. אם אכן ישנן תשובות כלשהן, נראה שכולן נמצאות במרתף ביתו של ארן, בין חורבות העיר שאליה פרצו הטיטאנים בראשונה.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1i-B0iBL_dnO6Z8zYr9C-1Rg6y7LgCp71/preview",
+          "thumbnailUrl": "1696751364404Shingeki no Kyojin Season 2.jpg"
+        }
+      ]
+    }
+  ]
+};
+
+// ============== SHINGEKI NO KYOJIN CHRONICLE ==============
+
+export const SHINGEKI_NO_KYOJIN_CHRONICLE: Movie = {
+  "id": "shingeki-no-kyojin-chronicle",
+  "englishName": "Shingeki no Kyojin: Chronicle",
+  "type": "series",
+  "title": "מתקפת הטיטאנים: כרוניקה",
+  "description": "סרט המסכם את כל מאורעות \"מתקפת הטיטאנים\" עד כה - את 59 הפרקים מהעונה הראשונה עד לעונה השלישית..",
+  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1696751493982Shingeki no Kyojin: Chronicle.jpg",
+  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1696751493982Shingeki no Kyojin: Chronicle.jpg",
+  "rating": "12+",
+  "matchScore": 95,
+  "year": 2020,
+  "genre": [
+    "אקשן",
+    "דרמה"
+  ],
+  "cast": [],
+  "source": {
+    "site": "aniplus.co",
+    "seriesUrl": "https://aniplus.co/anime/350",
+    "animeId": 350,
+    "generatedAt": "2026-01-03T16:32:00.367470Z"
+  },
+  "seasons": [
+    {
+      "id": "shingeki-no-kyojin-chronicle-s1",
+      "number": 1,
+      "title": "עונה 1",
+      "episodes": [
+        {
+          "id": "shingeki-no-kyojin-chronicle-e1",
+          "number": 1,
+          "title": "פרק 1: 1",
+          "description": "סרט המסכם את כל מאורעות \"מתקפת הטיטאנים\" עד כה - את 59 הפרקים מהעונה הראשונה עד לעונה השלישית..",
+          "duration": "90 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1NV2FEbgyivX0v0drCcqHkORRQ_GcgsiQ/preview",
+          "thumbnailUrl": "1696751493982Shingeki no Kyojin: Chronicle.jpg"
+        }
+      ]
+    }
+  ]
+};
+
+// ============== SHINGEKI NO KYOJIN THE FINAL SEASON ==============
+
+export const SHINGEKI_NO_KYOJIN_THE_FINAL_SEASON: Movie = {
+  "id": "shingeki-no-kyojin-the-final-season",
+  "englishName": "Shingeki no Kyojin: The Final Season",
+  "type": "series",
+  "title": "מתקפת הטיטאנים עונה 4",
+  "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1696751520269Shingeki no Kyojin: The Final Season.jpg",
+  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1696751520269Shingeki no Kyojin: The Final Season.jpg",
+  "rating": "12+",
+  "matchScore": 95,
+  "year": 2020,
+  "genre": [
+    "אקשן",
+    "דרמה"
+  ],
+  "cast": [],
+  "source": {
+    "site": "aniplus.co",
+    "seriesUrl": "https://aniplus.co/anime/351",
+    "animeId": 351,
+    "generatedAt": "2026-01-03T16:32:09.804166Z"
+  },
+  "seasons": [
+    {
+      "id": "shingeki-no-kyojin-the-final-season-s1",
+      "number": 1,
+      "title": "עונה 1",
+      "episodes": [
+        {
+          "id": "shingeki-no-kyojin-the-final-season-e1",
+          "number": 1,
+          "title": "פרק 1: 1",
+          "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/15JtYZ13qVs2-Qyy-OrlRlvNI_rqOFGkr/preview",
+          "thumbnailUrl": "1696751520269Shingeki no Kyojin: The Final Season.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-e2",
+          "number": 2,
+          "title": "פרק 2: 2",
+          "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1ZKyYr7WMyWsJrw2VAZGpjkFEgLXhYLO0/preview",
+          "thumbnailUrl": "1696751520269Shingeki no Kyojin: The Final Season.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-e3",
+          "number": 3,
+          "title": "פרק 3: 3",
+          "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1ofC-fPjfs250vGbMQJtk2AAQGyldHvQt/preview",
+          "thumbnailUrl": "1696751520269Shingeki no Kyojin: The Final Season.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-e4",
+          "number": 4,
+          "title": "פרק 4: 4",
+          "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1PCXqPbpgeJ8-rCTQTcYfTMMKvNp0ifAp/preview",
+          "thumbnailUrl": "1696751520269Shingeki no Kyojin: The Final Season.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-e5",
+          "number": 5,
+          "title": "פרק 5: 5",
+          "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1ZR-EHyvAO8xVIZ--szaLoRsy5UtXfFk6/preview",
+          "thumbnailUrl": "1696751520269Shingeki no Kyojin: The Final Season.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-e6",
+          "number": 6,
+          "title": "פרק 6: 6",
+          "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1SNgfIf9KrQU5dhnrhDOeIFwZMUUHpAF2/preview",
+          "thumbnailUrl": "1696751520269Shingeki no Kyojin: The Final Season.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-e7",
+          "number": 7,
+          "title": "פרק 7: 7",
+          "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1Uz2_K1RtlmmNnqyod7wYqhyhjQU5d7V8/preview",
+          "thumbnailUrl": "1696751520269Shingeki no Kyojin: The Final Season.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-e8",
+          "number": 8,
+          "title": "פרק 8: 8",
+          "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1a27Dq3-E0ByLGTQRe2B_rDexlKLcATG8/preview",
+          "thumbnailUrl": "1696751520269Shingeki no Kyojin: The Final Season.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-e9",
+          "number": 9,
+          "title": "פרק 9: 9",
+          "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/10Z5uLScPhcybLtLdFflH6JbOXBXppqoX/preview",
+          "thumbnailUrl": "1696751520269Shingeki no Kyojin: The Final Season.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-e10",
+          "number": 10,
+          "title": "פרק 10: 10",
+          "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1-0Zasn9wSTGrWq0xHjM_PjhQYsqtGcY-/preview",
+          "thumbnailUrl": "1696751520269Shingeki no Kyojin: The Final Season.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-e11",
+          "number": 11,
+          "title": "פרק 11: 11",
+          "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1FEfaLbQfT16g2BcF_csHM-2ZqZA88W25/preview",
+          "thumbnailUrl": "1696751520269Shingeki no Kyojin: The Final Season.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-e12",
+          "number": 12,
+          "title": "פרק 12: 12",
+          "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1VcWTm8umxdHv8sQNW2u9jLwBi8CufKqo/preview",
+          "thumbnailUrl": "1696751520269Shingeki no Kyojin: The Final Season.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-e13",
+          "number": 13,
+          "title": "פרק 13: 13",
+          "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1xd8DaXm6ysFh2rejMLaayAX3qzW05gjP/preview",
+          "thumbnailUrl": "1696751520269Shingeki no Kyojin: The Final Season.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-e14",
+          "number": 14,
+          "title": "פרק 14: 14",
+          "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1KEyYjQF-tdTUlvDqdsw_m3I5h5kJI5OJ/preview",
+          "thumbnailUrl": "1696751520269Shingeki no Kyojin: The Final Season.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-e15",
+          "number": 15,
+          "title": "פרק 15: 15",
+          "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/18H0YbWooVcr2SiZyhYI89puyWiBIWEsb/preview",
+          "thumbnailUrl": "1696751520269Shingeki no Kyojin: The Final Season.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-e16",
+          "number": 16,
+          "title": "פרק 16: 16",
+          "description": "גבי בראון ופאלקו גרייס התאמנו כל חייהם להיות היורשים של כוחות הטיטאנים שנמצאים כעת בשליטת מארלי, הם מוכנים לעשות הכל על מנת לסייע לאומתם בחיסול האלדיאנים באי פארדיס. עם זאת, כשהכל נראה כשורה, שלוותם של אנשי מארלי מופרת לפתע בעקבות הגעתם של ארן ייגר וחיל הסיור לשטחם.\nלאחר שהגיעו סוף סוף למרתף ביתם של משפחת ייגר ולמדו על ההיסטוריה האפלה של הטיטאנים ועל החומות, חיל הסיור מחזיק בידיו את התשובות לשאלות שהם נלחמו כל-כך קשה למענן. התשובות, אומנם, שונות ונוראות מעל לכל מה שיכלו להעלות בדעתם. כשהאמת נמצאת ברשותם, הקבוצה יוצאת אל העולם שמעבר לחומות במטרה להציל את האנושות מן הרעידות.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1XUSZsXNFUpizkONJ6xIlxCfgmUfOWreG/preview",
+          "thumbnailUrl": "1696751520269Shingeki no Kyojin: The Final Season.jpg"
+        }
+      ]
+    }
+  ]
+};
+
+// ============== SHINGEKI NO KYOJIN THE FINAL SEASON PART 2 ==============
+
+export const SHINGEKI_NO_KYOJIN_THE_FINAL_SEASON_PART_2: Movie = {
+  "id": "shingeki-no-kyojin-the-final-season-part-2",
+  "englishName": "Shingeki no Kyojin: The Final Season Part 2",
+  "type": "series",
+  "title": "מתקפת הטיטאנים עונה 4 חלק 2",
+  "description": "ארן ייגר, מי שרצה בכל מאודו להציל את האנושות שבין החומות, מפנה כעת את עורפו לחבריו, לבעלי בריתו ולאויביו לשעבר. בהדרכתו של הטיטאן החייתי, זיק, ארן מוכן בקפידה לסיום הסכסוך עתיק היומין בין מארלי ובין אלדיה, והוא עומד לנקוט בכל האמצעים הדרושים על מנת להוציא את תוכניתו אל הפועל.\nבמקביל, מארלי ואלדיה נלחמות זו בזו במטרה לחסל זו את זו עד היסוד, תוך שימוש נרחב בחיילים ובטיטאנים שברשותם. ריינר בראון משתמש בכוחותיו בניסיון נואש להדוף את הכוח הצבאי של ארן, בעוד שהילדים האלדיאנים פאלקו גרייס וגבי בראון נאבקים לשרוד בכאוס המתרחש סביבם.\nארן הפך כעת למפלצת. מיקאסה, ארמין וכל החבורה עדיין מאמינים שהוא מסתיר כוונות טובות כלשהן, למרות שכוונותיו האמיתיות עדיין אינן ברורות, ועושים כל שביכולתם בכדי להציל את חברם הטוב שכבר אבד ואיננו עוד.",
+  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1696751546027Shingeki no Kyojin: The Final Season Part 2.jpg",
+  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1696751546027Shingeki no Kyojin: The Final Season Part 2.jpg",
+  "rating": "12+",
+  "matchScore": 95,
+  "year": 2022,
+  "genre": [
+    "אקשן",
+    "דרמה"
+  ],
+  "cast": [],
+  "source": {
+    "site": "aniplus.co",
+    "seriesUrl": "https://aniplus.co/anime/352",
+    "animeId": 352,
+    "generatedAt": "2026-01-03T16:32:16.489208Z"
+  },
+  "seasons": [
+    {
+      "id": "shingeki-no-kyojin-the-final-season-part-2-s1",
+      "number": 1,
+      "title": "עונה 1",
+      "episodes": [
+        {
+          "id": "shingeki-no-kyojin-the-final-season-part-2-e1",
+          "number": 1,
+          "title": "פרק 1: 1",
+          "description": "ארן ייגר, מי שרצה בכל מאודו להציל את האנושות שבין החומות, מפנה כעת את עורפו לחבריו, לבעלי בריתו ולאויביו לשעבר. בהדרכתו של הטיטאן החייתי, זיק, ארן מוכן בקפידה לסיום הסכסוך עתיק היומין בין מארלי ובין אלדיה, והוא עומד לנקוט בכל האמצעים הדרושים על מנת להוציא את תוכניתו אל הפועל.\nבמקביל, מארלי ואלדיה נלחמות זו בזו במטרה לחסל זו את זו עד היסוד, תוך שימוש נרחב בחיילים ובטיטאנים שברשותם. ריינר בראון משתמש בכוחותיו בניסיון נואש להדוף את הכוח הצבאי של ארן, בעוד שהילדים האלדיאנים פאלקו גרייס וגבי בראון נאבקים לשרוד בכאוס המתרחש סביבם.\nארן הפך כעת למפלצת. מיקאסה, ארמין וכל החבורה עדיין מאמינים שהוא מסתיר כוונות טובות כלשהן, למרות שכוונותיו האמיתיות עדיין אינן ברורות, ועושים כל שביכולתם בכדי להציל את חברם הטוב שכבר אבד ואיננו עוד.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1f7cMJhDB_ozFFOOZqJ-WMApAcOJ209uY/preview",
+          "thumbnailUrl": "1696751546027Shingeki no Kyojin: The Final Season Part 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-part-2-e2",
+          "number": 2,
+          "title": "פרק 2: 2",
+          "description": "ארן ייגר, מי שרצה בכל מאודו להציל את האנושות שבין החומות, מפנה כעת את עורפו לחבריו, לבעלי בריתו ולאויביו לשעבר. בהדרכתו של הטיטאן החייתי, זיק, ארן מוכן בקפידה לסיום הסכסוך עתיק היומין בין מארלי ובין אלדיה, והוא עומד לנקוט בכל האמצעים הדרושים על מנת להוציא את תוכניתו אל הפועל.\nבמקביל, מארלי ואלדיה נלחמות זו בזו במטרה לחסל זו את זו עד היסוד, תוך שימוש נרחב בחיילים ובטיטאנים שברשותם. ריינר בראון משתמש בכוחותיו בניסיון נואש להדוף את הכוח הצבאי של ארן, בעוד שהילדים האלדיאנים פאלקו גרייס וגבי בראון נאבקים לשרוד בכאוס המתרחש סביבם.\nארן הפך כעת למפלצת. מיקאסה, ארמין וכל החבורה עדיין מאמינים שהוא מסתיר כוונות טובות כלשהן, למרות שכוונותיו האמיתיות עדיין אינן ברורות, ועושים כל שביכולתם בכדי להציל את חברם הטוב שכבר אבד ואיננו עוד.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1gKCVbqqqDI8hCAM_MB-YHVbuOPXluLRE/preview",
+          "thumbnailUrl": "1696751546027Shingeki no Kyojin: The Final Season Part 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-part-2-e3",
+          "number": 3,
+          "title": "פרק 3: 3",
+          "description": "ארן ייגר, מי שרצה בכל מאודו להציל את האנושות שבין החומות, מפנה כעת את עורפו לחבריו, לבעלי בריתו ולאויביו לשעבר. בהדרכתו של הטיטאן החייתי, זיק, ארן מוכן בקפידה לסיום הסכסוך עתיק היומין בין מארלי ובין אלדיה, והוא עומד לנקוט בכל האמצעים הדרושים על מנת להוציא את תוכניתו אל הפועל.\nבמקביל, מארלי ואלדיה נלחמות זו בזו במטרה לחסל זו את זו עד היסוד, תוך שימוש נרחב בחיילים ובטיטאנים שברשותם. ריינר בראון משתמש בכוחותיו בניסיון נואש להדוף את הכוח הצבאי של ארן, בעוד שהילדים האלדיאנים פאלקו גרייס וגבי בראון נאבקים לשרוד בכאוס המתרחש סביבם.\nארן הפך כעת למפלצת. מיקאסה, ארמין וכל החבורה עדיין מאמינים שהוא מסתיר כוונות טובות כלשהן, למרות שכוונותיו האמיתיות עדיין אינן ברורות, ועושים כל שביכולתם בכדי להציל את חברם הטוב שכבר אבד ואיננו עוד.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1ALwpllqYH6ZjQe5DJK9XMTBNWa_BBJTX/preview",
+          "thumbnailUrl": "1696751546027Shingeki no Kyojin: The Final Season Part 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-part-2-e4",
+          "number": 4,
+          "title": "פרק 4: 4",
+          "description": "ארן ייגר, מי שרצה בכל מאודו להציל את האנושות שבין החומות, מפנה כעת את עורפו לחבריו, לבעלי בריתו ולאויביו לשעבר. בהדרכתו של הטיטאן החייתי, זיק, ארן מוכן בקפידה לסיום הסכסוך עתיק היומין בין מארלי ובין אלדיה, והוא עומד לנקוט בכל האמצעים הדרושים על מנת להוציא את תוכניתו אל הפועל.\nבמקביל, מארלי ואלדיה נלחמות זו בזו במטרה לחסל זו את זו עד היסוד, תוך שימוש נרחב בחיילים ובטיטאנים שברשותם. ריינר בראון משתמש בכוחותיו בניסיון נואש להדוף את הכוח הצבאי של ארן, בעוד שהילדים האלדיאנים פאלקו גרייס וגבי בראון נאבקים לשרוד בכאוס המתרחש סביבם.\nארן הפך כעת למפלצת. מיקאסה, ארמין וכל החבורה עדיין מאמינים שהוא מסתיר כוונות טובות כלשהן, למרות שכוונותיו האמיתיות עדיין אינן ברורות, ועושים כל שביכולתם בכדי להציל את חברם הטוב שכבר אבד ואיננו עוד.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1RIIQli3JTtO-2eHIcLCJdiA4LA3NvqoH/preview",
+          "thumbnailUrl": "1696751546027Shingeki no Kyojin: The Final Season Part 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-part-2-e5",
+          "number": 5,
+          "title": "פרק 5: 5",
+          "description": "ארן ייגר, מי שרצה בכל מאודו להציל את האנושות שבין החומות, מפנה כעת את עורפו לחבריו, לבעלי בריתו ולאויביו לשעבר. בהדרכתו של הטיטאן החייתי, זיק, ארן מוכן בקפידה לסיום הסכסוך עתיק היומין בין מארלי ובין אלדיה, והוא עומד לנקוט בכל האמצעים הדרושים על מנת להוציא את תוכניתו אל הפועל.\nבמקביל, מארלי ואלדיה נלחמות זו בזו במטרה לחסל זו את זו עד היסוד, תוך שימוש נרחב בחיילים ובטיטאנים שברשותם. ריינר בראון משתמש בכוחותיו בניסיון נואש להדוף את הכוח הצבאי של ארן, בעוד שהילדים האלדיאנים פאלקו גרייס וגבי בראון נאבקים לשרוד בכאוס המתרחש סביבם.\nארן הפך כעת למפלצת. מיקאסה, ארמין וכל החבורה עדיין מאמינים שהוא מסתיר כוונות טובות כלשהן, למרות שכוונותיו האמיתיות עדיין אינן ברורות, ועושים כל שביכולתם בכדי להציל את חברם הטוב שכבר אבד ואיננו עוד.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1XKJoDd6i0sbq2_BdYi1xAKL3fzeLDL34/preview",
+          "thumbnailUrl": "1696751546027Shingeki no Kyojin: The Final Season Part 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-part-2-e6",
+          "number": 6,
+          "title": "פרק 6: 6",
+          "description": "ארן ייגר, מי שרצה בכל מאודו להציל את האנושות שבין החומות, מפנה כעת את עורפו לחבריו, לבעלי בריתו ולאויביו לשעבר. בהדרכתו של הטיטאן החייתי, זיק, ארן מוכן בקפידה לסיום הסכסוך עתיק היומין בין מארלי ובין אלדיה, והוא עומד לנקוט בכל האמצעים הדרושים על מנת להוציא את תוכניתו אל הפועל.\nבמקביל, מארלי ואלדיה נלחמות זו בזו במטרה לחסל זו את זו עד היסוד, תוך שימוש נרחב בחיילים ובטיטאנים שברשותם. ריינר בראון משתמש בכוחותיו בניסיון נואש להדוף את הכוח הצבאי של ארן, בעוד שהילדים האלדיאנים פאלקו גרייס וגבי בראון נאבקים לשרוד בכאוס המתרחש סביבם.\nארן הפך כעת למפלצת. מיקאסה, ארמין וכל החבורה עדיין מאמינים שהוא מסתיר כוונות טובות כלשהן, למרות שכוונותיו האמיתיות עדיין אינן ברורות, ועושים כל שביכולתם בכדי להציל את חברם הטוב שכבר אבד ואיננו עוד.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/148QezgLHUj9N4J_D1SyAb9cEgwLrt4da/preview",
+          "thumbnailUrl": "1696751546027Shingeki no Kyojin: The Final Season Part 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-part-2-e7",
+          "number": 7,
+          "title": "פרק 7: 7",
+          "description": "ארן ייגר, מי שרצה בכל מאודו להציל את האנושות שבין החומות, מפנה כעת את עורפו לחבריו, לבעלי בריתו ולאויביו לשעבר. בהדרכתו של הטיטאן החייתי, זיק, ארן מוכן בקפידה לסיום הסכסוך עתיק היומין בין מארלי ובין אלדיה, והוא עומד לנקוט בכל האמצעים הדרושים על מנת להוציא את תוכניתו אל הפועל.\nבמקביל, מארלי ואלדיה נלחמות זו בזו במטרה לחסל זו את זו עד היסוד, תוך שימוש נרחב בחיילים ובטיטאנים שברשותם. ריינר בראון משתמש בכוחותיו בניסיון נואש להדוף את הכוח הצבאי של ארן, בעוד שהילדים האלדיאנים פאלקו גרייס וגבי בראון נאבקים לשרוד בכאוס המתרחש סביבם.\nארן הפך כעת למפלצת. מיקאסה, ארמין וכל החבורה עדיין מאמינים שהוא מסתיר כוונות טובות כלשהן, למרות שכוונותיו האמיתיות עדיין אינן ברורות, ועושים כל שביכולתם בכדי להציל את חברם הטוב שכבר אבד ואיננו עוד.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/147jVkAVRbJ1btU5ROd1vMrzb8hORux1x/preview",
+          "thumbnailUrl": "1696751546027Shingeki no Kyojin: The Final Season Part 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-part-2-e8",
+          "number": 8,
+          "title": "פרק 8: 8",
+          "description": "ארן ייגר, מי שרצה בכל מאודו להציל את האנושות שבין החומות, מפנה כעת את עורפו לחבריו, לבעלי בריתו ולאויביו לשעבר. בהדרכתו של הטיטאן החייתי, זיק, ארן מוכן בקפידה לסיום הסכסוך עתיק היומין בין מארלי ובין אלדיה, והוא עומד לנקוט בכל האמצעים הדרושים על מנת להוציא את תוכניתו אל הפועל.\nבמקביל, מארלי ואלדיה נלחמות זו בזו במטרה לחסל זו את זו עד היסוד, תוך שימוש נרחב בחיילים ובטיטאנים שברשותם. ריינר בראון משתמש בכוחותיו בניסיון נואש להדוף את הכוח הצבאי של ארן, בעוד שהילדים האלדיאנים פאלקו גרייס וגבי בראון נאבקים לשרוד בכאוס המתרחש סביבם.\nארן הפך כעת למפלצת. מיקאסה, ארמין וכל החבורה עדיין מאמינים שהוא מסתיר כוונות טובות כלשהן, למרות שכוונותיו האמיתיות עדיין אינן ברורות, ועושים כל שביכולתם בכדי להציל את חברם הטוב שכבר אבד ואיננו עוד.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1dqJk-E3TiDA4sKKcR2bMjrS_Xf5BYsWu/preview",
+          "thumbnailUrl": "1696751546027Shingeki no Kyojin: The Final Season Part 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-part-2-e9",
+          "number": 9,
+          "title": "פרק 9: 9",
+          "description": "ארן ייגר, מי שרצה בכל מאודו להציל את האנושות שבין החומות, מפנה כעת את עורפו לחבריו, לבעלי בריתו ולאויביו לשעבר. בהדרכתו של הטיטאן החייתי, זיק, ארן מוכן בקפידה לסיום הסכסוך עתיק היומין בין מארלי ובין אלדיה, והוא עומד לנקוט בכל האמצעים הדרושים על מנת להוציא את תוכניתו אל הפועל.\nבמקביל, מארלי ואלדיה נלחמות זו בזו במטרה לחסל זו את זו עד היסוד, תוך שימוש נרחב בחיילים ובטיטאנים שברשותם. ריינר בראון משתמש בכוחותיו בניסיון נואש להדוף את הכוח הצבאי של ארן, בעוד שהילדים האלדיאנים פאלקו גרייס וגבי בראון נאבקים לשרוד בכאוס המתרחש סביבם.\nארן הפך כעת למפלצת. מיקאסה, ארמין וכל החבורה עדיין מאמינים שהוא מסתיר כוונות טובות כלשהן, למרות שכוונותיו האמיתיות עדיין אינן ברורות, ועושים כל שביכולתם בכדי להציל את חברם הטוב שכבר אבד ואיננו עוד.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1IG-EuaafpprY-ioOz1J7Bo3M7Cdmzj8r/preview",
+          "thumbnailUrl": "1696751546027Shingeki no Kyojin: The Final Season Part 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-part-2-e10",
+          "number": 10,
+          "title": "פרק 10: 10",
+          "description": "ארן ייגר, מי שרצה בכל מאודו להציל את האנושות שבין החומות, מפנה כעת את עורפו לחבריו, לבעלי בריתו ולאויביו לשעבר. בהדרכתו של הטיטאן החייתי, זיק, ארן מוכן בקפידה לסיום הסכסוך עתיק היומין בין מארלי ובין אלדיה, והוא עומד לנקוט בכל האמצעים הדרושים על מנת להוציא את תוכניתו אל הפועל.\nבמקביל, מארלי ואלדיה נלחמות זו בזו במטרה לחסל זו את זו עד היסוד, תוך שימוש נרחב בחיילים ובטיטאנים שברשותם. ריינר בראון משתמש בכוחותיו בניסיון נואש להדוף את הכוח הצבאי של ארן, בעוד שהילדים האלדיאנים פאלקו גרייס וגבי בראון נאבקים לשרוד בכאוס המתרחש סביבם.\nארן הפך כעת למפלצת. מיקאסה, ארמין וכל החבורה עדיין מאמינים שהוא מסתיר כוונות טובות כלשהן, למרות שכוונותיו האמיתיות עדיין אינן ברורות, ועושים כל שביכולתם בכדי להציל את חברם הטוב שכבר אבד ואיננו עוד.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1SsxzDZHhNFLV5ibQwcYiP5HAI8HGlxrd/preview",
+          "thumbnailUrl": "1696751546027Shingeki no Kyojin: The Final Season Part 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-part-2-e11",
+          "number": 11,
+          "title": "פרק 11: 11",
+          "description": "ארן ייגר, מי שרצה בכל מאודו להציל את האנושות שבין החומות, מפנה כעת את עורפו לחבריו, לבעלי בריתו ולאויביו לשעבר. בהדרכתו של הטיטאן החייתי, זיק, ארן מוכן בקפידה לסיום הסכסוך עתיק היומין בין מארלי ובין אלדיה, והוא עומד לנקוט בכל האמצעים הדרושים על מנת להוציא את תוכניתו אל הפועל.\nבמקביל, מארלי ואלדיה נלחמות זו בזו במטרה לחסל זו את זו עד היסוד, תוך שימוש נרחב בחיילים ובטיטאנים שברשותם. ריינר בראון משתמש בכוחותיו בניסיון נואש להדוף את הכוח הצבאי של ארן, בעוד שהילדים האלדיאנים פאלקו גרייס וגבי בראון נאבקים לשרוד בכאוס המתרחש סביבם.\nארן הפך כעת למפלצת. מיקאסה, ארמין וכל החבורה עדיין מאמינים שהוא מסתיר כוונות טובות כלשהן, למרות שכוונותיו האמיתיות עדיין אינן ברורות, ועושים כל שביכולתם בכדי להציל את חברם הטוב שכבר אבד ואיננו עוד.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/17aVaYt3tzrhJABCpeRYDSwe5Ea9dPEtP/preview",
+          "thumbnailUrl": "1696751546027Shingeki no Kyojin: The Final Season Part 2.jpg"
+        },
+        {
+          "id": "shingeki-no-kyojin-the-final-season-part-2-e12",
+          "number": 12,
+          "title": "פרק 12: 12",
+          "description": "ארן ייגר, מי שרצה בכל מאודו להציל את האנושות שבין החומות, מפנה כעת את עורפו לחבריו, לבעלי בריתו ולאויביו לשעבר. בהדרכתו של הטיטאן החייתי, זיק, ארן מוכן בקפידה לסיום הסכסוך עתיק היומין בין מארלי ובין אלדיה, והוא עומד לנקוט בכל האמצעים הדרושים על מנת להוציא את תוכניתו אל הפועל.\nבמקביל, מארלי ואלדיה נלחמות זו בזו במטרה לחסל זו את זו עד היסוד, תוך שימוש נרחב בחיילים ובטיטאנים שברשותם. ריינר בראון משתמש בכוחותיו בניסיון נואש להדוף את הכוח הצבאי של ארן, בעוד שהילדים האלדיאנים פאלקו גרייס וגבי בראון נאבקים לשרוד בכאוס המתרחש סביבם.\nארן הפך כעת למפלצת. מיקאסה, ארמין וכל החבורה עדיין מאמינים שהוא מסתיר כוונות טובות כלשהן, למרות שכוונותיו האמיתיות עדיין אינן ברורות, ועושים כל שביכולתם בכדי להציל את חברם הטוב שכבר אבד ואיננו עוד.",
+          "duration": "23 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1F3jX89WBerYyY1FeFRQMzXDd5av9E-12/preview",
+          "thumbnailUrl": "1696751546027Shingeki no Kyojin: The Final Season Part 2.jpg"
+        }
+      ]
+    }
+  ]
+};
+
+// ============== SHINGEKI KYOJIN CHUUGAKKOU ==============
+
+export const SHINGEKI_KYOJIN_CHUUGAKKOU: Movie = {
+  "id": "shingeki-kyojin-chuugakkou",
+  "englishName": "Shingeki! Kyojin Chuugakkou",
+  "type": "series",
+  "title": "מתקפת חטיבת הביניים",
+  "description": "ביומו הראשון בחטיבת הביניים, ארן ייגר עומד פנים אל פנים מול טיטאן - שגונב ממנו את ארוחת הצהריים! מאותו יום ואילך, ארן נוטר טינה לטיטאנים על שלקחו ממנו את ארוחת הצ'יזבורגר שלו - האוכל האהוב עליו, ונשבע שיום אחד הוא ייחסל את הטיטאנים אחת ולתמיד. יחד עם אחותו המאומצת מיקאסה אקרמן וחברו הטוב ארמין ארלרט, השלישייה פולשת אל תיכון הטיטאנים, נתקלת בפנים מוכרות ומשתתפת בפעילויות שונות מחוץ לבית הספר במסגרת מועדון ניקוי החומות.\n\nכפרודיה לסדרת האם הפופולרית, \"מתקפת חטיבת הביניים\" מציגה את הדמויות האהובות כתלמידי חטיבה הנלחמים כל עוד נפשם בם בכדי להגן על ארוחות הצהריים שלהם מפני הטיטאנים הזללנים.",
+  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1696751276606Shingeki! Kyojin Chuugakkou.jpg",
+  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1696751276606Shingeki! Kyojin Chuugakkou.jpg",
+  "rating": "12+",
+  "matchScore": 95,
+  "year": 2015,
+  "genre": [
+    "קומדיה"
+  ],
+  "cast": [],
+  "source": {
+    "site": "aniplus.co",
+    "seriesUrl": "https://aniplus.co/anime/346",
+    "animeId": 346,
+    "generatedAt": "2026-01-03T16:32:23.098089Z"
+  },
+  "seasons": [
+    {
+      "id": "shingeki-kyojin-chuugakkou-s1",
+      "number": 1,
+      "title": "עונה 1",
+      "episodes": [
+        {
+          "id": "shingeki-kyojin-chuugakkou-e1",
+          "number": 1,
+          "title": "פרק 1: 1",
+          "description": "ביומו הראשון בחטיבת הביניים, ארן ייגר עומד פנים אל פנים מול טיטאן - שגונב ממנו את ארוחת הצהריים! מאותו יום ואילך, ארן נוטר טינה לטיטאנים על שלקחו ממנו את ארוחת הצ'יזבורגר שלו - האוכל האהוב עליו, ונשבע שיום אחד הוא ייחסל את הטיטאנים אחת ולתמיד. יחד עם אחותו המאומצת מיקאסה אקרמן וחברו הטוב ארמין ארלרט, השלישייה פולשת אל תיכון הטיטאנים, נתקלת בפנים מוכרות ומשתתפת בפעילויות שונות מחוץ לבית הספר במסגרת מועדון ניקוי החומות.\n\nכפרודיה לסדרת האם הפופולרית, \"מתקפת חטיבת הביניים\" מציגה את הדמויות האהובות כתלמידי חטיבה הנלחמים כל עוד נפשם בם בכדי להגן על ארוחות הצהריים שלהם מפני הטיטאנים הזללנים.",
+          "duration": "17 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1mC-V0XWzLK9OYLwCq6yrTjdm0jigx74J/preview",
+          "thumbnailUrl": "1696751276606Shingeki! Kyojin Chuugakkou.jpg"
+        },
+        {
+          "id": "shingeki-kyojin-chuugakkou-e2",
+          "number": 2,
+          "title": "פרק 2: 2",
+          "description": "ביומו הראשון בחטיבת הביניים, ארן ייגר עומד פנים אל פנים מול טיטאן - שגונב ממנו את ארוחת הצהריים! מאותו יום ואילך, ארן נוטר טינה לטיטאנים על שלקחו ממנו את ארוחת הצ'יזבורגר שלו - האוכל האהוב עליו, ונשבע שיום אחד הוא ייחסל את הטיטאנים אחת ולתמיד. יחד עם אחותו המאומצת מיקאסה אקרמן וחברו הטוב ארמין ארלרט, השלישייה פולשת אל תיכון הטיטאנים, נתקלת בפנים מוכרות ומשתתפת בפעילויות שונות מחוץ לבית הספר במסגרת מועדון ניקוי החומות.\n\nכפרודיה לסדרת האם הפופולרית, \"מתקפת חטיבת הביניים\" מציגה את הדמויות האהובות כתלמידי חטיבה הנלחמים כל עוד נפשם בם בכדי להגן על ארוחות הצהריים שלהם מפני הטיטאנים הזללנים.",
+          "duration": "17 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1XhjBM9PWce5SqC_XJAq1dzFKprePYHdI/preview",
+          "thumbnailUrl": "1696751276606Shingeki! Kyojin Chuugakkou.jpg"
+        },
+        {
+          "id": "shingeki-kyojin-chuugakkou-e3",
+          "number": 3,
+          "title": "פרק 3: 3",
+          "description": "ביומו הראשון בחטיבת הביניים, ארן ייגר עומד פנים אל פנים מול טיטאן - שגונב ממנו את ארוחת הצהריים! מאותו יום ואילך, ארן נוטר טינה לטיטאנים על שלקחו ממנו את ארוחת הצ'יזבורגר שלו - האוכל האהוב עליו, ונשבע שיום אחד הוא ייחסל את הטיטאנים אחת ולתמיד. יחד עם אחותו המאומצת מיקאסה אקרמן וחברו הטוב ארמין ארלרט, השלישייה פולשת אל תיכון הטיטאנים, נתקלת בפנים מוכרות ומשתתפת בפעילויות שונות מחוץ לבית הספר במסגרת מועדון ניקוי החומות.\n\nכפרודיה לסדרת האם הפופולרית, \"מתקפת חטיבת הביניים\" מציגה את הדמויות האהובות כתלמידי חטיבה הנלחמים כל עוד נפשם בם בכדי להגן על ארוחות הצהריים שלהם מפני הטיטאנים הזללנים.",
+          "duration": "17 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1UGSzQhukhxFh695FjOayPJGGlZ1x5VoY/preview",
+          "thumbnailUrl": "1696751276606Shingeki! Kyojin Chuugakkou.jpg"
+        },
+        {
+          "id": "shingeki-kyojin-chuugakkou-e4",
+          "number": 4,
+          "title": "פרק 4: 4",
+          "description": "ביומו הראשון בחטיבת הביניים, ארן ייגר עומד פנים אל פנים מול טיטאן - שגונב ממנו את ארוחת הצהריים! מאותו יום ואילך, ארן נוטר טינה לטיטאנים על שלקחו ממנו את ארוחת הצ'יזבורגר שלו - האוכל האהוב עליו, ונשבע שיום אחד הוא ייחסל את הטיטאנים אחת ולתמיד. יחד עם אחותו המאומצת מיקאסה אקרמן וחברו הטוב ארמין ארלרט, השלישייה פולשת אל תיכון הטיטאנים, נתקלת בפנים מוכרות ומשתתפת בפעילויות שונות מחוץ לבית הספר במסגרת מועדון ניקוי החומות.\n\nכפרודיה לסדרת האם הפופולרית, \"מתקפת חטיבת הביניים\" מציגה את הדמויות האהובות כתלמידי חטיבה הנלחמים כל עוד נפשם בם בכדי להגן על ארוחות הצהריים שלהם מפני הטיטאנים הזללנים.",
+          "duration": "17 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1DENEcipa3g9mfrhupinct3FhJIF8Gfq2/preview",
+          "thumbnailUrl": "1696751276606Shingeki! Kyojin Chuugakkou.jpg"
+        },
+        {
+          "id": "shingeki-kyojin-chuugakkou-e5",
+          "number": 5,
+          "title": "פרק 5: 5",
+          "description": "ביומו הראשון בחטיבת הביניים, ארן ייגר עומד פנים אל פנים מול טיטאן - שגונב ממנו את ארוחת הצהריים! מאותו יום ואילך, ארן נוטר טינה לטיטאנים על שלקחו ממנו את ארוחת הצ'יזבורגר שלו - האוכל האהוב עליו, ונשבע שיום אחד הוא ייחסל את הטיטאנים אחת ולתמיד. יחד עם אחותו המאומצת מיקאסה אקרמן וחברו הטוב ארמין ארלרט, השלישייה פולשת אל תיכון הטיטאנים, נתקלת בפנים מוכרות ומשתתפת בפעילויות שונות מחוץ לבית הספר במסגרת מועדון ניקוי החומות.\n\nכפרודיה לסדרת האם הפופולרית, \"מתקפת חטיבת הביניים\" מציגה את הדמויות האהובות כתלמידי חטיבה הנלחמים כל עוד נפשם בם בכדי להגן על ארוחות הצהריים שלהם מפני הטיטאנים הזללנים.",
+          "duration": "17 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1Le1PMhUeYAljI_imJx5F3E7iI2FXcoJe/preview",
+          "thumbnailUrl": "1696751276606Shingeki! Kyojin Chuugakkou.jpg"
+        },
+        {
+          "id": "shingeki-kyojin-chuugakkou-e6",
+          "number": 6,
+          "title": "פרק 6: 6",
+          "description": "ביומו הראשון בחטיבת הביניים, ארן ייגר עומד פנים אל פנים מול טיטאן - שגונב ממנו את ארוחת הצהריים! מאותו יום ואילך, ארן נוטר טינה לטיטאנים על שלקחו ממנו את ארוחת הצ'יזבורגר שלו - האוכל האהוב עליו, ונשבע שיום אחד הוא ייחסל את הטיטאנים אחת ולתמיד. יחד עם אחותו המאומצת מיקאסה אקרמן וחברו הטוב ארמין ארלרט, השלישייה פולשת אל תיכון הטיטאנים, נתקלת בפנים מוכרות ומשתתפת בפעילויות שונות מחוץ לבית הספר במסגרת מועדון ניקוי החומות.\n\nכפרודיה לסדרת האם הפופולרית, \"מתקפת חטיבת הביניים\" מציגה את הדמויות האהובות כתלמידי חטיבה הנלחמים כל עוד נפשם בם בכדי להגן על ארוחות הצהריים שלהם מפני הטיטאנים הזללנים.",
+          "duration": "17 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1OXjkbXnXZhBjyLU9FgKdtBG0Af0-OKkK/preview",
+          "thumbnailUrl": "1696751276606Shingeki! Kyojin Chuugakkou.jpg"
+        },
+        {
+          "id": "shingeki-kyojin-chuugakkou-e7",
+          "number": 7,
+          "title": "פרק 7: 7",
+          "description": "ביומו הראשון בחטיבת הביניים, ארן ייגר עומד פנים אל פנים מול טיטאן - שגונב ממנו את ארוחת הצהריים! מאותו יום ואילך, ארן נוטר טינה לטיטאנים על שלקחו ממנו את ארוחת הצ'יזבורגר שלו - האוכל האהוב עליו, ונשבע שיום אחד הוא ייחסל את הטיטאנים אחת ולתמיד. יחד עם אחותו המאומצת מיקאסה אקרמן וחברו הטוב ארמין ארלרט, השלישייה פולשת אל תיכון הטיטאנים, נתקלת בפנים מוכרות ומשתתפת בפעילויות שונות מחוץ לבית הספר במסגרת מועדון ניקוי החומות.\n\nכפרודיה לסדרת האם הפופולרית, \"מתקפת חטיבת הביניים\" מציגה את הדמויות האהובות כתלמידי חטיבה הנלחמים כל עוד נפשם בם בכדי להגן על ארוחות הצהריים שלהם מפני הטיטאנים הזללנים.",
+          "duration": "17 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/10ZaOHI-Phov-MjK-JqTunmceikAp-Jmr/preview",
+          "thumbnailUrl": "1696751276606Shingeki! Kyojin Chuugakkou.jpg"
+        },
+        {
+          "id": "shingeki-kyojin-chuugakkou-e8",
+          "number": 8,
+          "title": "פרק 8: 8",
+          "description": "ביומו הראשון בחטיבת הביניים, ארן ייגר עומד פנים אל פנים מול טיטאן - שגונב ממנו את ארוחת הצהריים! מאותו יום ואילך, ארן נוטר טינה לטיטאנים על שלקחו ממנו את ארוחת הצ'יזבורגר שלו - האוכל האהוב עליו, ונשבע שיום אחד הוא ייחסל את הטיטאנים אחת ולתמיד. יחד עם אחותו המאומצת מיקאסה אקרמן וחברו הטוב ארמין ארלרט, השלישייה פולשת אל תיכון הטיטאנים, נתקלת בפנים מוכרות ומשתתפת בפעילויות שונות מחוץ לבית הספר במסגרת מועדון ניקוי החומות.\n\nכפרודיה לסדרת האם הפופולרית, \"מתקפת חטיבת הביניים\" מציגה את הדמויות האהובות כתלמידי חטיבה הנלחמים כל עוד נפשם בם בכדי להגן על ארוחות הצהריים שלהם מפני הטיטאנים הזללנים.",
+          "duration": "17 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1iAA19dipXSHxCns93Afn0pX8r4HAPcjo/preview",
+          "thumbnailUrl": "1696751276606Shingeki! Kyojin Chuugakkou.jpg"
+        },
+        {
+          "id": "shingeki-kyojin-chuugakkou-e9",
+          "number": 9,
+          "title": "פרק 9: 9",
+          "description": "ביומו הראשון בחטיבת הביניים, ארן ייגר עומד פנים אל פנים מול טיטאן - שגונב ממנו את ארוחת הצהריים! מאותו יום ואילך, ארן נוטר טינה לטיטאנים על שלקחו ממנו את ארוחת הצ'יזבורגר שלו - האוכל האהוב עליו, ונשבע שיום אחד הוא ייחסל את הטיטאנים אחת ולתמיד. יחד עם אחותו המאומצת מיקאסה אקרמן וחברו הטוב ארמין ארלרט, השלישייה פולשת אל תיכון הטיטאנים, נתקלת בפנים מוכרות ומשתתפת בפעילויות שונות מחוץ לבית הספר במסגרת מועדון ניקוי החומות.\n\nכפרודיה לסדרת האם הפופולרית, \"מתקפת חטיבת הביניים\" מציגה את הדמויות האהובות כתלמידי חטיבה הנלחמים כל עוד נפשם בם בכדי להגן על ארוחות הצהריים שלהם מפני הטיטאנים הזללנים.",
+          "duration": "17 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1rsOCaJfKF-pIHrNp0TcTW1fe5EwwZYed/preview",
+          "thumbnailUrl": "1696751276606Shingeki! Kyojin Chuugakkou.jpg"
+        },
+        {
+          "id": "shingeki-kyojin-chuugakkou-e10",
+          "number": 10,
+          "title": "פרק 10: 10",
+          "description": "ביומו הראשון בחטיבת הביניים, ארן ייגר עומד פנים אל פנים מול טיטאן - שגונב ממנו את ארוחת הצהריים! מאותו יום ואילך, ארן נוטר טינה לטיטאנים על שלקחו ממנו את ארוחת הצ'יזבורגר שלו - האוכל האהוב עליו, ונשבע שיום אחד הוא ייחסל את הטיטאנים אחת ולתמיד. יחד עם אחותו המאומצת מיקאסה אקרמן וחברו הטוב ארמין ארלרט, השלישייה פולשת אל תיכון הטיטאנים, נתקלת בפנים מוכרות ומשתתפת בפעילויות שונות מחוץ לבית הספר במסגרת מועדון ניקוי החומות.\n\nכפרודיה לסדרת האם הפופולרית, \"מתקפת חטיבת הביניים\" מציגה את הדמויות האהובות כתלמידי חטיבה הנלחמים כל עוד נפשם בם בכדי להגן על ארוחות הצהריים שלהם מפני הטיטאנים הזללנים.",
+          "duration": "17 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/11rislf61Rkz5DZTB7SpVCEiJOgyY0OVk/preview",
+          "thumbnailUrl": "1696751276606Shingeki! Kyojin Chuugakkou.jpg"
+        },
+        {
+          "id": "shingeki-kyojin-chuugakkou-e11",
+          "number": 11,
+          "title": "פרק 11: 11",
+          "description": "ביומו הראשון בחטיבת הביניים, ארן ייגר עומד פנים אל פנים מול טיטאן - שגונב ממנו את ארוחת הצהריים! מאותו יום ואילך, ארן נוטר טינה לטיטאנים על שלקחו ממנו את ארוחת הצ'יזבורגר שלו - האוכל האהוב עליו, ונשבע שיום אחד הוא ייחסל את הטיטאנים אחת ולתמיד. יחד עם אחותו המאומצת מיקאסה אקרמן וחברו הטוב ארמין ארלרט, השלישייה פולשת אל תיכון הטיטאנים, נתקלת בפנים מוכרות ומשתתפת בפעילויות שונות מחוץ לבית הספר במסגרת מועדון ניקוי החומות.\n\nכפרודיה לסדרת האם הפופולרית, \"מתקפת חטיבת הביניים\" מציגה את הדמויות האהובות כתלמידי חטיבה הנלחמים כל עוד נפשם בם בכדי להגן על ארוחות הצהריים שלהם מפני הטיטאנים הזללנים.",
+          "duration": "17 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1IMSEiR7CD2f-x5hpSqhnpqpaJ9LusB_v/preview",
+          "thumbnailUrl": "1696751276606Shingeki! Kyojin Chuugakkou.jpg"
+        },
+        {
+          "id": "shingeki-kyojin-chuugakkou-e12",
+          "number": 12,
+          "title": "פרק 12: 12",
+          "description": "ביומו הראשון בחטיבת הביניים, ארן ייגר עומד פנים אל פנים מול טיטאן - שגונב ממנו את ארוחת הצהריים! מאותו יום ואילך, ארן נוטר טינה לטיטאנים על שלקחו ממנו את ארוחת הצ'יזבורגר שלו - האוכל האהוב עליו, ונשבע שיום אחד הוא ייחסל את הטיטאנים אחת ולתמיד. יחד עם אחותו המאומצת מיקאסה אקרמן וחברו הטוב ארמין ארלרט, השלישייה פולשת אל תיכון הטיטאנים, נתקלת בפנים מוכרות ומשתתפת בפעילויות שונות מחוץ לבית הספר במסגרת מועדון ניקוי החומות.\n\nכפרודיה לסדרת האם הפופולרית, \"מתקפת חטיבת הביניים\" מציגה את הדמויות האהובות כתלמידי חטיבה הנלחמים כל עוד נפשם בם בכדי להגן על ארוחות הצהריים שלהם מפני הטיטאנים הזללנים.",
+          "duration": "17 דק׳",
+          "videoUrl": "https://drive.google.com/file/d/1fu3yfdPvEUtogpRfGnKFzk3ImsRiixb-/preview",
+          "thumbnailUrl": "1696751276606Shingeki! Kyojin Chuugakkou.jpg"
+        }
+      ]
+    }
+  ]
+};
+
+// ============== TENSEI SHITARA SLIME DATTA KEN MOVIE GUREN NO KIZUNAHEN ==============
+
+export const TENSEI_SHITARA_SLIME_DATTA_KEN_MOVIE_GUREN_NO_KIZUNAHEN: Movie = {
+  "id": "tensei-shitara-slime-datta-ken-movie-guren-no-kizuna-hen",
+  "englishName": "Tensei shitara Slime Datta Ken Movie: Guren no Kizuna-hen",
+  "type": "series",
+  "title": "המקרה בו חזרתי לחיים בתור סליים הסרט: סקרלט בונד",
+  "description": "ראג'ה, היא מדינה קטנה השוכנת ממערב ל-טמפסט. רימורו וחבריו מעורבים בקונספירציה ארוכת שנים שמסתחררת סביב כוחה המסתורי של המלכה. רימורו ומפקדו בנימארו נתקלים גם בניצול מגזע הענקים בשם היירו, מישהו מהגזע של בנימארו.",
+  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1707461153134Tensei shitara Slime Datta Ken Movie: Guren no Kizuna-hen.jpg",
+  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1707461153134Tensei shitara Slime Datta Ken Movie: Guren no Kizuna-hen.jpg",
+  "rating": "12+",
+  "matchScore": 95,
+  "year": 2022,
+  "genre": [
+    "אקשן",
+    "הרפתקאות",
+    "פנטזיה",
+    "קומדיה"
+  ],
+  "cast": [],
+  "source": {
+    "site": "aniplus.co",
+    "seriesUrl": "https://aniplus.co/anime/944",
+    "animeId": 944,
+    "generatedAt": "2026-01-03T16:32:23.959370Z"
+  },
+  "seasons": [
+    {
+      "id": "tensei-shitara-slime-datta-ken-movie-guren-no-kizuna-hen-s1",
+      "number": 1,
+      "title": "עונה 1",
+      "episodes": [
+        {
+          "id": "tensei-shitara-slime-datta-ken-movie-guren-no-kizuna-hen-e1",
+          "number": 1,
+          "title": "פרק 1: 1",
+          "description": "ראג'ה, היא מדינה קטנה השוכנת ממערב ל-טמפסט. רימורו וחבריו מעורבים בקונספירציה ארוכת שנים שמסתחררת סביב כוחה המסתורי של המלכה. רימורו ומפקדו בנימארו נתקלים גם בניצול מגזע הענקים בשם היירו, מישהו מהגזע של בנימארו.\n\n",
+          "duration": "90 דק׳",
+          "videoUrl": "https://filemoon.sx/e/6g7zx5ni2gg7/_Anime-Fire__Tensei_Shitara_Slime_Datta_Ken_Movie_Guren_No_Kizuna-Hen-1",
+          "thumbnailUrl": "1707461153134Tensei shitara Slime Datta Ken Movie: Guren no Kizuna-hen.jpg"
+        }
+      ]
+    }
+  ]
+};
+
+// ============== TENSEI KIZOKU NO ISEKAI BOUKENROKU JICHOU WO SHIRANAI KAMIGAMI NO SHITO ==============
+
+export const TENSEI_KIZOKU_NO_ISEKAI_BOUKENROKU_JICHOU_WO_SHIRANAI_KAMIGAMI_NO_SHITO: Movie = {
+  "id": "tensei-kizoku-no-isekai-boukenroku-jichou-wo-shiranai-kamigami-no-shito",
+  "englishName": "Tensei Kizoku no Isekai Boukenroku: Jichou wo Shiranai Kamigami no Shito",
+  "type": "series",
+  "title": "הרפתקת האריסטוקרט בעולם אחר: לשרת אלים שהרחיקו לכת",
+  "description": "בדרכו לחנות נוחות, קאזויה שיינה מנסה להגן על שתי נערות שהותקפו על ידי תוקף חמוש, רק שבעת ניסיון ההגנה, הוא נדקר ומת במקום.\nהמעשה הזה, מאפשר לו להיוולד מחדש בעולם אחר כקיין וון סילפורד, בנו השלישי של המארקגראף.\n\nכשקיין מגיע לגיל חמש, בטקס ההטבלה שלו בכנסייה, האלים השולטים מעניקים לו ברכות שמיימיות שמאפשרים לו להשתמש ביכולות סיף, קסם ומגוון דברים נוספים.\n\nעם הברכות האלו, קיין יוצא לעולם כדי לחיות חיים שיגשימו לו את חלומו.\nיחד עם זאת, קיין מבין במהרה, שלאלים יש תוכניות אחרות עבורו.",
+  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1689461692876135255l[1].jpg",
+  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1689461692876135255l[1].jpg",
+  "rating": "12+",
+  "matchScore": 95,
+  "year": 2023,
+  "genre": [
+    "אקשן",
+    "פנטזיה",
+    "רומנטיקה"
+  ],
+  "cast": [],
+  "source": {
+    "site": "aniplus.co",
+    "seriesUrl": "https://aniplus.co/anime/30",
+    "animeId": 30,
+    "generatedAt": "2026-01-03T16:32:29.444803Z"
+  },
+  "seasons": [
+    {
+      "id": "tensei-kizoku-no-isekai-boukenroku-jichou-wo-shiranai-kamigami-no-shito-s1",
+      "number": 1,
+      "title": "עונה 1",
+      "episodes": [
+        {
+          "id": "tensei-kizoku-no-isekai-boukenroku-jichou-wo-shiranai-kamigami-no-shito-e1",
+          "number": 1,
+          "title": "פרק 1: 1",
+          "description": "בדרכו לחנות נוחות, קאזויה שיינה מנסה להגן על שתי נערות שהותקפו על ידי תוקף חמוש, רק שבעת ניסיון ההגנה, הוא נדקר ומת במקום.\nהמעשה הזה, מאפשר לו להיוולד מחדש בעולם אחר כקיין וון סילפורד, בנו השלישי של המארקגראף.\n\nכשקיין מגיע לגיל חמש, בטקס ההטבלה שלו בכנסייה, האלים השולטים מעניקים לו ברכות שמיימיות שמאפשרים לו להשתמש ביכולות סיף, קסם ומגוון דברים נוספים.\n\nעם הברכות האלו, קיין יוצא לעולם כדי לחיות חיים שיגשימו לו את חלומו.\nיחד עם זאת, קיין מבין במהרה, שלאלים יש תוכניות אחרות עבורו.\n",
+          "duration": "23 דק׳",
+          "videoUrl": "https://strmup.cc/hw5LxDPNmu94v",
+          "thumbnailUrl": "1689461692876135255l[1].jpg"
+        },
+        {
+          "id": "tensei-kizoku-no-isekai-boukenroku-jichou-wo-shiranai-kamigami-no-shito-e2",
+          "number": 2,
+          "title": "פרק 2: 2",
+          "description": "בדרכו לחנות נוחות, קאזויה שיינה מנסה להגן על שתי נערות שהותקפו על ידי תוקף חמוש, רק שבעת ניסיון ההגנה, הוא נדקר ומת במקום.\nהמעשה הזה, מאפשר לו להיוולד מחדש בעולם אחר כקיין וון סילפורד, בנו השלישי של המארקגראף.\n\nכשקיין מגיע לגיל חמש, בטקס ההטבלה שלו בכנסייה, האלים השולטים מעניקים לו ברכות שמיימיות שמאפשרים לו להשתמש ביכולות סיף, קסם ומגוון דברים נוספים.\n\nעם הברכות האלו, קיין יוצא לעולם כדי לחיות חיים שיגשימו לו את חלומו.\nיחד עם זאת, קיין מבין במהרה, שלאלים יש תוכניות אחרות עבורו.\n",
+          "duration": "23 דק׳",
+          "videoUrl": "https://strmup.cc/6S3KVLfMxJspd",
+          "thumbnailUrl": "1689461692876135255l[1].jpg"
+        },
+        {
+          "id": "tensei-kizoku-no-isekai-boukenroku-jichou-wo-shiranai-kamigami-no-shito-e3",
+          "number": 3,
+          "title": "פרק 3: 3",
+          "description": "בדרכו לחנות נוחות, קאזויה שיינה מנסה להגן על שתי נערות שהותקפו על ידי תוקף חמוש, רק שבעת ניסיון ההגנה, הוא נדקר ומת במקום.\nהמעשה הזה, מאפשר לו להיוולד מחדש בעולם אחר כקיין וון סילפורד, בנו השלישי של המארקגראף.\n\nכשקיין מגיע לגיל חמש, בטקס ההטבלה שלו בכנסייה, האלים השולטים מעניקים לו ברכות שמיימיות שמאפשרים לו להשתמש ביכולות סיף, קסם ומגוון דברים נוספים.\n\nעם הברכות האלו, קיין יוצא לעולם כדי לחיות חיים שיגשימו לו את חלומו.\nיחד עם זאת, קיין מבין במהרה, שלאלים יש תוכניות אחרות עבורו.\n",
+          "duration": "23 דק׳",
+          "videoUrl": "https://strmup.cc/TvX4JrVoQ0WP3",
+          "thumbnailUrl": "1689461692876135255l[1].jpg"
+        },
+        {
+          "id": "tensei-kizoku-no-isekai-boukenroku-jichou-wo-shiranai-kamigami-no-shito-e4",
+          "number": 4,
+          "title": "פרק 4: 4",
+          "description": "בדרכו לחנות נוחות, קאזויה שיינה מנסה להגן על שתי נערות שהותקפו על ידי תוקף חמוש, רק שבעת ניסיון ההגנה, הוא נדקר ומת במקום.\nהמעשה הזה, מאפשר לו להיוולד מחדש בעולם אחר כקיין וון סילפורד, בנו השלישי של המארקגראף.\n\nכשקיין מגיע לגיל חמש, בטקס ההטבלה שלו בכנסייה, האלים השולטים מעניקים לו ברכות שמיימיות שמאפשרים לו להשתמש ביכולות סיף, קסם ומגוון דברים נוספים.\n\nעם הברכות האלו, קיין יוצא לעולם כדי לחיות חיים שיגשימו לו את חלומו.\nיחד עם זאת, קיין מבין במהרה, שלאלים יש תוכניות אחרות עבורו.\n",
+          "duration": "23 דק׳",
+          "videoUrl": "https://anipluspro.upn.one/#mhdsov",
+          "thumbnailUrl": "1689461692876135255l[1].jpg"
+        },
+        {
+          "id": "tensei-kizoku-no-isekai-boukenroku-jichou-wo-shiranai-kamigami-no-shito-e5",
+          "number": 5,
+          "title": "פרק 5: 5",
+          "description": "בדרכו לחנות נוחות, קאזויה שיינה מנסה להגן על שתי נערות שהותקפו על ידי תוקף חמוש, רק שבעת ניסיון ההגנה, הוא נדקר ומת במקום.\nהמעשה הזה, מאפשר לו להיוולד מחדש בעולם אחר כקיין וון סילפורד, בנו השלישי של המארקגראף.\n\nכשקיין מגיע לגיל חמש, בטקס ההטבלה שלו בכנסייה, האלים השולטים מעניקים לו ברכות שמיימיות שמאפשרים לו להשתמש ביכולות סיף, קסם ומגוון דברים נוספים.\n\nעם הברכות האלו, קיין יוצא לעולם כדי לחיות חיים שיגשימו לו את חלומו.\nיחד עם זאת, קיין מבין במהרה, שלאלים יש תוכניות אחרות עבורו.\n",
+          "duration": "23 דק׳",
+          "videoUrl": "https://strmup.cc/C7bZK4ugMy6IV",
+          "thumbnailUrl": "1689461692876135255l[1].jpg"
+        },
+        {
+          "id": "tensei-kizoku-no-isekai-boukenroku-jichou-wo-shiranai-kamigami-no-shito-e6",
+          "number": 6,
+          "title": "פרק 6: 6",
+          "description": "בדרכו לחנות נוחות, קאזויה שיינה מנסה להגן על שתי נערות שהותקפו על ידי תוקף חמוש, רק שבעת ניסיון ההגנה, הוא נדקר ומת במקום.\nהמעשה הזה, מאפשר לו להיוולד מחדש בעולם אחר כקיין וון סילפורד, בנו השלישי של המארקגראף.\n\nכשקיין מגיע לגיל חמש, בטקס ההטבלה שלו בכנסייה, האלים השולטים מעניקים לו ברכות שמיימיות שמאפשרים לו להשתמש ביכולות סיף, קסם ומגוון דברים נוספים.\n\nעם הברכות האלו, קיין יוצא לעולם כדי לחיות חיים שיגשימו לו את חלומו.\nיחד עם זאת, קיין מבין במהרה, שלאלים יש תוכניות אחרות עבורו.\n",
+          "duration": "23 דק׳",
+          "videoUrl": "https://anipluspro.upn.one/#d8zcwo",
+          "thumbnailUrl": "1689461692876135255l[1].jpg"
+        },
+        {
+          "id": "tensei-kizoku-no-isekai-boukenroku-jichou-wo-shiranai-kamigami-no-shito-e7",
+          "number": 7,
+          "title": "פרק 7: 7",
+          "description": "בדרכו לחנות נוחות, קאזויה שיינה מנסה להגן על שתי נערות שהותקפו על ידי תוקף חמוש, רק שבעת ניסיון ההגנה, הוא נדקר ומת במקום.\nהמעשה הזה, מאפשר לו להיוולד מחדש בעולם אחר כקיין וון סילפורד, בנו השלישי של המארקגראף.\n\nכשקיין מגיע לגיל חמש, בטקס ההטבלה שלו בכנסייה, האלים השולטים מעניקים לו ברכות שמיימיות שמאפשרים לו להשתמש ביכולות סיף, קסם ומגוון דברים נוספים.\n\nעם הברכות האלו, קיין יוצא לעולם כדי לחיות חיים שיגשימו לו את חלומו.\nיחד עם זאת, קיין מבין במהרה, שלאלים יש תוכניות אחרות עבורו.\n",
+          "duration": "23 דק׳",
+          "videoUrl": "https://anipluspro.upn.one/#vfeyil",
+          "thumbnailUrl": "1689461692876135255l[1].jpg"
+        },
+        {
+          "id": "tensei-kizoku-no-isekai-boukenroku-jichou-wo-shiranai-kamigami-no-shito-e8",
+          "number": 8,
+          "title": "פרק 8: 8",
+          "description": "בדרכו לחנות נוחות, קאזויה שיינה מנסה להגן על שתי נערות שהותקפו על ידי תוקף חמוש, רק שבעת ניסיון ההגנה, הוא נדקר ומת במקום.\nהמעשה הזה, מאפשר לו להיוולד מחדש בעולם אחר כקיין וון סילפורד, בנו השלישי של המארקגראף.\n\nכשקיין מגיע לגיל חמש, בטקס ההטבלה שלו בכנסייה, האלים השולטים מעניקים לו ברכות שמיימיות שמאפשרים לו להשתמש ביכולות סיף, קסם ומגוון דברים נוספים.\n\nעם הברכות האלו, קיין יוצא לעולם כדי לחיות חיים שיגשימו לו את חלומו.\nיחד עם זאת, קיין מבין במהרה, שלאלים יש תוכניות אחרות עבורו.\n",
+          "duration": "23 דק׳",
+          "videoUrl": "https://strmup.cc/Uw5bsmqIQy0oM",
+          "thumbnailUrl": "1689461692876135255l[1].jpg"
+        },
+        {
+          "id": "tensei-kizoku-no-isekai-boukenroku-jichou-wo-shiranai-kamigami-no-shito-e9",
+          "number": 9,
+          "title": "פרק 9: 9",
+          "description": "בדרכו לחנות נוחות, קאזויה שיינה מנסה להגן על שתי נערות שהותקפו על ידי תוקף חמוש, רק שבעת ניסיון ההגנה, הוא נדקר ומת במקום.\nהמעשה הזה, מאפשר לו להיוולד מחדש בעולם אחר כקיין וון סילפורד, בנו השלישי של המארקגראף.\n\nכשקיין מגיע לגיל חמש, בטקס ההטבלה שלו בכנסייה, האלים השולטים מעניקים לו ברכות שמיימיות שמאפשרים לו להשתמש ביכולות סיף, קסם ומגוון דברים נוספים.\n\nעם הברכות האלו, קיין יוצא לעולם כדי לחיות חיים שיגשימו לו את חלומו.\nיחד עם זאת, קיין מבין במהרה, שלאלים יש תוכניות אחרות עבורו.\n",
+          "duration": "23 דק׳",
+          "videoUrl": "https://anipluspro.upn.one/#n3ftf5",
+          "thumbnailUrl": "1689461692876135255l[1].jpg"
+        },
+        {
+          "id": "tensei-kizoku-no-isekai-boukenroku-jichou-wo-shiranai-kamigami-no-shito-e10",
+          "number": 10,
+          "title": "פרק 10: 10",
+          "description": "בדרכו לחנות נוחות, קאזויה שיינה מנסה להגן על שתי נערות שהותקפו על ידי תוקף חמוש, רק שבעת ניסיון ההגנה, הוא נדקר ומת במקום.\nהמעשה הזה, מאפשר לו להיוולד מחדש בעולם אחר כקיין וון סילפורד, בנו השלישי של המארקגראף.\n\nכשקיין מגיע לגיל חמש, בטקס ההטבלה שלו בכנסייה, האלים השולטים מעניקים לו ברכות שמיימיות שמאפשרים לו להשתמש ביכולות סיף, קסם ומגוון דברים נוספים.\n\nעם הברכות האלו, קיין יוצא לעולם כדי לחיות חיים שיגשימו לו את חלומו.\nיחד עם זאת, קיין מבין במהרה, שלאלים יש תוכניות אחרות עבורו.\n",
+          "duration": "23 דק׳",
+          "videoUrl": "https://anipluspro.upn.one/#biueur",
+          "thumbnailUrl": "1689461692876135255l[1].jpg"
+        },
+        {
+          "id": "tensei-kizoku-no-isekai-boukenroku-jichou-wo-shiranai-kamigami-no-shito-e11",
+          "number": 11,
+          "title": "פרק 11: 11",
+          "description": "בדרכו לחנות נוחות, קאזויה שיינה מנסה להגן על שתי נערות שהותקפו על ידי תוקף חמוש, רק שבעת ניסיון ההגנה, הוא נדקר ומת במקום.\nהמעשה הזה, מאפשר לו להיוולד מחדש בעולם אחר כקיין וון סילפורד, בנו השלישי של המארקגראף.\n\nכשקיין מגיע לגיל חמש, בטקס ההטבלה שלו בכנסייה, האלים השולטים מעניקים לו ברכות שמיימיות שמאפשרים לו להשתמש ביכולות סיף, קסם ומגוון דברים נוספים.\n\nעם הברכות האלו, קיין יוצא לעולם כדי לחיות חיים שיגשימו לו את חלומו.\nיחד עם זאת, קיין מבין במהרה, שלאלים יש תוכניות אחרות עבורו.\n",
+          "duration": "23 דק׳",
+          "videoUrl": "https://strmup.cc/uI065vJa7tE9P",
+          "thumbnailUrl": "1689461692876135255l[1].jpg"
+        },
+        {
+          "id": "tensei-kizoku-no-isekai-boukenroku-jichou-wo-shiranai-kamigami-no-shito-e12",
+          "number": 12,
+          "title": "פרק 12: 12",
+          "description": "בדרכו לחנות נוחות, קאזויה שיינה מנסה להגן על שתי נערות שהותקפו על ידי תוקף חמוש, רק שבעת ניסיון ההגנה, הוא נדקר ומת במקום.\nהמעשה הזה, מאפשר לו להיוולד מחדש בעולם אחר כקיין וון סילפורד, בנו השלישי של המארקגראף.\n\nכשקיין מגיע לגיל חמש, בטקס ההטבלה שלו בכנסייה, האלים השולטים מעניקים לו ברכות שמיימיות שמאפשרים לו להשתמש ביכולות סיף, קסם ומגוון דברים נוספים.\n\nעם הברכות האלו, קיין יוצא לעולם כדי לחיות חיים שיגשימו לו את חלומו.\nיחד עם זאת, קיין מבין במהרה, שלאלים יש תוכניות אחרות עבורו.\n",
+          "duration": "23 דק׳",
+          "videoUrl": "https://anipluspro.upn.one/#po3d3m",
+          "thumbnailUrl": "1689461692876135255l[1].jpg"
+        }
+      ]
+    }
+  ]
+};
+
+// ============== ISEKAI WA SMARTPHONE TO TOMO NI ==============
+
+export const ISEKAI_WA_SMARTPHONE_TO_TOMO_NI: Movie = {
+  "id": "isekai-wa-smartphone-to-tomo-ni",
+  "englishName": "Isekai wa Smartphone to Tomo ni.",
+  "type": "series",
+  "title": "בעולם אחר עם הסמארטפון שלי",
+  "description": "טויה מוצ'יזוקי נהרג בטעות, וכאות התנצלות, אלוהים מאפשר לו להיוולד מחדש בעולם פנטזיה ומעניק לו משאלה אחת. טויה בוחר לשמור על הסמארטפון שלו בעולם הבא.\nבהזדמנות השנייה שלו, הוא מתיידד עם דמויות חשובות רבות ומגלה את סודו של העולם. הוא יורש את המורשת של תרבות עתיקה ונוסע סביב העולם ללא דאגות בעוד הוא משתלט על כוחות המתחרים באלו של מלכים.",
+  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1693858977832Isekai wa Smartphone to Tomo ni..jpg",
+  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1693858977832Isekai wa Smartphone to Tomo ni..jpg",
+  "rating": "12+",
+  "matchScore": 95,
+  "year": 2017,
+  "genre": [
+    "הרפתקאות",
+    "פנטזיה",
+    "רומנטיקה",
+    "קומדיה"
+  ],
+  "cast": [],
+  "source": {
+    "site": "aniplus.co",
+    "seriesUrl": "https://aniplus.co/anime/264",
+    "animeId": 264,
+    "generatedAt": "2026-01-03T16:32:35.787365Z"
+  },
+  "seasons": [
+    {
+      "id": "isekai-wa-smartphone-to-tomo-ni-s1",
+      "number": 1,
+      "title": "עונה 1",
+      "episodes": [
+        {
+          "id": "isekai-wa-smartphone-to-tomo-ni-e1",
+          "number": 1,
+          "title": "פרק 1: 1",
+          "description": "טויה מוצ'יזוקי נהרג בטעות, וכאות התנצלות, אלוהים מאפשר לו להיוולד מחדש בעולם פנטזיה ומעניק לו משאלה אחת. טויה בוחר לשמור על הסמארטפון שלו בעולם הבא.\nבהזדמנות השנייה שלו, הוא מתיידד עם דמויות חשובות רבות ומגלה את סודו של העולם. הוא יורש את המורשת של תרבות עתיקה ונוסע סביב העולם ללא דאגות בעוד הוא משתלט על כוחות המתחרים באלו של מלכים.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://strmup.cc/aqtikApQHRz0j",
+          "thumbnailUrl": "1693858977832Isekai wa Smartphone to Tomo ni..jpg"
+        },
+        {
+          "id": "isekai-wa-smartphone-to-tomo-ni-e2",
+          "number": 2,
+          "title": "פרק 2: 1",
+          "description": "טויה מוצ'יזוקי נהרג בטעות, וכאות התנצלות, אלוהים מאפשר לו להיוולד מחדש בעולם פנטזיה ומעניק לו משאלה אחת. טויה בוחר לשמור על הסמארטפון שלו בעולם הבא.\nבהזדמנות השנייה שלו, הוא מתיידד עם דמויות חשובות רבות ומגלה את סודו של העולם. הוא יורש את המורשת של תרבות עתיקה ונוסע סביב העולם ללא דאגות בעוד הוא משתלט על כוחות המתחרים באלו של מלכים.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://strmup.cc/7JKDrNiBvShfm",
+          "thumbnailUrl": "1693858977832Isekai wa Smartphone to Tomo ni..jpg"
+        },
+        {
+          "id": "isekai-wa-smartphone-to-tomo-ni-e3",
+          "number": 3,
+          "title": "פרק 3: 1",
+          "description": "טויה מוצ'יזוקי נהרג בטעות, וכאות התנצלות, אלוהים מאפשר לו להיוולד מחדש בעולם פנטזיה ומעניק לו משאלה אחת. טויה בוחר לשמור על הסמארטפון שלו בעולם הבא.\nבהזדמנות השנייה שלו, הוא מתיידד עם דמויות חשובות רבות ומגלה את סודו של העולם. הוא יורש את המורשת של תרבות עתיקה ונוסע סביב העולם ללא דאגות בעוד הוא משתלט על כוחות המתחרים באלו של מלכים.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://strmup.cc/DhTHfe85FoK4v",
+          "thumbnailUrl": "1693858977832Isekai wa Smartphone to Tomo ni..jpg"
+        },
+        {
+          "id": "isekai-wa-smartphone-to-tomo-ni-e4",
+          "number": 4,
+          "title": "פרק 4: 1",
+          "description": "טויה מוצ'יזוקי נהרג בטעות, וכאות התנצלות, אלוהים מאפשר לו להיוולד מחדש בעולם פנטזיה ומעניק לו משאלה אחת. טויה בוחר לשמור על הסמארטפון שלו בעולם הבא.\nבהזדמנות השנייה שלו, הוא מתיידד עם דמויות חשובות רבות ומגלה את סודו של העולם. הוא יורש את המורשת של תרבות עתיקה ונוסע סביב העולם ללא דאגות בעוד הוא משתלט על כוחות המתחרים באלו של מלכים.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://strmup.cc/iWyM2YOjAqtvH",
+          "thumbnailUrl": "1693858977832Isekai wa Smartphone to Tomo ni..jpg"
+        },
+        {
+          "id": "isekai-wa-smartphone-to-tomo-ni-e5",
+          "number": 5,
+          "title": "פרק 5: 1",
+          "description": "טויה מוצ'יזוקי נהרג בטעות, וכאות התנצלות, אלוהים מאפשר לו להיוולד מחדש בעולם פנטזיה ומעניק לו משאלה אחת. טויה בוחר לשמור על הסמארטפון שלו בעולם הבא.\nבהזדמנות השנייה שלו, הוא מתיידד עם דמויות חשובות רבות ומגלה את סודו של העולם. הוא יורש את המורשת של תרבות עתיקה ונוסע סביב העולם ללא דאגות בעוד הוא משתלט על כוחות המתחרים באלו של מלכים.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://strmup.cc/mqP27rFLMu3QN",
+          "thumbnailUrl": "1693858977832Isekai wa Smartphone to Tomo ni..jpg"
+        },
+        {
+          "id": "isekai-wa-smartphone-to-tomo-ni-e6",
+          "number": 6,
+          "title": "פרק 6: 1",
+          "description": "טויה מוצ'יזוקי נהרג בטעות, וכאות התנצלות, אלוהים מאפשר לו להיוולד מחדש בעולם פנטזיה ומעניק לו משאלה אחת. טויה בוחר לשמור על הסמארטפון שלו בעולם הבא.\nבהזדמנות השנייה שלו, הוא מתיידד עם דמויות חשובות רבות ומגלה את סודו של העולם. הוא יורש את המורשת של תרבות עתיקה ונוסע סביב העולם ללא דאגות בעוד הוא משתלט על כוחות המתחרים באלו של מלכים.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://strmup.cc/3dI5eXoqzpf1U",
+          "thumbnailUrl": "1693858977832Isekai wa Smartphone to Tomo ni..jpg"
+        },
+        {
+          "id": "isekai-wa-smartphone-to-tomo-ni-e7",
+          "number": 7,
+          "title": "פרק 7: 1",
+          "description": "טויה מוצ'יזוקי נהרג בטעות, וכאות התנצלות, אלוהים מאפשר לו להיוולד מחדש בעולם פנטזיה ומעניק לו משאלה אחת. טויה בוחר לשמור על הסמארטפון שלו בעולם הבא.\nבהזדמנות השנייה שלו, הוא מתיידד עם דמויות חשובות רבות ומגלה את סודו של העולם. הוא יורש את המורשת של תרבות עתיקה ונוסע סביב העולם ללא דאגות בעוד הוא משתלט על כוחות המתחרים באלו של מלכים.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://strmup.cc/ulJCLsU6w74An",
+          "thumbnailUrl": "1693858977832Isekai wa Smartphone to Tomo ni..jpg"
+        },
+        {
+          "id": "isekai-wa-smartphone-to-tomo-ni-e8",
+          "number": 8,
+          "title": "פרק 8: 1",
+          "description": "טויה מוצ'יזוקי נהרג בטעות, וכאות התנצלות, אלוהים מאפשר לו להיוולד מחדש בעולם פנטזיה ומעניק לו משאלה אחת. טויה בוחר לשמור על הסמארטפון שלו בעולם הבא.\nבהזדמנות השנייה שלו, הוא מתיידד עם דמויות חשובות רבות ומגלה את סודו של העולם. הוא יורש את המורשת של תרבות עתיקה ונוסע סביב העולם ללא דאגות בעוד הוא משתלט על כוחות המתחרים באלו של מלכים.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://strmup.cc/fZqLrlx9vjKnR",
+          "thumbnailUrl": "1693858977832Isekai wa Smartphone to Tomo ni..jpg"
+        },
+        {
+          "id": "isekai-wa-smartphone-to-tomo-ni-e9",
+          "number": 9,
+          "title": "פרק 9: 1",
+          "description": "טויה מוצ'יזוקי נהרג בטעות, וכאות התנצלות, אלוהים מאפשר לו להיוולד מחדש בעולם פנטזיה ומעניק לו משאלה אחת. טויה בוחר לשמור על הסמארטפון שלו בעולם הבא.\nבהזדמנות השנייה שלו, הוא מתיידד עם דמויות חשובות רבות ומגלה את סודו של העולם. הוא יורש את המורשת של תרבות עתיקה ונוסע סביב העולם ללא דאגות בעוד הוא משתלט על כוחות המתחרים באלו של מלכים.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://strmup.cc/b0gpZXGWVe8Ll",
+          "thumbnailUrl": "1693858977832Isekai wa Smartphone to Tomo ni..jpg"
+        },
+        {
+          "id": "isekai-wa-smartphone-to-tomo-ni-e10",
+          "number": 10,
+          "title": "פרק 10: 1",
+          "description": "טויה מוצ'יזוקי נהרג בטעות, וכאות התנצלות, אלוהים מאפשר לו להיוולד מחדש בעולם פנטזיה ומעניק לו משאלה אחת. טויה בוחר לשמור על הסמארטפון שלו בעולם הבא.\nבהזדמנות השנייה שלו, הוא מתיידד עם דמויות חשובות רבות ומגלה את סודו של העולם. הוא יורש את המורשת של תרבות עתיקה ונוסע סביב העולם ללא דאגות בעוד הוא משתלט על כוחות המתחרים באלו של מלכים.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://strmup.cc/NbiGYSCdE5xzB",
+          "thumbnailUrl": "1693858977832Isekai wa Smartphone to Tomo ni..jpg"
+        },
+        {
+          "id": "isekai-wa-smartphone-to-tomo-ni-e11",
+          "number": 11,
+          "title": "פרק 11: 1",
+          "description": "טויה מוצ'יזוקי נהרג בטעות, וכאות התנצלות, אלוהים מאפשר לו להיוולד מחדש בעולם פנטזיה ומעניק לו משאלה אחת. טויה בוחר לשמור על הסמארטפון שלו בעולם הבא.\nבהזדמנות השנייה שלו, הוא מתיידד עם דמויות חשובות רבות ומגלה את סודו של העולם. הוא יורש את המורשת של תרבות עתיקה ונוסע סביב העולם ללא דאגות בעוד הוא משתלט על כוחות המתחרים באלו של מלכים.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://strmup.cc/SwhvP1J5My964",
+          "thumbnailUrl": "1693858977832Isekai wa Smartphone to Tomo ni..jpg"
+        },
+        {
+          "id": "isekai-wa-smartphone-to-tomo-ni-e12",
+          "number": 12,
+          "title": "פרק 12: 1",
+          "description": "טויה מוצ'יזוקי נהרג בטעות, וכאות התנצלות, אלוהים מאפשר לו להיוולד מחדש בעולם פנטזיה ומעניק לו משאלה אחת. טויה בוחר לשמור על הסמארטפון שלו בעולם הבא.\nבהזדמנות השנייה שלו, הוא מתיידד עם דמויות חשובות רבות ומגלה את סודו של העולם. הוא יורש את המורשת של תרבות עתיקה ונוסע סביב העולם ללא דאגות בעוד הוא משתלט על כוחות המתחרים באלו של מלכים.",
+          "duration": "24 דק׳",
+          "videoUrl": "https://strmup.cc/CNfcdGKUuv1zI",
+          "thumbnailUrl": "1693858977832Isekai wa Smartphone to Tomo ni..jpg"
+        }
+      ]
+    }
+  ]
+};
 
 
 export const ALL_SERIES: Movie[] = [
@@ -22060,5 +23290,16 @@ export const ALL_SERIES: Movie[] = [
   SWORD_ART_ONLINE_MOVIE_ORDINAL_SCALE,
   SWORD_ART_ONLINE_ALICIZATION__WAR_OF_UNDERWORLD,
   SWORD_ART_ONLINE_PROGRESSIVE_MOVIE__HOSHI_NAKI_YORU_NO_ARIA,
-  SWORD_ART_ONLINE_ALTERNATIVE_GUN_GALE_ONLINE
+  SWORD_ART_ONLINE_ALTERNATIVE_GUN_GALE_ONLINE,
+  SHINGEKI_NO_KYOJIN_SEASON_3_PART_2,
+  SHINGEKI_NO_KYOJIN_OVA,
+  SHINGEKI_NO_KYOJIN_KUINAKI_SENTAKU,
+  SHINGEKI_NO_KYOJIN_SEASON_2,
+  SHINGEKI_NO_KYOJIN_CHRONICLE,
+  SHINGEKI_NO_KYOJIN_THE_FINAL_SEASON,
+  SHINGEKI_NO_KYOJIN_THE_FINAL_SEASON_PART_2,
+  SHINGEKI_KYOJIN_CHUUGAKKOU,
+  TENSEI_SHITARA_SLIME_DATTA_KEN_MOVIE_GUREN_NO_KIZUNAHEN,
+  TENSEI_KIZOKU_NO_ISEKAI_BOUKENROKU_JICHOU_WO_SHIRANAI_KAMIGAMI_NO_SHITO,
+  ISEKAI_WA_SMARTPHONE_TO_TOMO_NI
 ];
