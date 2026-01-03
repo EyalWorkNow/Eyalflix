@@ -225,7 +225,7 @@ function AppContent() {
                     return {
                         type: 'episode',
                         title: `פרק ${nextEp.number}: ${nextEp.title}`,
-                        thumbnailUrl: nextEp.thumbnailUrl || currentMovie.backdropUrl || currentMovie.thumbnailUrl,
+                        thumbnailUrl: (nextEp.thumbnailUrl?.startsWith('http')) ? nextEp.thumbnailUrl : (currentMovie.backdropUrl || currentMovie.thumbnailUrl),
                         videoUrl: nextEp.videoUrl,
                         subTitle: `${currentMovie.title} - ${currentSeason.title}`,
                         duration: parseDuration(nextEp.duration)
@@ -240,7 +240,7 @@ function AppContent() {
                         return {
                             type: 'episode',
                             title: `פרק ${nextEp.number}: ${nextEp.title}`,
-                            thumbnailUrl: nextEp.thumbnailUrl || currentMovie.backdropUrl || currentMovie.thumbnailUrl,
+                            thumbnailUrl: (nextEp.thumbnailUrl?.startsWith('http')) ? nextEp.thumbnailUrl : (currentMovie.backdropUrl || currentMovie.thumbnailUrl),
                             videoUrl: nextEp.videoUrl,
                             subTitle: `${currentMovie.title} - ${nextSeason.title}`,
                             duration: parseDuration(nextEp.duration)
@@ -534,8 +534,8 @@ function AppContent() {
                                             key={mood.id}
                                             onClick={() => handleMoodChange(isActive ? null : mood.id)}
                                             className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold transition-all border whitespace-nowrap hover:scale-105 active:scale-95 backdrop-blur-md shadow-lg focus:ring-2 focus:ring-cyan-500 ${isActive
-                                                    ? 'bg-cyan-500 text-black border-cyan-500 shadow-[0_0_20px_rgba(34,211,238,0.4)]'
-                                                    : 'bg-white/10 text-white border-white/10 hover:bg-white/20 hover:border-white/30'
+                                                ? 'bg-cyan-500 text-black border-cyan-500 shadow-[0_0_20px_rgba(34,211,238,0.4)]'
+                                                : 'bg-white/10 text-white border-white/10 hover:bg-white/20 hover:border-white/30'
                                                 }`}
                                         >
                                             <Icon className="w-4 h-4" />

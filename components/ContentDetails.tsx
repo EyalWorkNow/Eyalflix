@@ -103,8 +103,8 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
                             <button
                                 onClick={onToggleList}
                                 className={`p-4 rounded-full border-2 transition bg-white/5 focus:scale-110 focus:ring-2 focus:ring-white ${isAdded
-                                        ? 'border-cyan-500 text-cyan-500 bg-cyan-500/10'
-                                        : 'border-gray-500 text-gray-200 hover:border-white hover:text-white'
+                                    ? 'border-cyan-500 text-cyan-500 bg-cyan-500/10'
+                                    : 'border-gray-500 text-gray-200 hover:border-white hover:text-white'
                                     }`}
                                 title={isAdded ? "הסר מהרשימה שלי" : "הוסף לרשימה שלי"}
                             >
@@ -113,8 +113,8 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
                             <button
                                 onClick={onToggleLike}
                                 className={`p-4 rounded-full border-2 transition bg-white/5 focus:scale-110 focus:ring-2 focus:ring-white ${isLiked
-                                        ? 'border-white text-white bg-white/20'
-                                        : 'border-gray-500 text-gray-200 hover:border-white hover:text-white'
+                                    ? 'border-white text-white bg-white/20'
+                                    : 'border-gray-500 text-gray-200 hover:border-white hover:text-white'
                                     }`}
                                 title="אהבתי"
                             >
@@ -256,8 +256,8 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
                                                             setIsDropdownOpen(false);
                                                         }}
                                                         className={`w-full text-right px-6 py-4 text-base font-bold transition-all flex items-center justify-between group focus:bg-white/10 focus:outline-none ${selectedSeasonId === season.id
-                                                                ? 'bg-cyan-500/10 text-cyan-400'
-                                                                : 'text-gray-300 hover:bg-white/5 hover:text-white'
+                                                            ? 'bg-cyan-500/10 text-cyan-400'
+                                                            : 'text-gray-300 hover:bg-white/5 hover:text-white'
                                                             }`}
                                                     >
                                                         <span>{season.title}</span>
@@ -279,7 +279,7 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
                                     <div key={ep.id} className="group flex flex-col md:flex-row gap-4 p-4 rounded-xl hover:bg-[#1e2530] focus-within:bg-[#1e2530] transition border border-transparent hover:border-white/10 cursor-pointer" onClick={() => onPlay(ep.videoUrl)}>
                                         <div className="relative w-full md:w-64 aspect-video flex-none rounded-lg overflow-hidden bg-black shadow-lg">
                                             <img
-                                                src={ep.thumbnailUrl || movie.backdropUrl || movie.thumbnailUrl}
+                                                src={ep.thumbnailUrl?.startsWith('http') ? ep.thumbnailUrl : (movie.backdropUrl || movie.thumbnailUrl)}
                                                 alt={ep.title}
                                                 className={`w-full h-full object-cover transition duration-300 ${spoilerProtection ? 'blur-md scale-110 group-hover:blur-0 group-hover:scale-100' : 'opacity-80 group-hover:opacity-100'}`}
                                             />
