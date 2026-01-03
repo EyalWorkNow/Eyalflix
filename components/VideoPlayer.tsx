@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { ArrowRight, AlertTriangle, FastForward, Maximize, Minimize, Volume2, VolumeX, Rewind, Play, Pause, Settings, Subtitles, PictureInPicture, Lock, Unlock, Monitor, HelpCircle, Gauge, Ratio, X, SkipForward, Clock } from 'lucide-react';
+import { ArrowRight, AlertTriangle, Maximize, Minimize, Volume2, VolumeX, Play, Settings, PictureInPicture, Lock, Unlock, Monitor, HelpCircle, Ratio, X } from 'lucide-react';
 import { ContentType } from '../types';
 
 export interface NextContent {
@@ -61,10 +61,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
     // New Features State
     const [showSettings, setShowSettings] = useState(false);
-    const [playbackSpeed, setPlaybackSpeed] = useState(1);
-    const [quality, setQuality] = useState('Auto');
-    const [subtitleStyle, setSubtitleStyle] = useState(SUBTITLE_STYLES[0]);
-    const [showSubtitles, setShowSubtitles] = useState(false);
     const [aspectRatio, setAspectRatio] = useState<'cover' | 'contain'>('contain');
     const [inactivityWarning, setInactivityWarning] = useState(false);
     const [showShortcuts, setShowShortcuts] = useState(false);
@@ -233,37 +229,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [onClose, showSettings, showShortcuts, isLocked, isPiP, showNextUp]);
 
-    // Simulated Time Tracking & Logic Checks
-    useEffect(() => {
-        if (loading || error) return;
-
-        // Clear previous interval if exists
-        if (timeIntervalRef.current) clearInterval(timeIntervalRef.current);
-
-        timeIntervalRef.current = setInterval(() => {
-            setSimulatedTime(prev => {
-                const nextTime = prev + 1;
-
-                // 1. Check for Completion (User watched > 90%)
-                if (duration > 0 && !completedTriggered) {
-                    if (nextTime / duration > 0.90) {
-                        setCompletedTriggered(true);
-                        if (onComplete) onComplete();
-                    }
-                }
-
-                // 2. Check for End of Video (If duration provided)
-                if (duration > 0 && nextTime >= duration && nextItem && !showNextUp && !nextUpCancelled) {
-                    setShowNextUp(true);
-                }
-                return nextTime;
-            });
-        }, 1000);
-
-        return () => {
-            if (timeIntervalRef.current) clearInterval(timeIntervalRef.current);
-        };
-    }, [loading, error, duration, nextItem, showNextUp, completedTriggered, onComplete, nextUpCancelled]);
+    // Simulated Time Tracking Removed (Non-functional in iframe)
 
     // Handle Skip Intro Visibility based on simulated time
     useEffect(() => {
@@ -477,32 +443,9 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
                     </div>
                 )}
 
-                {/* Mock Subtitles Overlay (Full Mode Only) */}
-                {showSubtitles && !isPiP && (
-                    <div className="absolute bottom-24 left-0 right-0 text-center pointer-events-none z-30 px-12">
-                        <span
-                            className="px-2 py-1 rounded text-xl md:text-2xl font-medium shadow-md inline-block max-w-[80%]"
-                            style={{ color: subtitleStyle.color, backgroundColor: subtitleStyle.bg }}
-                        >
-                            [מוזיקה דרמטית מתחזקת...]
-                        </span>
-                    </div>
-                )}
+                {/* Content Overlay */}
 
-                {/* Skip Intro Button */}
-                {showSkipIntro && !isLocked && !isPiP && !showNextUp && (
-                    <div
-                        className={`absolute bottom-32 right-6 z-50 transition-opacity duration-500 ${showControls || showSkipIntro ? 'opacity-100' : 'opacity-0 hover:opacity-100 pointer-events-auto'}`}
-                    >
-                        <button
-                            onClick={handleSkipIntro}
-                            className="bg-[#161b22]/90 hover:bg-cyan-500 hover:text-black hover:border-cyan-500 backdrop-blur-md border border-white/20 text-white font-bold px-6 py-3 rounded-xl flex items-center gap-3 transition-all duration-300 shadow-lg group focus:ring-4 focus:ring-white/50"
-                        >
-                            <span>דלג על הפתיח</span>
-                            <FastForward className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </button>
-                    </div>
-                )}
+                {/* Skip Intro Logic Disabled (Requires time tracking) */}
 
                 {/* --- NEXT UP / AUTO PLAY OVERLAY --- */}
                 {showNextUp && nextItem && !isLocked && !isPiP && (
@@ -594,88 +537,37 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
                     <div
                         className={`absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent transition-opacity duration-300 ${showControls && !isLocked ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                     >
-                        <div className="max-w-5xl mx-auto flex items-center justify-between pointer-events-auto">
-                            <div className="flex items-center gap-4">
-                                <button className="text-white/80 hover:text-white transition p-2 hover:bg-white/10 rounded-full focus:ring-2 focus:ring-cyan-500" onClick={toggleMute}>
-                                    {isMuted ? <VolumeX className="w-6 h-6" /> : <Volume2 className="w-6 h-6" />}
+                        <div className="max-w-5xl mx-auto flex items-center justify-end pointer-events-auto gap-4">
+                            {/* SETTINGS MENU (Aspect Ratio Only) */}
+                            <div className="relative">
+                                <button
+                                    className={`text-white/80 hover:text-white transition p-2 hover:bg-white/10 rounded-full focus:ring-2 focus:ring-cyan-500 ${showSettings ? 'bg-white/20 text-white' : ''}`}
+                                    onClick={() => setShowSettings(!showSettings)}
+                                >
+                                    <Settings className="w-6 h-6" />
                                 </button>
 
-                                <div className="text-white/60 text-xs font-mono hidden sm:block">
-                                    <span className="text-white">
-                                        {Math.floor(simulatedTime / 60)}:{String(simulatedTime % 60).padStart(2, '0')}
-                                    </span>
-                                    {duration > 0 && <span> / {Math.floor(duration / 60)}:00</span>}
-                                </div>
-                            </div>
-
-                            {/* Simulated Seek Controls */}
-                            <div className="flex items-center gap-6">
-                                <button className="text-white/70 hover:text-white transition hover:scale-110 flex flex-col items-center gap-1 group focus:text-cyan-400">
-                                    <Rewind className="w-6 h-6 md:w-8 md:h-8" />
-                                    <span className="text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">-10s</span>
-                                </button>
-                                <button className="text-white/70 hover:text-white transition hover:scale-110 flex flex-col items-center gap-1 group focus:text-cyan-400">
-                                    <FastForward className="w-6 h-6 md:w-8 md:h-8" />
-                                    <span className="text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">+10s</span>
-                                </button>
-                            </div>
-
-                            <div className="flex items-center gap-2 md:gap-4 relative">
-                                {/* SETTINGS MENU */}
-                                <div className="relative">
-                                    <button
-                                        className={`text-white/80 hover:text-white transition p-2 hover:bg-white/10 rounded-full focus:ring-2 focus:ring-cyan-500 ${showSettings ? 'bg-white/20 text-white' : ''}`}
-                                        onClick={() => setShowSettings(!showSettings)}
-                                    >
-                                        <Settings className="w-6 h-6" />
-                                    </button>
-
-                                    {showSettings && (
-                                        <div className="absolute bottom-full mb-4 left-1/2 -translate-x-1/2 w-64 bg-[#161b22]/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-fade-in origin-bottom">
-                                            <div className="p-2 space-y-1">
-                                                <div className="p-3 hover:bg-white/5 rounded-lg group cursor-pointer focus:bg-white/10" tabIndex={0} onClick={() => {
-                                                    const nextIndex = (PLAYBACK_SPEEDS.indexOf(playbackSpeed) + 1) % PLAYBACK_SPEEDS.length;
-                                                    setPlaybackSpeed(PLAYBACK_SPEEDS[nextIndex]);
-                                                }}>
-                                                    <div className="flex items-center justify-between text-sm text-gray-300 group-hover:text-white">
-                                                        <div className="flex items-center gap-2"><Gauge className="w-4 h-4" /> <span>מהירות</span></div>
-                                                        <span className="font-bold text-cyan-400">{playbackSpeed}x</span>
-                                                    </div>
-                                                </div>
-                                                <div className="p-3 hover:bg-white/5 rounded-lg group cursor-pointer focus:bg-white/10" tabIndex={0} onClick={() => {
-                                                    const nextIndex = (QUALITIES.indexOf(quality) + 1) % QUALITIES.length;
-                                                    setQuality(QUALITIES[nextIndex]);
-                                                }}>
-                                                    <div className="flex items-center justify-between text-sm text-gray-300 group-hover:text-white">
-                                                        <div className="flex items-center gap-2"><Monitor className="w-4 h-4" /> <span>איכות</span></div>
-                                                        <span className="font-bold text-cyan-400">{quality}</span>
-                                                    </div>
-                                                </div>
-                                                <div className="p-3 hover:bg-white/5 rounded-lg group cursor-pointer focus:bg-white/10" tabIndex={0} onClick={() => setShowSubtitles(!showSubtitles)}>
-                                                    <div className="flex items-center justify-between text-sm text-gray-300 group-hover:text-white">
-                                                        <div className="flex items-center gap-2"><Subtitles className="w-4 h-4" /> <span>כתוביות</span></div>
-                                                        <span className={`font-bold ${showSubtitles ? 'text-green-400' : 'text-red-400'}`}>{showSubtitles ? 'פעיל' : 'כבוי'}</span>
-                                                    </div>
-                                                </div>
-                                                <div className="p-3 hover:bg-white/5 rounded-lg group cursor-pointer focus:bg-white/10" tabIndex={0} onClick={() => setAspectRatio(prev => prev === 'cover' ? 'contain' : 'cover')}>
-                                                    <div className="flex items-center justify-between text-sm text-gray-300 group-hover:text-white">
-                                                        <div className="flex items-center gap-2"><Ratio className="w-4 h-4" /> <span>תצוגה</span></div>
-                                                        <span className="font-bold text-cyan-400">{aspectRatio === 'cover' ? 'Zoom' : 'Fit'}</span>
-                                                    </div>
+                                {showSettings && (
+                                    <div className="absolute bottom-full mb-4 left-1/2 -translate-x-1/2 w-48 bg-[#161b22]/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden animate-fade-in origin-bottom">
+                                        <div className="p-2 space-y-1">
+                                            <div className="p-3 hover:bg-white/5 rounded-lg group cursor-pointer focus:bg-white/10" tabIndex={0} onClick={() => setAspectRatio(prev => prev === 'cover' ? 'contain' : 'cover')}>
+                                                <div className="flex items-center justify-between text-sm text-gray-300 group-hover:text-white">
+                                                    <div className="flex items-center gap-2"><Ratio className="w-4 h-4" /> <span>תצוגה</span></div>
+                                                    <span className="font-bold text-cyan-400">{aspectRatio === 'cover' ? 'Zoom' : 'Fit'}</span>
                                                 </div>
                                             </div>
                                         </div>
-                                    )}
-                                </div>
-
-                                <button className="text-white/80 hover:text-white transition p-2 hover:bg-white/10 rounded-full hidden md:block focus:ring-2 focus:ring-cyan-500" onClick={togglePiP} title="תמונה בתוך תמונה">
-                                    <PictureInPicture className="w-6 h-6" />
-                                </button>
-
-                                <button className="text-white/80 hover:text-white transition p-2 hover:bg-white/10 rounded-full focus:ring-2 focus:ring-cyan-500" onClick={toggleFullscreen}>
-                                    {isFullscreen ? <Minimize className="w-6 h-6" /> : <Maximize className="w-6 h-6" />}
-                                </button>
+                                    </div>
+                                )}
                             </div>
+
+                            <button className="text-white/80 hover:text-white transition p-2 hover:bg-white/10 rounded-full hidden md:block focus:ring-2 focus:ring-cyan-500" onClick={togglePiP} title="תמונה בתוך תמונה">
+                                <PictureInPicture className="w-6 h-6" />
+                            </button>
+
+                            <button className="text-white/80 hover:text-white transition p-2 hover:bg-white/10 rounded-full focus:ring-2 focus:ring-cyan-500" onClick={toggleFullscreen}>
+                                {isFullscreen ? <Minimize className="w-6 h-6" /> : <Maximize className="w-6 h-6" />}
+                            </button>
                         </div>
                     </div>
                 )}
