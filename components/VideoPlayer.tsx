@@ -397,7 +397,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
                         className={`w-full h-full border-0 focus:outline-none transition-all duration-300 ${!isPiP && aspectRatio === 'cover' ? 'object-cover' : 'object-contain'}`}
                         allowFullScreen
                         allow="autoplay; encrypted-media; picture-in-picture"
-                        sandbox="allow-scripts allow-same-origin allow-forms allow-presentation allow-popups allow-popups-to-escape-sandbox"
                         referrerPolicy="no-referrer"
                         onLoad={(e) => {
                             setLoading(false);
