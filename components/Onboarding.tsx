@@ -22,23 +22,21 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
     const [step, setStep] = useState(1);
 
     const toggleGenre = (genre: string) => {
-        setSelectedGenres(prev => 
-            prev.includes(genre) 
+        setSelectedGenres(prev =>
+            prev.includes(genre)
                 ? prev.filter(g => g !== genre)
                 : [...prev, genre]
         );
     };
 
     const handleFinish = () => {
-        // Save to local storage for persistence across reloads in this demo
-        localStorage.setItem('eyalatiatv_preferences', JSON.stringify(selectedGenres));
         onComplete(selectedGenres);
     };
 
     return (
         <div className="fixed inset-0 z-[200] bg-[#0d1117] flex flex-col items-center justify-center animate-fade-in px-4">
             <div className="max-w-2xl w-full text-center">
-                
+
                 {/* Progress Bar */}
                 <div className="flex justify-center mb-12 gap-2">
                     <div className={`h-1.5 w-12 rounded-full transition-colors ${step >= 1 ? 'bg-cyan-500 shadow-[0_0_10px_rgba(34,211,238,0.5)]' : 'bg-gray-800'}`} />
@@ -62,11 +60,10 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
                                     <button
                                         key={genre.id}
                                         onClick={() => toggleGenre(genre.id)}
-                                        className={`relative p-4 rounded-2xl border-2 transition-all duration-300 flex flex-col items-center gap-2 group ${
-                                            isSelected 
-                                            ? 'border-cyan-500 bg-cyan-500/10 scale-105 shadow-lg shadow-cyan-500/20' 
-                                            : 'border-white/10 bg-[#161b22] hover:border-white/30 hover:bg-white/5'
-                                        }`}
+                                        className={`relative p-4 rounded-2xl border-2 transition-all duration-300 flex flex-col items-center gap-2 group ${isSelected
+                                                ? 'border-cyan-500 bg-cyan-500/10 scale-105 shadow-lg shadow-cyan-500/20'
+                                                : 'border-white/10 bg-[#161b22] hover:border-white/30 hover:bg-white/5'
+                                            }`}
                                     >
                                         <span className="text-3xl filter drop-shadow-lg group-hover:scale-110 transition-transform">{genre.emoji}</span>
                                         <span className={`font-bold ${isSelected ? 'text-white' : 'text-gray-400'}`}>{genre.label}</span>
@@ -91,12 +88,12 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
                 ) : (
                     <div className="animate-slide-up">
                         <div className="mb-8">
-                             <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-3xl mx-auto flex items-center justify-center mb-6 shadow-2xl shadow-purple-500/20 -rotate-3">
+                            <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-3xl mx-auto flex items-center justify-center mb-6 shadow-2xl shadow-purple-500/20 -rotate-3">
                                 <Film className="w-10 h-10 text-white" />
                             </div>
                             <h1 className="text-4xl font-black text-white mb-4">אנחנו בונים את הפיד שלך...</h1>
                             <p className="text-gray-400 text-lg mb-8">בהתבסס על הבחירות שלך: <span className="text-cyan-400 font-bold">{selectedGenres.join(', ')}</span></p>
-                            
+
                             <div className="bg-[#161b22] p-6 rounded-2xl border border-white/10 max-w-lg mx-auto mb-10">
                                 <div className="space-y-4">
                                     <div className="flex items-center gap-4">
@@ -115,7 +112,7 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
                             </div>
                         </div>
 
-                         <button
+                        <button
                             onClick={handleFinish}
                             className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-black text-lg px-12 py-4 rounded-xl hover:shadow-[0_0_30px_rgba(34,211,238,0.4)] hover:scale-105 transition-all flex items-center gap-2 mx-auto"
                         >

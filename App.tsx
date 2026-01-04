@@ -69,32 +69,108 @@ function AppContent() {
         { id: 'scary', icon: Ghost, label: 'פחד' },
     ];
 
+    // Load User Data when UID is available
     useEffect(() => {
-        // Simulate initial data fetch for skeleton loading screen
-        const timer = setTimeout(() => {
-            setAppLoading(false);
-            // Load preferences from local storage
-            const savedPrefs = localStorage.getItem('eyalatiatv_preferences');
+        if (!authLoading && user) {
+            const uid = user.uid;
+
+            // 1. Preferences
+            const savedPrefs = localStorage.getItem(`eyalatiatv_${uid}_preferences`);
             if (savedPrefs) {
                 try {
                     const parsed = JSON.parse(savedPrefs);
-                    if (Array.isArray(parsed) && parsed.length > 0) {
-                        setUserPreferences(parsed);
-                    }
+                    if (Array.isArray(parsed)) setUserPreferences(parsed);
                 } catch (e) { }
+            } else {
+                setUserPreferences([]); // Reset if no prefs for this user
             }
 
-            // Load watch history
-            const savedHistory = localStorage.getItem('eyalatiatv_history');
+            // 2. History
+            const savedHistory = localStorage.getItem(`eyalatiatv_${uid}_history`);
             if (savedHistory) {
                 try {
                     const parsed = JSON.parse(savedHistory);
                     if (Array.isArray(parsed)) setWatchedHistory(parsed);
                 } catch (e) { }
+            } else {
+                setWatchedHistory([]);
             }
-        }, 1500);
-        return () => clearTimeout(timer);
-    }, []);
+
+            // 3. My List
+            const savedList = localStorage.getItem(`eyalatiatv_${uid}_mylist`);
+            if (savedList) {
+                try {
+                    const parsed = JSON.parse(savedList);
+                    if (Array.isArray(parsed)) setMyList(parsed);
+                } catch (e) { }
+            } else {
+                setMyList([]);
+            }
+
+            // 4. Liked Content
+            const savedLikes = localStorage.getItem(`eyalatiatv_${uid}_likes`);
+            if (savedLikes) {
+                try {
+                    const parsed = JSON.parse(savedLikes);
+                    if (Array.isArray(parsed)) setLikedContent(parsed);
+                } catch (e) { }
+            } else {
+                setLikedContent([]);
+            }
+
+            // 5. Recently Viewed
+            const savedRecent = localStorage.getItem(`eyalatiatv_${uid}_recent`);
+            if (savedRecent) {
+                try {
+                    const parsed = JSON.parse(savedRecent);
+                    if (Array.isArray(parsed)) setRecentlyViewedIds(parsed);
+                } catch (e) { }
+            } else {
+                setRecentlyViewedIds([]);
+            }
+
+            setAppLoading(false);
+        } else if (!authLoading && !user) {
+            // Reset state on logout
+            setUserPreferences([]);
+            setWatchedHistory([]);
+            setMyList([]);
+            setLikedContent([]);
+            setRecentlyViewedIds([]);
+            setAppLoading(false);
+        }
+    }, [user, authLoading]);
+
+    // Persistence Effects for each state
+    useEffect(() => {
+        if (user) {
+            localStorage.setItem(`eyalatiatv_${user.uid}_preferences`, JSON.stringify(userPreferences));
+        }
+    }, [userPreferences, user]);
+
+    useEffect(() => {
+        if (user) {
+            localStorage.setItem(`eyalatiatv_${user.uid}_history`, JSON.stringify(watchedHistory));
+        }
+    }, [watchedHistory, user]);
+
+    useEffect(() => {
+        if (user) {
+            localStorage.setItem(`eyalatiatv_${user.uid}_mylist`, JSON.stringify(myList));
+        }
+    }, [myList, user]);
+
+    useEffect(() => {
+        if (user) {
+            localStorage.setItem(`eyalatiatv_${user.uid}_likes`, JSON.stringify(likedContent));
+        }
+    }, [likedContent, user]);
+
+    useEffect(() => {
+        if (user) {
+            localStorage.setItem(`eyalatiatv_${user.uid}_recent`, JSON.stringify(recentlyViewedIds));
+        }
+    }, [recentlyViewedIds, user]);
 
     // TV Remote Navigation Handler (Back Button)
     useEffect(() => {
@@ -353,7 +429,6 @@ function AppContent() {
         if (activeVideoId) {
             setWatchedHistory(prev => {
                 const newHistory = [activeVideoId, ...prev.filter(id => id !== activeVideoId)];
-                localStorage.setItem('eyalatiatv_history', JSON.stringify(newHistory));
                 // Note: The UI updates automatically because 'watchedHistory' state changes trigger re-render
                 // and getPersonalizedCategories recalculates scores.
                 return newHistory;
