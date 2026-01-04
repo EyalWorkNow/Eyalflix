@@ -4206,48 +4206,7 @@ export const KIMETSU_NO_YAIBA_HASHIRA_GEIKOHEN: Movie = {
 };
 
 // ============== ORE DAKE LEVEL UP NA KEN HOW TO GET STRONGER ==============
-export const ORE_DAKE_LEVEL_UP_NA_KEN_HOW_TO_GET_STRONGER: Movie = {
-  "id": "ore-dake-level-up-na-ken-how-to-get-stronger",
-  "englishName": "Ore dake Level Up na Ken: How to Get Stronger",
-  "type": "series",
-  "title": "עולה רמות לבדי - ריקאפ",
-  "description": "פרק ריקאפ המסביר על התרחשויות הסדרה בין פרקים 1 עד 7",
-  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/17187903177365846152111874752931_121.jpg",
-  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/17187903177365846152111874752931_121.jpg",
-  "rating": "12+",
-  "matchScore": 95,
-  "year": 2024,
-  "genre": [
-    "אקשן",
-    "הרפתקאות",
-    "פנטזיה"
-  ],
-  "cast": [],
-  "source": {
-    "site": "aniplus.co",
-    "seriesUrl": "https://aniplus.co/anime/973",
-    "animeId": 973,
-    "generatedAt": "2026-01-02T23:02:01.572167Z"
-  },
-  "seasons": [
-    {
-      "id": "ore-dake-level-up-na-ken-how-to-get-stronger-s1",
-      "number": 1,
-      "title": "עונה 1",
-      "episodes": [
-        {
-          "id": "ore-dake-level-up-na-ken-how-to-get-stronger-e1",
-          "number": 1,
-          "title": "פרק 1: 7.5",
-          "description": "פרק ריקאפ המסביר על התרחשויות הסדרה בין פרקים 1 עד 7",
-          "duration": "23 דק׳",
-          "videoUrl": "https://filemoon.sx/e/mxss3gqhwk7y/_Erai-Raws__Ore_Dake_Level_Up_Na_Ken_-_07_5",
-          "thumbnailUrl": "17187903177365846152111874752931_121.jpg"
-        }
-      ]
-    }
-  ]
-};
+
 
 // ============== DEKISOKONAI TO YOBARETA MOTOEIYUU WA JIKKA KARA TSUIHOU SARETA NODE SUKIKATTE NI IKIRU KOTO NI SHITA ==============
 export const DEKISOKONAI_TO_YOBARETA_MOTOEIYUU_WA_JIKKA_KARA_TSUIHOU_SARETA_NODE_SUKIKATTE_NI_IKIRU_KOTO_NI_SHITA: Movie = {
@@ -4891,46 +4850,7 @@ export const DR_STONE_NEW_WORLD_PART_2: Movie = {
 };
 
 // ============== ATTACK ON TITAN FINAL SEASON  THE FINAL CHAPTERS ==============
-export const ATTACK_ON_TITAN_FINAL_SEASON__THE_FINAL_CHAPTERS: Movie = {
-  "id": "attack-on-titan-final-season---the-final-chapters",
-  "englishName": "Attack on Titan: Final Season - The Final Chapters",
-  "type": "series",
-  "title": "מתקפת הטיטאנים עונת סיום חלק אחרון",
-  "description": "",
-  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1699688135149131078.jpg",
-  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1699688135149131078.jpg",
-  "rating": "16+",
-  "matchScore": 95,
-  "year": 2023,
-  "genre": [
-    "אקשן"
-  ],
-  "cast": [],
-  "source": {
-    "site": "aniplus.co",
-    "seriesUrl": "https://aniplus.co/anime/585",
-    "animeId": 585,
-    "generatedAt": "2026-01-02T23:03:17.977333Z"
-  },
-  "seasons": [
-    {
-      "id": "attack-on-titan-final-season---the-final-chapters-s1",
-      "number": 1,
-      "title": "עונה 1",
-      "episodes": [
-        {
-          "id": "attack-on-titan-final-season---the-final-chapters-e1",
-          "number": 1,
-          "title": "פרק 1: 1",
-          "description": "",
-          "duration": "84 דק׳",
-          "videoUrl": "https://drive.google.com/file/d/1X8sJhMEoIbA-zezorZQP5RzTB4FDfTPn/preview",
-          "thumbnailUrl": "1699688135149131078.jpg"
-        }
-      ]
-    }
-  ]
-};
+
 
 // ============== SAIHATE NO PALADIN TETSUSABI NO YAMA NO OU ==============
 export const SAIHATE_NO_PALADIN_TETSUSABI_NO_YAMA_NO_OU: Movie = {
@@ -6627,48 +6547,7 @@ export const LONG_ZU: Movie = {
 };
 
 // ============== DR STONE RYUUSUI ==============
-export const DR_STONE_RYUUSUI: Movie = {
-  "id": "dr-stone-ryuusui",
-  "englishName": "Dr. Stone: Ryuusui",
-  "type": "series",
-  "title": "דר. סטון: ריוסוי",
-  "description": "דר. סטון: ספיישל - ריוסוי",
-  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1691731802347124921l[1].jpg",
-  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1691731802347124921l[1].jpg",
-  "rating": "12+",
-  "matchScore": 95,
-  "year": 2022,
-  "genre": [
-    "הרפתקאות",
-    "קומדיה",
-    "מדע בדיוני"
-  ],
-  "cast": [],
-  "source": {
-    "site": "aniplus.co",
-    "seriesUrl": "https://aniplus.co/anime/149",
-    "animeId": 149,
-    "generatedAt": "2026-01-02T23:06:35.581298Z"
-  },
-  "seasons": [
-    {
-      "id": "dr-stone-ryuusui-s1",
-      "number": 1,
-      "title": "עונה 1",
-      "episodes": [
-        {
-          "id": "dr-stone-ryuusui-e1",
-          "number": 1,
-          "title": "פרק 1: 1",
-          "description": "דר. סטון: ספיישל - ריוסוי",
-          "duration": "54 דק׳",
-          "videoUrl": "https://strmup.cc/NH0k6l8e13ixY",
-          "thumbnailUrl": "1691731802347124921l[1].jpg"
-        }
-      ]
-    }
-  ]
-};
+
 
 // ============== SEKAI SAIKOU NO ANSATSUSHA ISEKAI KIZOKU NI TENSEI SURU ==============
 export const SEKAI_SAIKOU_NO_ANSATSUSHA_ISEKAI_KIZOKU_NI_TENSEI_SURU: Movie = {
@@ -13567,47 +13446,7 @@ export const KIMETSU_NO_YAIBA_MUGEN_RESSHAHEN: Movie = {
 };
 
 // ============== KIMETSU NO YAIBA MOVIE MUGEN RESSHAHEN ==============
-export const KIMETSU_NO_YAIBA_MOVIE_MUGEN_RESSHAHEN: Movie = {
-  "id": "kimetsu-no-yaiba-movie-mugen-ressha-hen",
-  "englishName": "Kimetsu no Yaiba Movie: Mugen Ressha-hen",
-  "type": "series",
-  "title": "קוטל השדים הסרט: רכבת האינסוף",
-  "description": "טאנג'ירו, נזוקו, זניטסו ואינוסקה עולים על גבי רכבת האינסוף בכדי לסייע להאשירה הלהבות, רנגוקו קיוג'ורו, במציאתו של השד אשר קיפח עליה את חייהם של ציידי שדים רבים, נוסף להמוני נוסעים חפים מפשע.\n\nהסרט הינו המשך ישיר של העונה הראשונה של האנימה.",
-  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1696400727695Kimetsu no Yaiba Movie: Mugen Ressha-hen.jpg",
-  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1696400727695Kimetsu no Yaiba Movie: Mugen Ressha-hen.jpg",
-  "rating": "12+",
-  "matchScore": 95,
-  "year": 2020,
-  "genre": [
-    "אקשן",
-    "פנטזיה"
-  ],
-  "cast": [],
-  "source": {
-    "site": "aniplus.co",
-    "seriesUrl": "https://aniplus.co/anime/314",
-    "animeId": 314,
-    "generatedAt": "2026-01-02T23:43:44.464444Z"
-  },
-  "seasons": [
-    {
-      "id": "kimetsu-no-yaiba-movie-mugen-ressha-hen-s1",
-      "number": 1,
-      "title": "עונה 1",
-      "episodes": [
-        {
-          "id": "kimetsu-no-yaiba-movie-mugen-ressha-hen-e1",
-          "number": 1,
-          "title": "פרק 1: 1",
-          "description": "טאנג'ירו, נזוקו, זניטסו ואינוסקה עולים על גבי רכבת האינסוף בכדי לסייע להאשירה הלהבות, רנגוקו קיוג'ורו, במציאתו של השד אשר קיפח עליה את חייהם של ציידי שדים רבים, נוסף להמוני נוסעים חפים מפשע.\n\nהסרט הינו המשך ישיר של העונה הראשונה של האנימה.",
-          "duration": "90 דק׳",
-          "videoUrl": "https://drive.google.com/file/d/1p69dPa2ntet8oCP_YuMlP6o4jp9eljaX/preview",
-          "thumbnailUrl": "1696400727695Kimetsu no Yaiba Movie: Mugen Ressha-hen.jpg"
-        }
-      ]
-    }
-  ]
-};
+
 
 // ============== KIMETSU NO YAIBA YUUKAKUHEN ==============
 export const KIMETSU_NO_YAIBA_YUUKAKUHEN: Movie = {
@@ -13886,91 +13725,10 @@ export const GATE_JIEITAI_KANOCHI_NITE_KAKU_TATAKAERI: Movie = {
 };
 
 // ============== MUSHOKU TENSEI ISEKAI ITTARA HONKI DASU  ERIS NO GOBLIN TOUBATSU ==============
-export const MUSHOKU_TENSEI_ISEKAI_ITTARA_HONKI_DASU__ERIS_NO_GOBLIN_TOUBATSU: Movie = {
-  "id": "mushoku-tensei-isekai-ittara-honki-dasu---eris-no-goblin-toubatsu",
-  "englishName": "Mushoku Tensei: Isekai Ittara Honki Dasu - Eris no Goblin Toubatsu",
-  "type": "series",
-  "title": "מושוקו טנסיי: גלגול מובטל - אריס קוטלת הגובלינים",
-  "description": "פרק שצורף לגרסת הבלו-ריי של הווליום הרביעי של האנימה \"מושוקו טנסיי\", ובו מסופר על המתרחש עם אריס במהלך אירועי פרק 16.",
-  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1696401650918Mushoku Tensei: Isekai Ittara Honki Dasu - Eris no Goblin Toubatsu.jpg",
-  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1696401650918Mushoku Tensei: Isekai Ittara Honki Dasu - Eris no Goblin Toubatsu.jpg",
-  "rating": "12+",
-  "matchScore": 95,
-  "year": 2022,
-  "genre": [
-    "פנטזיה",
-    "דרמה"
-  ],
-  "cast": [],
-  "source": {
-    "site": "aniplus.co",
-    "seriesUrl": "https://aniplus.co/anime/324",
-    "animeId": 324,
-    "generatedAt": "2026-01-02T23:44:23.847901Z"
-  },
-  "seasons": [
-    {
-      "id": "mushoku-tensei-isekai-ittara-honki-dasu---eris-no-goblin-toubatsu-s1",
-      "number": 1,
-      "title": "עונה 1",
-      "episodes": [
-        {
-          "id": "mushoku-tensei-isekai-ittara-honki-dasu---eris-no-goblin-toubatsu-e1",
-          "number": 1,
-          "title": "פרק 1: 1",
-          "description": "פרק שצורף לגרסת הבלו-ריי של הווליום הרביעי של האנימה \"מושוקו טנסיי\", ובו מסופר על המתרחש עם אריס במהלך אירועי פרק 16.",
-          "duration": "23 דק׳",
-          "videoUrl": "https://drive.google.com/file/d/17egooks4YyPd33Z_5Qz6ubh6wgimWACX/preview",
-          "thumbnailUrl": "1696401650918Mushoku Tensei: Isekai Ittara Honki Dasu - Eris no Goblin Toubatsu.jpg"
-        }
-      ]
-    }
-  ]
-};
+
 
 // ============== OVERLORD PLE PLE PLEIADES  NAZARICK SAIDAI NO KIKI ==============
-export const OVERLORD_PLE_PLE_PLEIADES__NAZARICK_SAIDAI_NO_KIKI: Movie = {
-  "id": "overlord-ple-ple-pleiades---nazarick-saidai-no-kiki",
-  "englishName": "Overlord: Ple Ple Pleiades - Nazarick Saidai no Kiki",
-  "type": "series",
-  "title": "שליט עליון: פליאדות טהורות טהורות - המשבר הגדול ביותר של נאזאריק",
-  "description": "אובה לאנימה \"שליט עליון\", הממשיכה את עלילות הספיישלים.",
-  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1697181677127Overlord: Ple Ple Pleiades - Nazarick Saidai no Kiki.jpg",
-  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1697181677127Overlord: Ple Ple Pleiades - Nazarick Saidai no Kiki.jpg",
-  "rating": "12+",
-  "matchScore": 95,
-  "year": 2016,
-  "genre": [
-    "אקשן",
-    "פנטזיה",
-    "קומדיה"
-  ],
-  "cast": [],
-  "source": {
-    "site": "aniplus.co",
-    "seriesUrl": "https://aniplus.co/anime/401",
-    "animeId": 401,
-    "generatedAt": "2026-01-02T23:45:07.099198Z"
-  },
-  "seasons": [
-    {
-      "id": "overlord-ple-ple-pleiades---nazarick-saidai-no-kiki-s1",
-      "number": 1,
-      "title": "עונה 1",
-      "episodes": [
-        {
-          "id": "overlord-ple-ple-pleiades---nazarick-saidai-no-kiki-e1",
-          "number": 1,
-          "title": "פרק 1: 1",
-          "description": "אובה לאנימה \"שליט עליון\", הממשיכה את עלילות הספיישלים.",
-          "duration": "30 דק׳",
-          "videoUrl": "https://anipluspro.upn.one/#nkmnn",
-          "thumbnailUrl": "1697181677127Overlord: Ple Ple Pleiades - Nazarick Saidai no Kiki.jpg"
-        }
-      ]
-    }
-  ]
-};
+
 
 // ============== OVERLORD II ==============
 export const OVERLORD_II: Movie = {
@@ -14972,48 +14730,7 @@ export const NO_GAME_NO_LIFE: Movie = {
 };
 
 // ============== NO GAME NO LIFE ZERO ==============
-export const NO_GAME_NO_LIFE_ZERO: Movie = {
-  "id": "no-game-no-life-zero",
-  "englishName": "No Game No Life: Zero",
-  "type": "series",
-  "title": "אין משחק אין חיים: זירו",
-  "description": "\"אין משחק, אין חיים\" מגוללת את סיפורם של סורה ושל שירו, אח ואחות, שניהם גיימרים מוכשרים להדהים ובעלי יכולות משחק עילאיות. האחים הללו, הנער והילדה, מסתכלים על העולם האמיתי בתור \"משחק עלוב\", לאחר ש\"חוקי המשחק\" החולניים והבלתי מוגדרים שלו הביאו אותם להפוך מרצונם להיקיקומורים. ולמען האמת, במובן מסוים, שניהם מרגישים כאילו נולדו בעולם הלא נכון.\nמשחק שחמט וירטואלי נגד משתמש מסתורי והתכתבות מוזרה וכנה בינו לבינם הופכים את גורלם של סורה ושל שירו. הם מזומנים לפתע אל עולם אחר ע\"י המשתמש המסתורי, שמגלה ששמו הוא טט. \"דיסבורד\" - עולם לוח המשחקים, עולם שכלו מתנהל לפי עשרה חוקים פשוטים וברורים, ובראשם: כל מחלוקת וכל התערבות שהן תיושבנה באמצעות משחקים.\nבעולם פשוט ופנטסטי שכזה, מה יקרה לסורה ולשירו? כיצד יפצחו שני השחקנים האולטימטיבים את הדרך אל פסגה העולם הכה אידיאלי עבורם? אין לדעת מה יעלה בגורל זוג האחים הצעיר והמבטיח, אז... \"קדימה, תנו למשחק להתחיל\".",
-  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1698167924517No Game No Life: Zero.jpg",
-  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1698167924517No Game No Life: Zero.jpg",
-  "rating": "12+",
-  "matchScore": 95,
-  "year": 2017,
-  "genre": [
-    "פנטזיה",
-    "רומנטיקה",
-    "דרמה"
-  ],
-  "cast": [],
-  "source": {
-    "site": "aniplus.co",
-    "seriesUrl": "https://aniplus.co/anime/522",
-    "animeId": 522,
-    "generatedAt": "2026-01-02T23:48:26.428807Z"
-  },
-  "seasons": [
-    {
-      "id": "no-game-no-life-zero-s1",
-      "number": 1,
-      "title": "עונה 1",
-      "episodes": [
-        {
-          "id": "no-game-no-life-zero-e1",
-          "number": 1,
-          "title": "פרק 1: 1",
-          "description": "\"אין משחק, אין חיים\" מגוללת את סיפורם של סורה ושל שירו, אח ואחות, שניהם גיימרים מוכשרים להדהים ובעלי יכולות משחק עילאיות. האחים הללו, הנער והילדה, מסתכלים על העולם האמיתי בתור \"משחק עלוב\", לאחר ש\"חוקי המשחק\" החולניים והבלתי מוגדרים שלו הביאו אותם להפוך מרצונם להיקיקומורים. ולמען האמת, במובן מסוים, שניהם מרגישים כאילו נולדו בעולם הלא נכון.\nמשחק שחמט וירטואלי נגד משתמש מסתורי והתכתבות מוזרה וכנה בינו לבינם הופכים את גורלם של סורה ושל שירו. הם מזומנים לפתע אל עולם אחר ע\"י המשתמש המסתורי, שמגלה ששמו הוא טט. \"דיסבורד\" - עולם לוח המשחקים, עולם שכלו מתנהל לפי עשרה חוקים פשוטים וברורים, ובראשם: כל מחלוקת וכל התערבות שהן תיושבנה באמצעות משחקים.\nבעולם פשוט ופנטסטי שכזה, מה יקרה לסורה ולשירו? כיצד יפצחו שני השחקנים האולטימטיבים את הדרך אל פסגה העולם הכה אידיאלי עבורם? אין לדעת מה יעלה בגורל זוג האחים הצעיר והמבטיח, אז... \"קדימה, תנו למשחק להתחיל\".",
-          "duration": "106 דק׳",
-          "videoUrl": "https://filemoon.sx/e/c3v63teb018z/_KKS__No_Game_No_Life__Zero\npreview",
-          "thumbnailUrl": "1698167924517No Game No Life: Zero.jpg"
-        }
-      ]
-    }
-  ]
-};
+
 
 // ============== KNIGHTS  MAGIC ==============
 export const KNIGHTS__MAGIC: Movie = {
@@ -18727,90 +18444,10 @@ export const TO_YOUR_ETERNITY_SEASON_2: Movie = {
 };
 
 // ============== PERSONA 4 THE ANIMATION NO ONE IS ALONE ==============
-export const PERSONA_4_THE_ANIMATION_NO_ONE_IS_ALONE: Movie = {
-  "id": "persona-4-the-animation-no-one-is-alone",
-  "englishName": "Persona 4 the Animation: No One is Alone",
-  "type": "series",
-  "title": "פרסונה 4 אף אחד לא לבד אובה",
-  "description": "אובה",
-  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1707548618583Persona 4 the Animation: No One is Alone.jpg",
-  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1707548618583Persona 4 the Animation: No One is Alone.jpg",
-  "rating": "12+",
-  "matchScore": 95,
-  "year": 2012,
-  "genre": [
-    "הרפתקאות",
-    "מסתורין"
-  ],
-  "cast": [],
-  "source": {
-    "site": "aniplus.co",
-    "seriesUrl": "https://aniplus.co/anime/960",
-    "animeId": 960,
-    "generatedAt": "2026-01-03T00:01:16.951750Z"
-  },
-  "seasons": [
-    {
-      "id": "persona-4-the-animation-no-one-is-alone-s1",
-      "number": 1,
-      "title": "עונה 1",
-      "episodes": [
-        {
-          "id": "persona-4-the-animation-no-one-is-alone-e1",
-          "number": 1,
-          "title": "פרק 1: 1",
-          "description": "אובה",
-          "duration": "30 דק׳",
-          "videoUrl": "https://drive.google.com/file/d/1LHIkWA1uKaD0OFOwEZheCjK9V7iiOHHs/preview",
-          "thumbnailUrl": "1707548618583Persona 4 the Animation: No One is Alone.jpg"
-        }
-      ]
-    }
-  ]
-};
+
 
 // ============== LONG ZU EPISODE 0 ==============
-export const LONG_ZU_EPISODE_0: Movie = {
-  "id": "long-zu-episode-0",
-  "englishName": "Long Zu Episode 0",
-  "type": "series",
-  "title": "דרקון ראג'ה 0",
-  "description": "פרק הקדמה (פרק-0) של דרקון ראג'ה.\n\nחשוב לראות אותו לפני שרואים את הסדרה",
-  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1713121545712Long Zu Episode 0.jpg",
-  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1713121545712Long Zu Episode 0.jpg",
-  "rating": "12+",
-  "matchScore": 95,
-  "year": 2022,
-  "genre": [
-    "הרפתקאות",
-    "פנטזיה"
-  ],
-  "cast": [],
-  "source": {
-    "site": "aniplus.co",
-    "seriesUrl": "https://aniplus.co/anime/1008",
-    "animeId": 1008,
-    "generatedAt": "2026-01-03T00:01:19.050257Z"
-  },
-  "seasons": [
-    {
-      "id": "long-zu-episode-0-s1",
-      "number": 1,
-      "title": "עונה 1",
-      "episodes": [
-        {
-          "id": "long-zu-episode-0-e1",
-          "number": 1,
-          "title": "פרק 1: 1",
-          "description": "פרק הקדמה (פרק-0) של דרקון ראג'ה.\n\nחשוב לראות אותו לפני שרואים את הסדרה",
-          "duration": "49 דק׳",
-          "videoUrl": "https://aniplustwo.upns.live/#5wt3w3",
-          "thumbnailUrl": "1713121545712Long Zu Episode 0.jpg"
-        }
-      ]
-    }
-  ]
-};
+
 
 // ============== ONE PUNCH MAN SEASON 2 ==============
 export const ONE_PUNCH_MAN_SEASON_2: Movie = {
@@ -20303,47 +19940,7 @@ export const BUNGOU_STRAY_DOGS_2ND_SEASON: Movie = {
 };
 
 // ============== BUNGOU STRAY DOGS DEAD APPLE ==============
-export const BUNGOU_STRAY_DOGS_DEAD_APPLE: Movie = {
-  "id": "bungou-stray-dogs-dead-apple",
-  "englishName": "Bungou Stray Dogs: Dead Apple",
-  "type": "series",
-  "title": "כלבי ספרות נודדים: תפוח מורעל",
-  "description": "אסון בקנה מידה עצום מתרחש בעולם. בעלי יכולות נמצאים מתים לאחר הופעתו של ערפל מסתורי, ונדמה מאז כאילו הם מתאבדים. חברת החקירות החמושה יוצאת לחקור את המיתות האלו. נראה שהמקרה סובב סביב בעל יכולות לא ידוע, שנקרא \"האספן\", ויכול מאוד להיות שהוא המוח מאחורי כל העניין.",
-  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1693860312125Bungou Stray Dogs: Dead Apple.jpg",
-  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1693860312125Bungou Stray Dogs: Dead Apple.jpg",
-  "rating": "12+",
-  "matchScore": 95,
-  "year": 2018,
-  "genre": [
-    "אקשן",
-    "מסתורין"
-  ],
-  "cast": [],
-  "source": {
-    "site": "aniplus.co",
-    "seriesUrl": "https://aniplus.co/anime/267",
-    "animeId": 267,
-    "generatedAt": "2026-01-03T00:07:01.770912Z"
-  },
-  "seasons": [
-    {
-      "id": "bungou-stray-dogs-dead-apple-s1",
-      "number": 1,
-      "title": "עונה 1",
-      "episodes": [
-        {
-          "id": "bungou-stray-dogs-dead-apple-e1",
-          "number": 1,
-          "title": "פרק 1: סרט",
-          "description": "אסון בקנה מידה עצום מתרחש בעולם. בעלי יכולות נמצאים מתים לאחר הופעתו של ערפל מסתורי, ונדמה מאז כאילו הם מתאבדים. חברת החקירות החמושה יוצאת לחקור את המיתות האלו. נראה שהמקרה סובב סביב בעל יכולות לא ידוע, שנקרא \"האספן\", ויכול מאוד להיות שהוא המוח מאחורי כל העניין.",
-          "duration": "90 דק׳",
-          "videoUrl": "https://drive.google.com/file/d/1_0F16AvfMn_JNSy78vS3JB1DLFtJxbQz/preview",
-          "thumbnailUrl": "1693860312125Bungou Stray Dogs: Dead Apple.jpg"
-        }
-      ]
-    }
-  ]
-};
+
 
 // ============== BUNGOU STRAY DOGS 3RD SEASON ==============
 export const BUNGOU_STRAY_DOGS_3RD_SEASON: Movie = {
@@ -21583,48 +21180,7 @@ export const SWORD_ART_ONLINE_ALICIZATION: Movie = {
 };
 
 // ============== SWORD ART ONLINE MOVIE ORDINAL SCALE ==============
-export const SWORD_ART_ONLINE_MOVIE_ORDINAL_SCALE: Movie = {
-  "id": "sword-art-online-movie-ordinal-scale",
-  "englishName": "Sword Art Online Movie: Ordinal Scale",
-  "type": "series",
-  "title": "אומנות החרב אונליין - סולם אורדינלי",
-  "description": "הסרט מתרחש לאחר סיום העונה השניה, ובו קיריטו וחבורתו יוצאים להרפתקה חדשה בעולמו של משחק חדש ומרתק המכונה \"סולם אורדינאלי\", שעושה שימוש בטכנולוגיית המציאות הרבודה - מציאות מדומה בתוך העולם האמיתי. הקו המפריד בין העולם המוחשי לעולם הוירטואלי מתחיל להטשטש, ומציב את גיבורינו בסכנה. האם קיריטו יוכל להציל את חבריו, או שבשבילו - המשחק נגמר?",
-  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1713339475331Sword Art Online Movie: Ordinal Scale.jpg",
-  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1713339475331Sword Art Online Movie: Ordinal Scale.jpg",
-  "rating": "12+",
-  "matchScore": 95,
-  "year": 2017,
-  "genre": [
-    "אקשן",
-    "הרפתקאות",
-    "פנטזיה"
-  ],
-  "cast": [],
-  "source": {
-    "site": "aniplus.co",
-    "seriesUrl": "https://aniplus.co/anime/1011",
-    "animeId": 1011,
-    "generatedAt": "2026-01-03T00:09:05.425032Z"
-  },
-  "seasons": [
-    {
-      "id": "sword-art-online-movie-ordinal-scale-s1",
-      "number": 1,
-      "title": "עונה 1",
-      "episodes": [
-        {
-          "id": "sword-art-online-movie-ordinal-scale-e1",
-          "number": 1,
-          "title": "פרק 1: 1",
-          "description": "הסרט מתרחש לאחר סיום העונה השניה, ובו קיריטו וחבורתו יוצאים להרפתקה חדשה בעולמו של משחק חדש ומרתק המכונה \"סולם אורדינאלי\", שעושה שימוש בטכנולוגיית המציאות הרבודה - מציאות מדומה בתוך העולם האמיתי. הקו המפריד בין העולם המוחשי לעולם הוירטואלי מתחיל להטשטש, ומציב את גיבורינו בסכנה. האם קיריטו יוכל להציל את חבריו, או שבשבילו - המשחק נגמר?",
-          "duration": "90 דק׳",
-          "videoUrl": "https://filemoon.sx/e/o4sxzko785xh/_Anime-Fun__Sword_Art_Online_-_Ordinal_Scale\npreview",
-          "thumbnailUrl": "1713339475331Sword Art Online Movie: Ordinal Scale.jpg"
-        }
-      ]
-    }
-  ]
-};
+
 
 // ============== SWORD ART ONLINE ALICIZATION  WAR OF UNDERWORLD ==============
 export const SWORD_ART_ONLINE_ALICIZATION__WAR_OF_UNDERWORLD: Movie = {
@@ -21770,48 +21326,7 @@ export const SWORD_ART_ONLINE_ALICIZATION__WAR_OF_UNDERWORLD: Movie = {
 };
 
 // ============== SWORD ART ONLINE PROGRESSIVE MOVIE  HOSHI NAKI YORU NO ARIA ==============
-export const SWORD_ART_ONLINE_PROGRESSIVE_MOVIE__HOSHI_NAKI_YORU_NO_ARIA: Movie = {
-  "id": "sword-art-online-progressive-movie---hoshi-naki-yoru-no-aria",
-  "englishName": "Sword Art Online: Progressive Movie - Hoshi Naki Yoru no Aria",
-  "type": "series",
-  "title": "אומנות החרב אונליין: פרוגרסיב – מוזיקה של לילה ללא כוכבים",
-  "description": "סרט המציג את תחילת מסעם של קיריטו ואסונה במשחק המקורי \"אומנות החרב אונליין\".\n\nאסונה יוקי, תלמידת חטיבה מצליחה ומוכשרת, נענית להצעה של חברתה לכיתה מיסומי טוזאווה - המכונה מיטו - לקחת הפסקה קצרה מהלימודים להצטרף אליה להשקה של משחק המציאות המדומה מרובה המשתתפים המדובר \"Sword Art Online\", או בקיצור - SAO. ההשקה, שהתרחשה בתוך המשחק, הציגה תפנית מפתיעה ומבעיתה כאחד - אסונה, מיטו וכל השחקנים שהתחברו למשחק אינם מסוגלים לעזוב אותו.\nאפשרויות ההתנתקות מתוך המשחק הוסרו, גופיהם האמיתיים של השחקנים שבמציאות משותקים עקב פעולת קסדת המציאות המדומה, והנורא מכל - כל שחקן שימות ב-SAO או שקסדתו תוסר ימות גם בחיים האמיתיים! הדרך היחידה לחזור בחיים אל המציאות היא לנצח את המשחק ולנקות את כל מאה הקומות שבו. כעת על אסונה, מיטו ושאר השחקנים לשרוד את המסע אל הקומה המאה, ולעשות כל מה שיידרש כדי לא למות.",
-  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1714471506793Sword Art Online: Progressive Movie - Hoshi Naki Yoru no Aria.jpg",
-  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1714471506793Sword Art Online: Progressive Movie - Hoshi Naki Yoru no Aria.jpg",
-  "rating": "12+",
-  "matchScore": 95,
-  "year": 2021,
-  "genre": [
-    "אקשן",
-    "הרפתקאות",
-    "פנטזיה"
-  ],
-  "cast": [],
-  "source": {
-    "site": "aniplus.co",
-    "seriesUrl": "https://aniplus.co/anime/1082",
-    "animeId": 1082,
-    "generatedAt": "2026-01-03T00:09:35.126320Z"
-  },
-  "seasons": [
-    {
-      "id": "sword-art-online-progressive-movie---hoshi-naki-yoru-no-aria-s1",
-      "number": 1,
-      "title": "עונה 1",
-      "episodes": [
-        {
-          "id": "sword-art-online-progressive-movie---hoshi-naki-yoru-no-aria-e1",
-          "number": 1,
-          "title": "פרק 1: 1",
-          "description": "סרט המציג את תחילת מסעם של קיריטו ואסונה במשחק המקורי \"אומנות החרב אונליין\".\n\nאסונה יוקי, תלמידת חטיבה מצליחה ומוכשרת, נענית להצעה של חברתה לכיתה מיסומי טוזאווה - המכונה מיטו - לקחת הפסקה קצרה מהלימודים להצטרף אליה להשקה של משחק המציאות המדומה מרובה המשתתפים המדובר \"Sword Art Online\", או בקיצור - SAO. ההשקה, שהתרחשה בתוך המשחק, הציגה תפנית מפתיעה ומבעיתה כאחד - אסונה, מיטו וכל השחקנים שהתחברו למשחק אינם מסוגלים לעזוב אותו.\nאפשרויות ההתנתקות מתוך המשחק הוסרו, גופיהם האמיתיים של השחקנים שבמציאות משותקים עקב פעולת קסדת המציאות המדומה, והנורא מכל - כל שחקן שימות ב-SAO או שקסדתו תוסר ימות גם בחיים האמיתיים! הדרך היחידה לחזור בחיים אל המציאות היא לנצח את המשחק ולנקות את כל מאה הקומות שבו. כעת על אסונה, מיטו ושאר השחקנים לשרוד את המסע אל הקומה המאה, ולעשות כל מה שיידרש כדי לא למות.",
-          "duration": "90 דק׳",
-          "videoUrl": "https://filemoon.sx/e/76ugstl8hid2/_AnimeBloodSub__SAO_Progressive_-_Aria_of_a_Starless_Night\npreview",
-          "thumbnailUrl": "1714471506793Sword Art Online: Progressive Movie - Hoshi Naki Yoru no Aria.jpg"
-        }
-      ]
-    }
-  ]
-};
+
 
 // ============== SWORD ART ONLINE ALTERNATIVE GUN GALE ONLINE ==============
 export const SWORD_ART_ONLINE_ALTERNATIVE_GUN_GALE_ONLINE: Movie = {
@@ -22143,46 +21658,7 @@ export const SHINGEKI_NO_KYOJIN_OVA: Movie = {
 
 // ============== SHINGEKI NO KYOJIN KUINAKI SENTAKU ==============
 
-export const SHINGEKI_NO_KYOJIN_KUINAKI_SENTAKU: Movie = {
-  "id": "shingeki-no-kyojin-kuinaki-sentaku",
-  "englishName": "Shingeki no Kyojin: Kuinaki Sentaku",
-  "type": "series",
-  "title": "מתקפת הטיטאנים: בלי חרטות",
-  "description": "פריקוול לאנימה \"מתקפה הטיטאנים\", המגולל את סיפור המקור של ליווי. באובה זו נגלה כיצד ליווי הפך מעבריין בשכונות העוני שבין החומות לקפטן חייל הסיור החזק ביותר שידעה האנושות, את מקור היחסים בינו לבין מפקד חייל הסיור הצעיר וחדור המטרה, ארווין סמית', ואת נסיבות הגעתו של ארווין להיות למנהיג הדגול, המחושב והסוחף שאנחנו מכירים.\n\nהערה:\nאובה זו יצאה תחילה כשני חלקי אובה נפרדים, אך לאחר זמן שוחררה האובה בשנית בגרסה מאוחדת ובאיכות HD.",
-  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1696751249718Shingeki no Kyojin: Kuinaki Sentaku.jpg",
-  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1696751249718Shingeki no Kyojin: Kuinaki Sentaku.jpg",
-  "rating": "12+",
-  "matchScore": 95,
-  "year": 2014,
-  "genre": [
-    "אקשן"
-  ],
-  "cast": [],
-  "source": {
-    "site": "aniplus.co",
-    "seriesUrl": "https://aniplus.co/anime/345",
-    "animeId": 345,
-    "generatedAt": "2026-01-03T16:31:45.406001Z"
-  },
-  "seasons": [
-    {
-      "id": "shingeki-no-kyojin-kuinaki-sentaku-s1",
-      "number": 1,
-      "title": "עונה 1",
-      "episodes": [
-        {
-          "id": "shingeki-no-kyojin-kuinaki-sentaku-e1",
-          "number": 1,
-          "title": "פרק 1: 1",
-          "description": "פריקוול לאנימה \"מתקפה הטיטאנים\", המגולל את סיפור המקור של ליווי. באובה זו נגלה כיצד ליווי הפך מעבריין בשכונות העוני שבין החומות לקפטן חייל הסיור החזק ביותר שידעה האנושות, את מקור היחסים בינו לבין מפקד חייל הסיור הצעיר וחדור המטרה, ארווין סמית', ואת נסיבות הגעתו של ארווין להיות למנהיג הדגול, המחושב והסוחף שאנחנו מכירים.\n\nהערה:\nאובה זו יצאה תחילה כשני חלקי אובה נפרדים, אך לאחר זמן שוחררה האובה בשנית בגרסה מאוחדת ובאיכות HD.",
-          "duration": "27 דק׳",
-          "videoUrl": "https://drive.google.com/file/d/1wa-Ly8masWW_KTC-BKNO-UTr_Wa22Vhd/preview",
-          "thumbnailUrl": "1696751249718Shingeki no Kyojin: Kuinaki Sentaku.jpg"
-        }
-      ]
-    }
-  ]
-};
+
 
 // ============== SHINGEKI NO KYOJIN SEASON 2 ==============
 
@@ -22329,47 +21805,7 @@ export const SHINGEKI_NO_KYOJIN_SEASON_2: Movie = {
 
 // ============== SHINGEKI NO KYOJIN CHRONICLE ==============
 
-export const SHINGEKI_NO_KYOJIN_CHRONICLE: Movie = {
-  "id": "shingeki-no-kyojin-chronicle",
-  "englishName": "Shingeki no Kyojin: Chronicle",
-  "type": "series",
-  "title": "מתקפת הטיטאנים: כרוניקה",
-  "description": "סרט המסכם את כל מאורעות \"מתקפת הטיטאנים\" עד כה - את 59 הפרקים מהעונה הראשונה עד לעונה השלישית..",
-  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1696751493982Shingeki no Kyojin: Chronicle.jpg",
-  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1696751493982Shingeki no Kyojin: Chronicle.jpg",
-  "rating": "12+",
-  "matchScore": 95,
-  "year": 2020,
-  "genre": [
-    "אקשן",
-    "דרמה"
-  ],
-  "cast": [],
-  "source": {
-    "site": "aniplus.co",
-    "seriesUrl": "https://aniplus.co/anime/350",
-    "animeId": 350,
-    "generatedAt": "2026-01-03T16:32:00.367470Z"
-  },
-  "seasons": [
-    {
-      "id": "shingeki-no-kyojin-chronicle-s1",
-      "number": 1,
-      "title": "עונה 1",
-      "episodes": [
-        {
-          "id": "shingeki-no-kyojin-chronicle-e1",
-          "number": 1,
-          "title": "פרק 1: 1",
-          "description": "סרט המסכם את כל מאורעות \"מתקפת הטיטאנים\" עד כה - את 59 הפרקים מהעונה הראשונה עד לעונה השלישית..",
-          "duration": "90 דק׳",
-          "videoUrl": "https://drive.google.com/file/d/1NV2FEbgyivX0v0drCcqHkORRQ_GcgsiQ/preview",
-          "thumbnailUrl": "1696751493982Shingeki no Kyojin: Chronicle.jpg"
-        }
-      ]
-    }
-  ]
-};
+
 
 // ============== SHINGEKI NO KYOJIN THE FINAL SEASON ==============
 
@@ -22837,49 +22273,7 @@ export const SHINGEKI_KYOJIN_CHUUGAKKOU: Movie = {
 
 // ============== TENSEI SHITARA SLIME DATTA KEN MOVIE GUREN NO KIZUNAHEN ==============
 
-export const TENSEI_SHITARA_SLIME_DATTA_KEN_MOVIE_GUREN_NO_KIZUNAHEN: Movie = {
-  "id": "tensei-shitara-slime-datta-ken-movie-guren-no-kizuna-hen",
-  "englishName": "Tensei shitara Slime Datta Ken Movie: Guren no Kizuna-hen",
-  "type": "series",
-  "title": "המקרה בו חזרתי לחיים בתור סליים הסרט: סקרלט בונד",
-  "description": "ראג'ה, היא מדינה קטנה השוכנת ממערב ל-טמפסט. רימורו וחבריו מעורבים בקונספירציה ארוכת שנים שמסתחררת סביב כוחה המסתורי של המלכה. רימורו ומפקדו בנימארו נתקלים גם בניצול מגזע הענקים בשם היירו, מישהו מהגזע של בנימארו.",
-  "thumbnailUrl": "https://img.aniplus.co/Imgs/animePictures/1707461153134Tensei shitara Slime Datta Ken Movie: Guren no Kizuna-hen.jpg",
-  "backdropUrl": "https://img.aniplus.co/Imgs/animePictures/1707461153134Tensei shitara Slime Datta Ken Movie: Guren no Kizuna-hen.jpg",
-  "rating": "12+",
-  "matchScore": 95,
-  "year": 2022,
-  "genre": [
-    "אקשן",
-    "הרפתקאות",
-    "פנטזיה",
-    "קומדיה"
-  ],
-  "cast": [],
-  "source": {
-    "site": "aniplus.co",
-    "seriesUrl": "https://aniplus.co/anime/944",
-    "animeId": 944,
-    "generatedAt": "2026-01-03T16:32:23.959370Z"
-  },
-  "seasons": [
-    {
-      "id": "tensei-shitara-slime-datta-ken-movie-guren-no-kizuna-hen-s1",
-      "number": 1,
-      "title": "עונה 1",
-      "episodes": [
-        {
-          "id": "tensei-shitara-slime-datta-ken-movie-guren-no-kizuna-hen-e1",
-          "number": 1,
-          "title": "פרק 1: 1",
-          "description": "ראג'ה, היא מדינה קטנה השוכנת ממערב ל-טמפסט. רימורו וחבריו מעורבים בקונספירציה ארוכת שנים שמסתחררת סביב כוחה המסתורי של המלכה. רימורו ומפקדו בנימארו נתקלים גם בניצול מגזע הענקים בשם היירו, מישהו מהגזע של בנימארו.\n\n",
-          "duration": "90 דק׳",
-          "videoUrl": "https://filemoon.sx/e/6g7zx5ni2gg7/_Anime-Fire__Tensei_Shitara_Slime_Datta_Ken_Movie_Guren_No_Kizuna-Hen-1",
-          "thumbnailUrl": "1707461153134Tensei shitara Slime Datta Ken Movie: Guren no Kizuna-hen.jpg"
-        }
-      ]
-    }
-  ]
-};
+
 
 // ============== TENSEI KIZOKU NO ISEKAI BOUKENROKU JICHOU WO SHIRANAI KAMIGAMI NO SHITO ==============
 
@@ -23170,9 +22564,9 @@ export const ISEKAI_WA_SMARTPHONE_TO_TOMO_NI: Movie = {
   ]
 };
 
-
 export const ALL_SERIES: Movie[] = [
   DUNGEON_NI_DEAI_WO_MOTOMERU_NO_WA_MACHIGATTEIRU_DAROU_KA,
+  ONEPUNCHMAN3,
   ONE_PUNCH_MAN_3,
   SHINJITEITA_NAKAMATACHI_NI_DUNGEON_OKUCHI_DE_KOROSAREKAKETA_GA_GIFT_MUGEN_GACHA_DE_LEVEL_9999_NO,
   OVERLORD_IV,
@@ -23200,13 +22594,11 @@ export const ALL_SERIES: Movie[] = [
   TENSEI_SHITARA_DAINANA_OUJI_DATTA_NODE_KIMAMA_NI_MAJUTSU_WO_KIWAMEMASU,
   WIND_BREAKER,
   KIMETSU_NO_YAIBA_HASHIRA_GEIKOHEN,
-  ORE_DAKE_LEVEL_UP_NA_KEN_HOW_TO_GET_STRONGER,
   DEKISOKONAI_TO_YOBARETA_MOTOEIYUU_WA_JIKKA_KARA_TSUIHOU_SARETA_NODE_SUKIKATTE_NI_IKIRU_KOTO_NI_SHITA,
   MASHLE_SHINKAKUSHA_KOUHO_SENBATSU_SHIKENHEN,
   CHIYU_MAHOU_NO_MACHIGATTA_TSUKAIKATA,
   SOLO_LEVELING,
   DR_STONE_NEW_WORLD_PART_2,
-  ATTACK_ON_TITAN_FINAL_SEASON__THE_FINAL_CHAPTERS,
   SAIHATE_NO_PALADIN_TETSUSABI_NO_YAMA_NO_OU,
   TOKYO_REVENGERS_TENJIKUHEN,
   SHANGRILA_FRONTIER_KUSOGE_HUNTER_KAMIGE_NI_IDOMAN_TO_SU,
@@ -23217,7 +22609,6 @@ export const ALL_SERIES: Movie[] = [
   CHAINSAW_MAN,
   BLEACH_SENNEN_KESSENHEN,
   LONG_ZU,
-  DR_STONE_RYUUSUI,
   SEKAI_SAIKOU_NO_ANSATSUSHA_ISEKAI_KIZOKU_NI_TENSEI_SURU,
   ISEKAI_MAOU_TO_SHOUKAN_SHOUJO_NO_DOREI_MAJUTSU,
   HUNTER_X_HUNTER_2011,
@@ -23233,18 +22624,14 @@ export const ALL_SERIES: Movie[] = [
   BLACK_CLOVER,
   NARUTO,
   KIMETSU_NO_YAIBA_MUGEN_RESSHAHEN,
-  KIMETSU_NO_YAIBA_MOVIE_MUGEN_RESSHAHEN,
   KIMETSU_NO_YAIBA_YUUKAKUHEN,
   GATE_JIEITAI_KANOCHI_NITE_KAKU_TATAKAERI,
-  MUSHOKU_TENSEI_ISEKAI_ITTARA_HONKI_DASU__ERIS_NO_GOBLIN_TOUBATSU,
-  OVERLORD_PLE_PLE_PLEIADES__NAZARICK_SAIDAI_NO_KIKI,
   OVERLORD_II,
   OVERLORD_III,
   GOD_EATER,
   REZERO_KARA_HAJIMERU_ISEKAI_SEIKATSU,
   SEIKEN_TSUKAI_NO_WORLD_BREAK,
   NO_GAME_NO_LIFE,
-  NO_GAME_NO_LIFE_ZERO,
   KNIGHTS__MAGIC,
   LOG_HORIZON,
   BLEACH_SENNEN_KESSENHEN__KETSUBETSUTAN,
@@ -23264,8 +22651,6 @@ export const ALL_SERIES: Movie[] = [
   FULLMETAL_ALCHEMIST_BROTHERHOOD_SPECIALS,
   TO_YOUR_ETERNITY,
   TO_YOUR_ETERNITY_SEASON_2,
-  PERSONA_4_THE_ANIMATION_NO_ONE_IS_ALONE,
-  LONG_ZU_EPISODE_0,
   ONE_PUNCH_MAN_SEASON_2,
   ONE_PUNCH_MAN_OVA,
   ONE_PUNCH_MAN_OVA_SEASON_2,
@@ -23278,7 +22663,6 @@ export const ALL_SERIES: Movie[] = [
   JIDOU_HANBAIKI_NI_UMAREKAWATTA_ORE_WA_MEIKYUU_WO_SAMAYOU,
   BUNGOU_STRAY_DOGS,
   BUNGOU_STRAY_DOGS_2ND_SEASON,
-  BUNGOU_STRAY_DOGS_DEAD_APPLE,
   BUNGOU_STRAY_DOGS_3RD_SEASON,
   BOKU_DAKE_GA_INAI_MACHI,
   DARWINS_GAME,
@@ -23287,19 +22671,14 @@ export const ALL_SERIES: Movie[] = [
   YAKUSOKU_NO_NEVERLAND_2ND_SEASON,
   HIKARU_GA_SHINDA_NATSU,
   SWORD_ART_ONLINE_ALICIZATION,
-  SWORD_ART_ONLINE_MOVIE_ORDINAL_SCALE,
   SWORD_ART_ONLINE_ALICIZATION__WAR_OF_UNDERWORLD,
-  SWORD_ART_ONLINE_PROGRESSIVE_MOVIE__HOSHI_NAKI_YORU_NO_ARIA,
   SWORD_ART_ONLINE_ALTERNATIVE_GUN_GALE_ONLINE,
   SHINGEKI_NO_KYOJIN_SEASON_3_PART_2,
   SHINGEKI_NO_KYOJIN_OVA,
-  SHINGEKI_NO_KYOJIN_KUINAKI_SENTAKU,
   SHINGEKI_NO_KYOJIN_SEASON_2,
-  SHINGEKI_NO_KYOJIN_CHRONICLE,
   SHINGEKI_NO_KYOJIN_THE_FINAL_SEASON,
   SHINGEKI_NO_KYOJIN_THE_FINAL_SEASON_PART_2,
   SHINGEKI_KYOJIN_CHUUGAKKOU,
-  TENSEI_SHITARA_SLIME_DATTA_KEN_MOVIE_GUREN_NO_KIZUNAHEN,
   TENSEI_KIZOKU_NO_ISEKAI_BOUKENROKU_JICHOU_WO_SHIRANAI_KAMIGAMI_NO_SHITO,
   ISEKAI_WA_SMARTPHONE_TO_TOMO_NI
 ];
