@@ -55,6 +55,7 @@ function AppContent() {
 
     const handleContentSelect = (movie: Movie) => {
         setSelectedContent(movie);
+        // We still track recently viewed at the movie/series level for the "Continue Watching" row
         setRecentlyViewedIds(prev => [movie.id, ...prev.filter(id => id !== movie.id)].slice(0, 10));
     };
 
@@ -64,14 +65,25 @@ function AppContent() {
         return isNaN(minutes) ? 0 : minutes * 60;
     };
 
-    const handlePlayVideo = (url: string, title: string = '') => {
+    const handlePlayVideo = (url: string, title: string = '', startTime: number = 0) => {
         let foundMovie: Movie | null = null;
         let videoId: string | null = null;
         const all = getAllContent();
 
         for (const m of all) {
             if (m.videoUrl === url) { foundMovie = m; videoId = m.id; break; }
-            if (m.seasons?.some(s => s.episodes.some(e => e.videoUrl === url))) { foundMovie = m; videoId = m.id; break; }
+            if (m.seasons?.some(s => s.episodes.some(e => e.videoUrl === url))) {
+                foundMovie = m;
+                // For series, we find the specific episode ID
+                for (const s of m.seasons) {
+                    const ep = s.episodes.find(e => e.videoUrl === url);
+                    if (ep) {
+                        videoId = ep.id;
+                        break;
+                    }
+                }
+                break;
+            }
         }
 
         if (foundMovie) {
@@ -119,11 +131,38 @@ function AppContent() {
     };
 
     const handleContentPlay = (movie: Movie) => {
-        if (movie.type === 'series' && movie.seasons?.[0]?.episodes?.[0]) {
-            const ep = movie.seasons[0].episodes[0];
-            handlePlayVideo(ep.videoUrl, `${movie.title}: ${ep.title}`);
+        if (movie.type === 'series') {
+            // Find last watched episode or default to 1x1
+            const progressKeys = activeProfile ? Object.keys(activeProfile.watchHistory) : [];
+            let lastEp: string | null = null;
+            let latestWatchedDate = 0;
+
+            movie.seasons?.forEach(s => {
+                s.episodes.forEach(e => {
+                    const prog = activeProfile?.watchHistory[e.id];
+                    if (prog) {
+                        const date = new Date(prog.lastWatched).getTime();
+                        if (date > latestWatchedDate) {
+                            latestWatchedDate = date;
+                            lastEp = e.id;
+                        }
+                    }
+                });
+            });
+
+            const targetEp = lastEp
+                ? movie.seasons?.flatMap(s => s.episodes).find(e => e.id === lastEp)
+                : movie.seasons?.[0]?.episodes?.[0];
+
+            if (targetEp) {
+                const prog = activeProfile?.watchHistory[targetEp.id];
+                const start = prog && (prog.currentTime / prog.duration < 0.95) ? prog.currentTime : 0;
+                handlePlayVideo(targetEp.videoUrl, `${movie.title}: ${targetEp.title}`, start);
+            }
         } else if (movie.videoUrl) {
-            handlePlayVideo(movie.videoUrl, movie.title);
+            const prog = activeProfile?.watchHistory[movie.id];
+            const start = prog && (prog.currentTime / prog.duration < 0.95) ? prog.currentTime : 0;
+            handlePlayVideo(movie.videoUrl, movie.title, start);
         }
     };
 
@@ -193,8 +232,25 @@ function AppContent() {
                     .map(id => getAllContent().find(m => m.id === id))
                     .filter((m): m is Movie => !!m)
                     .map(m => {
-                        const prog = activeProfile?.watchHistory[m.id];
-                        return { ...m, progress: prog ? Math.floor((prog.currentTime / prog.duration) * 100) : 0 };
+                        let finalProgress = 0;
+                        if (m.type === 'series') {
+                            // Find latest watched episode progress
+                            let latestDate = 0;
+                            m.seasons?.forEach(s => s.episodes.forEach(e => {
+                                const p = activeProfile?.watchHistory[e.id];
+                                if (p) {
+                                    const d = new Date(p.lastWatched).getTime();
+                                    if (d > latestDate) {
+                                        latestDate = d;
+                                        finalProgress = Math.floor((p.currentTime / p.duration) * 100);
+                                    }
+                                }
+                            }));
+                        } else {
+                            const prog = activeProfile?.watchHistory[m.id];
+                            finalProgress = prog ? Math.floor((prog.currentTime / prog.duration) * 100) : 0;
+                        }
+                        return { ...m, progress: finalProgress };
                     });
 
                 return (
@@ -221,6 +277,7 @@ function AppContent() {
                     type="movie"
                     duration={activeVideoDuration}
                     nextItem={nextEpisode}
+                    startTime={activeVideoId ? activeProfile?.watchHistory[activeVideoId]?.currentTime : 0}
                     onPlayNext={(url, title) => handlePlayVideo(url, title)}
                     onProgress={(time, dur) => {
                         if (activeVideoId) updateWatchProgress(activeVideoId, { contentId: activeVideoId, currentTime: time, duration: dur, lastWatched: new Date().toISOString() });

@@ -3,6 +3,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { X, Play, Plus, Check, ThumbsUp, ChevronDown, User, FileText, ListVideo, EyeOff, AlertTriangle, Layers } from 'lucide-react';
 import { Movie } from '../types';
 import { getAllContent } from '../constants';
+import { useAuth } from '../context/AuthContext';
 import { calculateContentSimilarity } from '../services/recommendationService';
 
 interface ContentDetailsProps {
@@ -34,6 +35,8 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
     const [opacity, setOpacity] = useState(0);
     const [activeTab, setActiveTab] = useState<DetailsTab>('overview');
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const { activeProfile } = useAuth();
+    const watchHistory = activeProfile?.watchHistory || {};
 
     useEffect(() => {
         const timer = setTimeout(() => setOpacity(1), 50);
@@ -61,11 +64,47 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
 
     const handlePlayClick = () => {
         if (movie.type === 'movie' && movie.videoUrl) {
+            const prog = watchHistory[movie.id];
+            // App handleContentPlay or handlePlayVideo expects the URL.
+            // But normally handleContentPlay is used for the main button.
+            // Actually App.tsx's handleContentPlay already handles resume logic.
+            // So we can just trigger onPlay(url).
             onPlay(movie.videoUrl);
-        } else if (movie.type === 'series' && currentSeason?.episodes[0]) {
-            onPlay(currentSeason.episodes[0].videoUrl);
+        } else if (movie.type === 'series') {
+            // Find last watched or first ep
+            let targetEp = currentSeason?.episodes[0];
+            let latestWatchedDate = 0;
+
+            movie.seasons?.forEach(s => {
+                s.episodes.forEach(e => {
+                    const prog = watchHistory[e.id];
+                    if (prog) {
+                        const date = new Date(prog.lastWatched).getTime();
+                        if (date > latestWatchedDate) {
+                            latestWatchedDate = date;
+                            targetEp = e;
+                        }
+                    }
+                });
+            });
+
+            if (targetEp) {
+                onPlay(targetEp.videoUrl);
+            }
         }
     };
+
+    const hasProgress = useMemo(() => {
+        if (movie.type === 'movie') {
+            const prog = watchHistory[movie.id];
+            return prog && (prog.currentTime / prog.duration > 0.02) && (prog.currentTime / prog.duration < 0.95);
+        } else {
+            return movie.seasons?.some(s => s.episodes.some(e => {
+                const prog = watchHistory[e.id];
+                return prog && (prog.currentTime / prog.duration > 0.02) && (prog.currentTime / prog.duration < 0.95);
+            }));
+        }
+    }, [movie, watchHistory]);
 
     return (
         <div
@@ -103,7 +142,7 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
                                 autoFocus
                             >
                                 <Play className="fill-current w-7 h-7" />
-                                <span>נגן</span>
+                                <span>{hasProgress ? 'המשך צפייה' : 'נגן'}</span>
                             </button>
                             <button
                                 onClick={onToggleList}
@@ -283,6 +322,28 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
                                                 <div className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition scale-75 group-hover:scale-100 bg-black/40 backdrop-blur-sm z-10 shadow-lg">
                                                     <Play className="fill-white w-5 h-5 ml-0.5" />
                                                 </div>
+
+                                                {/* Watch Progress Indicator */}
+                                                {(() => {
+                                                    const prog = watchHistory[ep.id];
+                                                    if (!prog) return null;
+                                                    const percent = Math.floor((prog.currentTime / prog.duration) * 100);
+                                                    if (percent > 90) {
+                                                        return (
+                                                            <div className="absolute top-2 left-2 bg-cyan-500 rounded-full p-1 shadow-lg ring-2 ring-black/50">
+                                                                <Check className="w-3 h-3 text-black" />
+                                                            </div>
+                                                        );
+                                                    }
+                                                    return (
+                                                        <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-white/20">
+                                                            <div
+                                                                className="h-full bg-cyan-500 shadow-[0_0_10px_rgba(34,211,238,0.5)]"
+                                                                style={{ width: `${percent}%` }}
+                                                            />
+                                                        </div>
+                                                    );
+                                                })()}
                                             </div>
                                             <div className="absolute bottom-2 left-2 bg-black/80 px-2 py-0.5 rounded text-xs font-bold text-white">
                                                 {ep.duration}
@@ -342,6 +403,6 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
 
                 </div>
             </div>
-        </div>
+        </div >
     );
 };

@@ -24,6 +24,7 @@ interface VideoPlayerProps {
     introEnd?: number;
     duration?: number;
     nextItem?: NextContent | null;
+    startTime?: number;
     onPlayNext?: (url: string, title: string) => void;
     onComplete?: () => void;
     onProgress?: (currentTime: number, duration: number) => void;
@@ -41,6 +42,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
     introEnd,
     duration = 0,
     nextItem,
+    startTime = 0,
     onPlayNext,
     onComplete,
     onProgress
@@ -56,7 +58,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
     const [aspectRatio, setAspectRatio] = useState<'cover' | 'contain'>('contain');
     const [inactivityWarning, setInactivityWarning] = useState(false);
     const [showShortcuts, setShowShortcuts] = useState(false);
-    const [simulatedTime, setSimulatedTime] = useState(0);
+    const [simulatedTime, setSimulatedTime] = useState(startTime);
     const [internalUrl, setInternalUrl] = useState(videoUrl);
     const [completedTriggered, setCompletedTriggered] = useState(false);
     const [showNextUp, setShowNextUp] = useState(false);
@@ -70,12 +72,12 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
     useEffect(() => {
         setInternalUrl(videoUrl);
-        setSimulatedTime(0);
+        setSimulatedTime(startTime);
         setLoading(true);
         setShowNextUp(false);
         setAutoPlayTimer(30);
         setCompletedTriggered(false);
-    }, [videoUrl]);
+    }, [videoUrl, startTime]);
 
     const handlePlayNext = () => {
         if (nextItem && onPlayNext) {
@@ -177,19 +179,22 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
                 finalSrc = internalUrl.replace('/view', '/preview');
             } else if (urlObj.pathname.includes('/shorts/')) {
                 const videoId = urlObj.pathname.split('/shorts/')[1];
-                if (videoId) finalSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                if (videoId) finalSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1${startTime > 0 ? `&start=${Math.floor(startTime)}` : ''}`;
             } else if (urlObj.searchParams.has('v')) {
                 const videoId = urlObj.searchParams.get('v');
-                const startParam = urlObj.searchParams.get('start');
+                const startParam = urlObj.searchParams.get('start') || (startTime > 0 ? Math.floor(startTime) : null);
                 finalSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1${startParam ? `&start=${startParam}` : ''}`;
             } else if (urlObj.hostname === 'youtu.be') {
                 const videoId = urlObj.pathname.slice(1);
-                const startParam = urlObj.searchParams.get('start');
+                const startParam = urlObj.searchParams.get('start') || (startTime > 0 ? Math.floor(startTime) : null);
                 if (videoId) finalSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1${startParam ? `&start=${startParam}` : ''}`;
+            } else if (startTime > 0) {
+                // Generic attempt for other providers that might support #t= or ?start=
+                finalSrc = internalUrl.includes('?') ? `${internalUrl}&start=${Math.floor(startTime)}` : `${internalUrl}?start=${Math.floor(startTime)}`;
             }
             return finalSrc;
         } catch (e) { return ''; }
-    }, [internalUrl, isExternal]);
+    }, [internalUrl, isExternal, startTime]);
 
     const containerClass = isPiP
         ? 'fixed bottom-6 left-6 z-[200] w-80 md:w-96 aspect-video rounded-xl shadow-2xl border border-white/20 overflow-hidden ring-1 ring-black/50 transition-all duration-300'
