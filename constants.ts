@@ -2,6 +2,7 @@
 import { Movie, Category, ContentAttributes } from './types';
 import { ALL_MOVIES } from './data/movies';
 import { ALL_SERIES } from './data/series';
+import { TOP_TRENDING_SCORES } from './data/trending';
 
 // ==========================================
 //           EYALATIATV CONTENT LIBRARY
@@ -10,7 +11,7 @@ import { ALL_SERIES } from './data/series';
 // Helper to auto-generate vector attributes if missing, based on Genre
 const generateAttributesFromGenre = (genres: string[] = []): ContentAttributes => {
     let attr = { adrenaline: 0.3, emotion: 0.3, intellect: 0.3 }; // Low Baseline
-    
+
     if (genres.includes('אקשן')) { attr.adrenaline += 0.5; attr.intellect -= 0.1; }
     if (genres.includes('מתח')) { attr.adrenaline += 0.3; attr.intellect += 0.3; }
     if (genres.includes('מדע בדיוני')) { attr.intellect += 0.4; attr.emotion -= 0.1; }
@@ -29,12 +30,23 @@ const generateAttributesFromGenre = (genres: string[] = []): ContentAttributes =
     };
 };
 
-// Enrich library with calculated attributes
+// Enrich library with calculated attributes and popularity scores
 const RAW_LIBRARY: Movie[] = [...ALL_MOVIES, ...ALL_SERIES];
-const CONTENT_LIBRARY: Movie[] = RAW_LIBRARY.map(m => ({
-    ...m,
-    attributes: m.attributes || generateAttributesFromGenre(m.genre)
-}));
+const CONTENT_LIBRARY: Movie[] = RAW_LIBRARY.map(m => {
+    // 1. Get predefined score or generate one
+    const basePopularity = TOP_TRENDING_SCORES[m.id] || 0;
+
+    // 2. Heuristic for others: Newer items + high matchScore = higher popularity
+    const yearWeight = typeof m.year === 'number' ? (m.year - 2000) * 50 : 0;
+    const ratingWeight = m.matchScore ? m.matchScore * 10 : 0;
+    const finalScore = basePopularity || Math.max(0, yearWeight + ratingWeight);
+
+    return {
+        ...m,
+        attributes: m.attributes || generateAttributesFromGenre(m.genre),
+        popularityScore: finalScore
+    };
+});
 
 // ==========================================
 //           EXPORTED HELPERS
@@ -55,8 +67,8 @@ export const getContentById = (id: string): Movie | undefined => CONTENT_LIBRARY
  */
 const calculateVectorDistance = (a: ContentAttributes, b: ContentAttributes): number => {
     return Math.sqrt(
-        Math.pow(a.adrenaline - b.adrenaline, 2) + 
-        Math.pow(a.emotion - b.emotion, 2) + 
+        Math.pow(a.adrenaline - b.adrenaline, 2) +
+        Math.pow(a.emotion - b.emotion, 2) +
         Math.pow(a.intellect - b.intellect, 2)
     );
 };
@@ -69,7 +81,7 @@ const calculateVectorDistance = (a: ContentAttributes, b: ContentAttributes): nu
 const getUserVector = (preferredGenres: string[], watchedHistoryIds: string[] = []): ContentAttributes => {
     // 1. Calculate Baseline from Genres
     const baseVector = generateAttributesFromGenre(preferredGenres);
-    
+
     // If no history, return genre preferences only
     if (watchedHistoryIds.length === 0) return baseVector;
 
@@ -115,8 +127,8 @@ const getUserVector = (preferredGenres: string[], watchedHistoryIds: string[] = 
  * Combines Vector Distance (Taste) + Social Proof (Rating) + Context (Time).
  */
 const calculateSmartScore = (
-    movie: Movie, 
-    userVector: ContentAttributes, 
+    movie: Movie,
+    userVector: ContentAttributes,
     preferredGenres: string[],
     timeContext: 'morning' | 'day' | 'night'
 ): number => {
@@ -126,9 +138,9 @@ const calculateSmartScore = (
     // Distance usually ranges 0 to 1.73. 
     // We convert distance to a similarity percentage.
     const distance = calculateVectorDistance(movie.attributes!, userVector);
-    
+
     // Impact: High similarity (dist 0) -> penalty 0. Low similarity (dist 1.5) -> penalty 60.
-    const distancePenalty = (distance * 45); 
+    const distancePenalty = (distance * 45);
     score -= distancePenalty;
 
     // 2. Direct Genre Bonus (Legacy preference boost)
@@ -138,7 +150,7 @@ const calculateSmartScore = (
     // 3. Quality Bias (Global Rating)
     // Normalize rating from database (assuming roughly 80-100 scale in data)
     // If unknown, assume 85.
-    const baseRating = movie.matchScore || 85; 
+    const baseRating = movie.matchScore || 85;
     score += (baseRating - 90) * 0.5; // Slight boost for masterpieces
 
     // 4. Time Context Awareness
@@ -166,14 +178,14 @@ const getYear = (year: string | number | undefined): number => {
 export const getPersonalizedCategories = (preferredGenres: string[], watchedHistory: string[], currentMood?: string): ExtendedCategory[] => {
     const hour = new Date().getHours();
     const timeContext = hour < 12 ? 'morning' : hour < 20 ? 'day' : 'night';
-    
+
     // Calculate the dynamic user vector
     const userVector = getUserVector(preferredGenres, watchedHistory);
 
     // Filter by Mood if active
     let pool = CONTENT_LIBRARY;
     if (currentMood) {
-        switch(currentMood) {
+        switch (currentMood) {
             case 'chill': pool = pool.filter(m => m.attributes!.adrenaline < 0.5); break;
             case 'pumped': pool = pool.filter(m => m.attributes!.adrenaline > 0.6); break;
             case 'smart': pool = pool.filter(m => m.attributes!.intellect > 0.6); break;
@@ -194,7 +206,7 @@ export const getPersonalizedCategories = (preferredGenres: string[], watchedHist
         // We allow some duplicates for "Top 10" vs "Action", but generally try to keep unique
         const uniqueItems = items.filter(i => !usedIds.has(i.id));
         const itemsToAdd = isRanked ? items : uniqueItems; // Ranked rows can reuse items
-        
+
         if (itemsToAdd.length > 0) {
             categories.push({ id, title, movies: itemsToAdd, isRanked });
             itemsToAdd.forEach(i => usedIds.add(i.id));
@@ -222,15 +234,15 @@ export const getPersonalizedCategories = (preferredGenres: string[], watchedHist
 
     // --- 4. BECAUSE YOU WATCHED (History Based) ---
     if (watchedHistory.length > 0) {
-        const lastWatchedId = watchedHistory[0]; 
+        const lastWatchedId = watchedHistory[0];
         const lastWatched = CONTENT_LIBRARY.find(m => m.id === lastWatchedId);
         if (lastWatched && lastWatched.genre) {
-             const similar = scoredContent
+            const similar = scoredContent
                 .filter(m => m.id !== lastWatchedId && m.genre?.some(g => lastWatched.genre?.includes(g)))
                 .slice(0, 10);
-             if (similar.length > 0) {
-                 addCat('because-watched', `כי צפית ב-${lastWatched.title}`, similar);
-             }
+            if (similar.length > 0) {
+                addCat('because-watched', `כי צפית ב-${lastWatched.title}`, similar);
+            }
         }
     }
 
@@ -247,9 +259,9 @@ export const getPersonalizedCategories = (preferredGenres: string[], watchedHist
     }
 
     // --- 7. TASTE BREAKERS (Algorithm) ---
-    const tasteBreakers = scoredContent.filter(m => 
-        (m.matchScore || 0) > 85 && 
-        calculateVectorDistance(m.attributes!, userVector) > 0.5 
+    const tasteBreakers = scoredContent.filter(m =>
+        (m.matchScore || 0) > 85 &&
+        calculateVectorDistance(m.attributes!, userVector) > 0.5
     ).slice(0, 10);
     if (tasteBreakers.length > 0) {
         addCat('taste-breakers', 'לצאת מאזור הנוחות', tasteBreakers);
@@ -260,8 +272,8 @@ export const getPersonalizedCategories = (preferredGenres: string[], watchedHist
     neededGenres.forEach(genre => {
         // Skip if this genre is the main preference (already covered in top picks likely)
         if (!preferredGenres.includes(genre)) {
-             const genreMovies = scoredContent.filter(m => m.genre?.includes(genre)).slice(0, 10);
-             addCat(`genre-${genre}`, genre, genreMovies);
+            const genreMovies = scoredContent.filter(m => m.genre?.includes(genre)).slice(0, 10);
+            addCat(`genre-${genre}`, genre, genreMovies);
         }
     });
 
@@ -282,15 +294,15 @@ const getMoodLabel = (mood: string) => {
 
 export const getPersonalizedHero = (preferredGenres: string[], watchedHistory: string[], currentMood?: string): Movie => {
     const userVector = getUserVector(preferredGenres, watchedHistory);
-    
+
     // Get all content with backdrops
     let candidates = CONTENT_LIBRARY.filter(m => m.backdropUrl && !watchedHistory.includes(m.id));
-    
+
     // Filter by mood
     if (currentMood) {
-         if (currentMood === 'pumped') candidates = candidates.filter(m => m.attributes!.adrenaline > 0.6);
-         if (currentMood === 'smart') candidates = candidates.filter(m => m.attributes!.intellect > 0.6);
-         if (currentMood === 'chill') candidates = candidates.filter(m => m.attributes!.adrenaline < 0.5);
+        if (currentMood === 'pumped') candidates = candidates.filter(m => m.attributes!.adrenaline > 0.6);
+        if (currentMood === 'smart') candidates = candidates.filter(m => m.attributes!.intellect > 0.6);
+        if (currentMood === 'chill') candidates = candidates.filter(m => m.attributes!.adrenaline < 0.5);
     }
 
     // Find closest vector match + random element for variety
@@ -303,7 +315,7 @@ export const getPersonalizedHero = (preferredGenres: string[], watchedHistory: s
     // Return the top match, but add calculated score to it
     const bestMatch = candidates[0] || FEATURED_MOVIE;
     const score = calculateSmartScore(bestMatch, userVector, preferredGenres, 'night');
-    
+
     return { ...bestMatch, matchScore: score };
 };
 

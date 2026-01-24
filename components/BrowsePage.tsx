@@ -64,7 +64,7 @@ export const BrowsePage: React.FC<BrowsePageProps> = ({
         // New & Popular has its own logic
         if (isNewAndPopular) {
             let categoriesList: { id: string; title: string; movies: Movie[]; isRanked?: boolean }[] = [];
-            const top10 = [...all].sort((a, b) => (b.matchScore || 0) - (a.matchScore || 0)).slice(0, 10);
+            const top10 = [...all].sort((a, b) => (b.popularityScore || 0) - (a.popularityScore || 0)).slice(0, 10);
             categoriesList.push({ id: 'top10', title: '10 המובילים בישראל היום', movies: top10, isRanked: true });
             const newReleases = all.filter(m => getYear(m.year) >= 2023);
             categoriesList.push({ id: 'new', title: 'חדש ב-EyalAtiaTV', movies: newReleases });
@@ -91,7 +91,7 @@ export const BrowsePage: React.FC<BrowsePageProps> = ({
         // Sorting
         masterList.sort((a, b) => {
             if (sortBy === 'year') return (getYear(b.year) || 0) - (getYear(a.year) || 0);
-            if (sortBy === 'popular') return (b.matchScore || 0) - (a.matchScore || 0);
+            if (sortBy === 'popular') return (b.popularityScore || 0) - (a.popularityScore || 0);
             return 0;
         });
 

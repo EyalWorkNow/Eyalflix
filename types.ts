@@ -57,6 +57,7 @@ export interface Movie {
   // AI Algorithms Data
   attributes?: ContentAttributes; // DNA of the content
   keywords?: string[]; // Micro-genres for specific matching
+  popularityScore?: number; // Simulated view count/popularity
 
   // Extended Data
   englishName?: string;
