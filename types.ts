@@ -22,16 +22,16 @@ export interface Season {
 
 // 0.0 to 1.0 scales for Vector Matching
 export interface ContentAttributes {
-    adrenaline: number; // 0 (Slow burn) -> 1 (Non-stop action)
-    emotion: number;    // 0 (Cold/Clinical) -> 1 (Heartbreaking/Joyful)
-    intellect: number;  // 0 (Brainless fun) -> 1 (Complex/Philosophical)
+  adrenaline: number; // 0 (Slow burn) -> 1 (Non-stop action)
+  emotion: number;    // 0 (Cold/Clinical) -> 1 (Heartbreaking/Joyful)
+  intellect: number;  // 0 (Brainless fun) -> 1 (Complex/Philosophical)
 }
 
 export interface AnimeSource {
-    site: string;
-    seriesUrl: string;
-    animeId: number;
-    generatedAt: string;
+  site: string;
+  seriesUrl: string;
+  animeId: number;
+  generatedAt: string;
 }
 
 export interface Movie {
@@ -53,7 +53,7 @@ export interface Movie {
   progress?: number; // % viewed, for "Continue Watching"
   introStart?: number; // Seconds for movies
   introEnd?: number;   // Seconds for movies
-  
+
   // AI Algorithms Data
   attributes?: ContentAttributes; // DNA of the content
   keywords?: string[]; // Micro-genres for specific matching
@@ -61,6 +61,37 @@ export interface Movie {
   // Extended Data
   englishName?: string;
   source?: AnimeSource;
+}
+
+export interface WatchProgress {
+  contentId: string;
+  currentTime: number;
+  duration: number;
+  lastWatched: string; // ISO Date
+  seasonId?: string;
+  episodeId?: string;
+}
+
+export interface UserProfile {
+  id: string;
+  name: string;
+  avatar: string;
+  watchHistory: Record<string, WatchProgress>;
+  myList: string[];
+  likedContent: string[];
+  preferences: {
+    favoriteGenres: string[];
+    ratings: Record<string, number>;
+    spoilerProtection: boolean;
+    autoPlay: boolean;
+    dataSaver: boolean;
+    subtitleSize: 'small' | 'medium' | 'large';
+    subtitleColor: 'white' | 'yellow';
+  };
+}
+
+export interface UserAccountMetadata {
+  profiles: UserProfile[];
 }
 
 export interface Category {

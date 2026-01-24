@@ -3,6 +3,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { X, Play, Plus, Check, ThumbsUp, ChevronDown, User, FileText, ListVideo, EyeOff, AlertTriangle, Layers } from 'lucide-react';
 import { Movie } from '../types';
 import { getAllContent } from '../constants';
+import { calculateContentSimilarity } from '../services/recommendationService';
 
 interface ContentDetailsProps {
     movie: Movie;
@@ -47,10 +48,15 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
 
     const recommendations = useMemo(() => {
         const allContent = getAllContent();
-        if (!movie.genre) return allContent.slice(0, 6);
         return allContent
-            .filter(item => item.id !== movie.id && item.genre?.some(g => movie.genre?.includes(g)))
-            .slice(0, 6);
+            .filter(item => item.id !== movie.id)
+            .map(item => ({
+                item,
+                score: calculateContentSimilarity(movie, item)
+            }))
+            .sort((a, b) => b.score - a.score)
+            .slice(0, 6)
+            .map(res => res.item);
     }, [movie]);
 
     const handlePlayClick = () => {
@@ -68,7 +74,6 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
         >
             <div className="absolute inset-0 cursor-default" onClick={onClose}></div>
 
-            {/* Main Container: Full screen on mobile, floating on desktop */}
             <div className="relative w-full max-w-5xl bg-[#161b22] h-full md:h-auto md:rounded-2xl md:my-10 mx-auto overflow-y-auto md:overflow-hidden animate-slide-up origin-bottom z-[101] border border-white/10 shadow-2xl shadow-black/50 scrollbar-hide">
 
                 <button
@@ -124,10 +129,7 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
                     </div>
                 </div>
 
-                {/* Info & Tabs */}
                 <div className="px-6 md:px-12 py-6 bg-[#161b22] pb-20 md:pb-6">
-
-                    {/* Metadata line */}
                     <div className="flex flex-wrap items-center gap-4 text-base font-medium text-[#8b949e] mb-8">
                         <span className="text-cyan-400 font-bold">{movie.matchScore}% התאמה</span>
                         <span className="text-white">{movie.year}</span>
@@ -136,7 +138,6 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
                         {movie.type === 'series' && <span>{movie.seasons?.length || 1} עונות</span>}
                     </div>
 
-                    {/* Tabs Navigation */}
                     <div className="flex items-center gap-8 border-b border-white/10 mb-8 overflow-x-auto scrollbar-hide">
                         <button
                             onClick={() => setActiveTab('overview')}
@@ -165,7 +166,6 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
                         </button>
                     </div>
 
-                    {/* Tab Content: OVERVIEW */}
                     {activeTab === 'overview' && (
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 animate-fade-in">
                             <div className="md:col-span-2 space-y-6">
@@ -173,7 +173,6 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
                                     {movie.description}
                                 </p>
 
-                                {/* New Feature: Content Advisory */}
                                 {movie.contentAdvisory && movie.contentAdvisory.length > 0 && (
                                     <div className="bg-red-900/10 border border-red-500/20 rounded-xl p-4 flex gap-3 items-start">
                                         <AlertTriangle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
@@ -203,7 +202,6 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
                         </div>
                     )}
 
-                    {/* Tab Content: CAST */}
                     {activeTab === 'cast' && (
                         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 animate-fade-in">
                             {movie.cast?.map((actor, idx) => (
@@ -217,15 +215,12 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
                         </div>
                     )}
 
-                    {/* Tab Content: EPISODES */}
                     {activeTab === 'episodes' && movie.type === 'series' && movie.seasons && (
                         <div className="animate-fade-in relative min-h-[300px]">
                             <div className="flex flex-wrap items-center justify-between mb-8 gap-4">
                                 <h3 className="text-2xl font-bold text-white hidden md:block">פרקים</h3>
 
-                                {/* ENHANCED TV DROPDOWN UI */}
                                 <div className="relative z-30 w-full md:w-auto">
-                                    {/* Backdrop */}
                                     {isDropdownOpen && (
                                         <div className="fixed inset-0 z-10" onClick={() => setIsDropdownOpen(false)} />
                                     )}
@@ -307,7 +302,6 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
                         </div>
                     )}
 
-                    {/* Similar Content */}
                     <div className="pb-16 pt-8 border-t border-white/10 bg-[#161b22]">
                         <h3 className="text-xl md:text-2xl font-bold mb-6 text-white">יכול לעניין אותך גם</h3>
 
@@ -339,15 +333,7 @@ export const ContentDetails: React.FC<ContentDetailsProps> = ({
                                                 {recMovie.title}
                                             </h4>
                                         </div>
-
-                                        <div className="flex items-center gap-2 md:gap-3 text-[10px] md:text-xs font-medium">
-                                            <span className="text-cyan-400">{recMovie.matchScore}% התאמה</span>
-                                            <span className="text-gray-500">{recMovie.year}</span>
-                                        </div>
-
-                                        <p className="hidden md:block text-gray-500 text-xs line-clamp-2 leading-relaxed mt-1 group-hover:text-gray-400 transition-colors">
-                                            {recMovie.description}
-                                        </p>
+                                        <p className="hidden md:block text-gray-400 text-xs line-clamp-2 leading-relaxed mt-1">{recMovie.description}</p>
                                     </div>
                                 </div>
                             ))}
