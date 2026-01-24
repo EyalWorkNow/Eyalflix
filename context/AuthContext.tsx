@@ -12,6 +12,7 @@ import {
   googleProvider
 } from '../lib/firebase';
 import { UserProfile, WatchProgress } from '../types';
+import { sanitizeInput, checkRateLimit, logSecurityEvent } from '../utils/security';
 
 interface AuthContextType {
   user: User | null;
@@ -162,17 +163,19 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     updateProfile(activeProfile.id, updates);
   };
 
-  const sanitizeName = (name: string): string => {
-    return name.trim().replace(/[<>]/g, '').slice(0, 25);
-  };
-
   const updateProfile = (id: string, updates: Partial<UserProfile>) => {
     if (!user) return;
+
+    // 🛡️ Security: Rate limit profile updates (5 per 10s)
+    if (!checkRateLimit(`update_profile_${id}`, 5, 10000)) {
+      logSecurityEvent(`Excessive profile update attempts for ID: ${id}`, 'MEDIUM');
+      return;
+    }
 
     // Validate and sanitize if name is being updated
     const finalUpdates = { ...updates };
     if (updates.name) {
-      finalUpdates.name = sanitizeName(updates.name);
+      finalUpdates.name = sanitizeInput(updates.name, 25);
       if (!finalUpdates.name) return; // Prevent empty names after sanitization
     }
 
@@ -191,7 +194,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const addProfile = (name: string, avatar: string) => {
     if (!user || profiles.length >= 4) return;
 
-    const sanitizedName = sanitizeName(name);
+    // 🛡️ Security: Rate limit profile creation (2 per 60s)
+    if (!checkRateLimit('add_profile', 2, 60000)) {
+      logSecurityEvent('Rapid profile creation attempt blocked', 'HIGH');
+      return;
+    }
+
+    const sanitizedName = sanitizeInput(name, 25);
     if (!sanitizedName) return;
 
     const newProfile: UserProfile = {
