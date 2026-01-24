@@ -30,6 +30,7 @@ function AppContent() {
     const [activeVideoTitle, setActiveVideoTitle] = useState<string>('');
     const [activeVideoId, setActiveVideoId] = useState<string | null>(null);
     const [activeVideoDuration, setActiveVideoDuration] = useState<number>(0);
+    const [nextEpisode, setNextEpisode] = useState<NextContent | null>(null);
     const { user, loading: authLoading, activeProfile, updateWatchProgress, toggleMyList, toggleLikedContent, updatePreference } = useAuth();
     const [recentlyViewedIds, setRecentlyViewedIds] = useState<string[]>([]);
     const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -75,18 +76,41 @@ function AppContent() {
 
         if (foundMovie) {
             videoId = foundMovie.id;
+            let next: NextContent | null = null;
+
             if (foundMovie.type === 'series') {
-                for (const s of foundMovie.seasons!) {
-                    const ep = s.episodes.find(e => e.videoUrl === url);
-                    if (ep) {
+                const seasons = foundMovie.seasons || [];
+                for (let sIdx = 0; sIdx < seasons.length; sIdx++) {
+                    const season = seasons[sIdx];
+                    const epIdx = season.episodes.findIndex(e => e.videoUrl === url);
+                    if (epIdx !== -1) {
+                        const ep = season.episodes[epIdx];
                         title = `${foundMovie.title}: ${ep.title}`;
                         setActiveVideoDuration(parseDuration(ep.duration) || 3600);
+
+                        // Find next episode
+                        let nextEp = season.episodes[epIdx + 1];
+                        if (!nextEp && seasons[sIdx + 1]) {
+                            nextEp = seasons[sIdx + 1].episodes[0];
+                        }
+
+                        if (nextEp) {
+                            next = {
+                                type: 'episode',
+                                title: nextEp.title,
+                                subTitle: foundMovie.title,
+                                thumbnailUrl: nextEp.thumbnailUrl || foundMovie.thumbnailUrl,
+                                videoUrl: nextEp.videoUrl,
+                                duration: parseDuration(nextEp.duration) || 3600
+                            };
+                        }
                         break;
                     }
                 }
             } else {
                 setActiveVideoDuration(5400);
             }
+            setNextEpisode(next);
         }
 
         setActiveVideoTitle(title);
@@ -196,6 +220,8 @@ function AppContent() {
                     onClose={() => setActiveVideoUrl(null)}
                     type="movie"
                     duration={activeVideoDuration}
+                    nextItem={nextEpisode}
+                    onPlayNext={(url, title) => handlePlayVideo(url, title)}
                     onProgress={(time, dur) => {
                         if (activeVideoId) updateWatchProgress(activeVideoId, { contentId: activeVideoId, currentTime: time, duration: dur, lastWatched: new Date().toISOString() });
                     }}
