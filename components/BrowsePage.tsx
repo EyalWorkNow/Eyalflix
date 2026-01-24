@@ -4,6 +4,7 @@ import { Hero } from './Hero';
 import { MovieRow } from './MovieRow';
 import { getAllContent, FEATURED_MOVIE } from '../constants';
 import { Movie } from '../types';
+import { SlidersHorizontal, ChevronDown, X } from 'lucide-react';
 
 interface BrowsePageProps {
     contentType?: 'movie' | 'series';
@@ -20,7 +21,7 @@ interface BrowsePageProps {
 const getYear = (year: string | number | undefined): number => {
     if (typeof year === 'number') return year;
     if (typeof year === 'string') return parseInt(year, 10) || 0;
-    return year || 0;
+    return 0;
 };
 
 export const BrowsePage: React.FC<BrowsePageProps> = ({
@@ -37,120 +38,91 @@ export const BrowsePage: React.FC<BrowsePageProps> = ({
 
     const isNewAndPopular = title === "חדש ופופולרי";
     const [activeGenre, setActiveGenre] = useState<string | null>(null);
-    const [activeYear, setActiveYear] = useState<string | null>(null);
+    const [activeYearRange, setActiveYearRange] = useState<string | null>(null);
     const [sortBy, setSortBy] = useState<string>('score');
+    const [isFilterExpanded, setIsFilterExpanded] = useState(false);
 
     const yearFilters = [
         { label: 'הכל', value: null },
-        { label: '2024+', value: '2024' },
-        { label: 'שנות ה-20', value: '2020' },
-        { label: 'שנות ה-10', value: '2010' },
-        { label: 'קלאסיקות', value: 'classic' }
+        { label: 'חדש (2024)', value: '2024' },
+        { label: '2020-2023', value: '2020' },
+        { label: '2010-2019', value: '2010' },
+        { label: 'לפני 2010', value: 'classic' }
     ];
 
     const sortOptions = [
-        { label: 'התאמה', value: 'score' },
+        { label: 'התאמה אישית', value: 'score' },
         { label: 'הכי חדש', value: 'year' },
-        { label: 'הכי פופולרי', value: 'popular' }
+        { label: 'פופולריות', value: 'popular' }
     ];
 
     // Filter and Sort logic
-    const { filteredContent, featuredItem, categories, allGenres } = useMemo(() => {
+    const { featuredItem, categories, allGenres } = useMemo(() => {
         const all = getAllContent();
         let genresSet = new Set<string>();
 
-        // CASE 1: New & Popular Page - Special Layout
+        // New & Popular has its own logic
         if (isNewAndPopular) {
             let categoriesList: { id: string; title: string; movies: Movie[]; isRanked?: boolean }[] = [];
-
-            // 1. Top 10 Ranked
             const top10 = [...all].sort((a, b) => (b.matchScore || 0) - (a.matchScore || 0)).slice(0, 10);
             categoriesList.push({ id: 'top10', title: '10 המובילים בישראל היום', movies: top10, isRanked: true });
-
-            // 2. New Releases (Year >= 2023)
             const newReleases = all.filter(m => getYear(m.year) >= 2023);
             categoriesList.push({ id: 'new', title: 'חדש ב-EyalAtiaTV', movies: newReleases });
-
-            // 3. Series Worth Binging
-            const series = all.filter(m => m.type === 'series');
-            if (series.length > 0) {
-                categoriesList.push({ id: 'binge', title: 'שווים בינג׳', movies: series });
-            }
-
-            // 4. Trending Now
-            const trending = [...all].sort((a, b) => 0.5 - Math.random()).slice(0, 8);
-            categoriesList.push({ id: 'trending', title: 'כולם מדברים על זה', movies: trending });
-
             const newest = [...all].sort((a, b) => getYear(b.year) - getYear(a.year))[0] || all[0];
-            return { filteredContent: all, featuredItem: newest, categories: categoriesList, allGenres: [] };
+            return { featuredItem: newest, categories: categoriesList, allGenres: [] };
         }
 
-        // CASE 2: Standard Browse Page (Movies/Series)
-        let filtered = contentType
-            ? all.filter(m => m.type === contentType)
-            : all;
+        // Apply filters to ALL content first
+        let masterList = contentType ? all.filter(m => m.type === contentType) : all;
+        masterList.forEach(m => m.genre?.forEach(g => genresSet.add(g)));
 
-        // Collect Genres
-        filtered.forEach(m => m.genre?.forEach(g => genresSet.add(g)));
-
-        // 1. Filter by Genre
-        if (activeGenre) {
-            filtered = filtered.filter(m => m.genre?.includes(activeGenre));
-        }
-
-        // 2. Filter by Year
-        if (activeYear) {
-            filtered = filtered.filter(m => {
+        if (activeGenre) masterList = masterList.filter(m => m.genre?.includes(activeGenre));
+        if (activeYearRange) {
+            masterList = masterList.filter(m => {
                 const y = getYear(m.year);
-                if (activeYear === '2024') return y >= 2024;
-                if (activeYear === '2020') return y >= 2020 && y < 2024;
-                if (activeYear === '2010') return y >= 2010 && y < 2020;
-                if (activeYear === 'classic') return y < 2010 && y > 0;
+                if (activeYearRange === '2024') return y >= 2024;
+                if (activeYearRange === '2020') return y >= 2020 && y < 2024;
+                if (activeYearRange === '2010') return y >= 2010 && y < 2020;
+                if (activeYearRange === 'classic') return y < 2010 && y > 0;
                 return true;
             });
         }
 
-        // 3. Sort logic
-        filtered.sort((a, b) => {
-            if (sortBy === 'year') {
-                return (getYear(b.year) || 0) - (getYear(a.year) || 0);
-            }
-            if (sortBy === 'popular') {
-                return (b.matchScore || 0) - (a.matchScore || 0);
-            }
+        // Sorting
+        masterList.sort((a, b) => {
+            if (sortBy === 'year') return (getYear(b.year) || 0) - (getYear(a.year) || 0);
+            if (sortBy === 'popular') return (b.matchScore || 0) - (a.matchScore || 0);
             return 0;
         });
 
-        const featured = filtered.length > 0 ? filtered[0] : FEATURED_MOVIE;
-
-        // Dynamically create categories based on Genres
+        // Generate categories from the FILTERED master list
         const genreMap = new Map<string, Movie[]>();
-        filtered.forEach(movie => {
+        masterList.forEach(movie => {
             movie.genre?.forEach(g => {
                 if (!genreMap.has(g)) genreMap.set(g, []);
                 genreMap.get(g)?.push(movie);
             });
         });
 
-        let dynamicCats = [];
-        if (activeGenre) {
-            dynamicCats.push({
-                id: activeGenre,
-                title: `המובילים ב${activeGenre}`,
-                movies: filtered,
-                isRanked: false
-            });
-        } else {
-            dynamicCats = Array.from(genreMap.entries()).map(([genre, movies]) => ({
+        const dynamicCats = Array.from(genreMap.entries())
+            .map(([genre, movies]) => ({
                 id: genre,
-                title: `${genre}`,
-                movies: movies.slice(0, 15),
+                title: genre,
+                movies: movies,
                 isRanked: false
-            })).sort((a, b) => b.movies.length - a.movies.length);
-        }
+            }))
+            .sort((a, b) => b.movies.length - a.movies.length);
 
-        return { filteredContent: filtered, featuredItem: featured, categories: dynamicCats, allGenres: Array.from(genresSet) };
-    }, [contentType, title, isNewAndPopular, activeGenre, activeYear, sortBy]);
+        const featured = masterList.length > 0 ? masterList[0] : FEATURED_MOVIE;
+
+        return { featuredItem: featured, categories: dynamicCats, allGenres: Array.from(genresSet).sort() };
+    }, [contentType, title, isNewAndPopular, activeGenre, activeYearRange, sortBy]);
+
+    const resetFilters = () => {
+        setActiveGenre(null);
+        setActiveYearRange(null);
+        setSortBy('score');
+    };
 
     return (
         <div className="relative min-h-screen">
@@ -162,72 +134,86 @@ export const BrowsePage: React.FC<BrowsePageProps> = ({
                 onToggleList={() => onToggleList(featuredItem.id)}
             />
 
-            <div className="relative z-10 space-y-8 md:space-y-12 pb-12 bg-gradient-to-b from-transparent via-[#0d1117] to-[#0d1117] -mt-16 md:-mt-32 pt-24 md:pt-48 pointer-events-none">
+            <div className="relative z-10 space-y-6 md:space-y-10 pb-12 bg-gradient-to-b from-transparent via-[#0d1117] to-[#0d1117] -mt-24 md:-mt-48 pt-32 md:pt-64 pointer-events-none">
 
-                <div className="px-4 md:px-12 mb-4 pointer-events-auto">
-                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
-                        <div className="flex items-center gap-3">
-                            {title && showPageTitle && <h2 className="text-3xl md:text-6xl font-black text-white drop-shadow-md tracking-tight">{title}</h2>}
-                            {isNewAndPopular && (
-                                <span className="bg-cyan-500 text-black text-xs font-black px-2 py-1 rounded rotate-3">HOT</span>
+                <div className="px-4 md:px-12 pointer-events-auto">
+                    {/* Header Row */}
+                    <div className="flex items-center justify-between mb-8">
+                        <div className="flex items-center gap-4">
+                            {title && showPageTitle && <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">{title}</h2>}
+                            {!isNewAndPopular && (
+                                <button
+                                    onClick={() => setIsFilterExpanded(!isFilterExpanded)}
+                                    className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${isFilterExpanded ? 'bg-cyan-500 border-cyan-500 text-black shadow-lg scale-105' : 'bg-white/5 border-white/10 text-white hover:bg-white/10'}`}
+                                >
+                                    <SlidersHorizontal className="w-4 h-4" />
+                                    <span className="text-sm font-bold">מסננים</span>
+                                    <ChevronDown className={`w-4 h-4 transition-transform ${isFilterExpanded ? 'rotate-180' : ''}`} />
+                                </button>
                             )}
                         </div>
 
-                        {!isNewAndPopular && (
-                            <div className="flex flex-wrap items-center gap-4 bg-white/5 backdrop-blur-md p-4 rounded-2xl border border-white/10 shadow-xl">
-                                <div className="space-y-1.5 flex-1 min-w-[150px]">
-                                    <label className="text-[10px] font-black text-cyan-400 uppercase tracking-widest px-1">ז'אנר</label>
-                                    <select
-                                        value={activeGenre || ''}
-                                        onChange={(e) => setActiveGenre(e.target.value || null)}
-                                        className="w-full bg-[#161b22] text-white text-sm font-bold p-2.5 rounded-xl border border-white/10 outline-none focus:border-cyan-500 transition-colors cursor-pointer"
-                                    >
-                                        <option value="">כל הז'אנרים</option>
-                                        {allGenres.sort().map(g => <option key={g} value={g}>{g}</option>)}
-                                    </select>
-                                </div>
-
-                                <div className="space-y-1.5 flex-1 min-w-[150px]">
-                                    <label className="text-[10px] font-black text-cyan-400 uppercase tracking-widest px-1">שנת יציאה</label>
-                                    <div className="flex bg-[#161b22] p-1 rounded-xl border border-white/10">
-                                        {yearFilters.map(yf => (
-                                            <button
-                                                key={yf.label}
-                                                onClick={() => setActiveYear(yf.value)}
-                                                className={`flex-1 text-[11px] font-bold py-1.5 px-2 rounded-lg transition-all ${activeYear === yf.value ? 'bg-white text-black shadow-lg' : 'text-gray-400 hover:text-white'}`}
-                                            >
-                                                {yf.label}
-                                            </button>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                <div className="space-y-1.5 min-w-[120px]">
-                                    <label className="text-[10px] font-black text-cyan-400 uppercase tracking-widest px-1">מיין לפי</label>
-                                    <select
-                                        value={sortBy}
-                                        onChange={(e) => setSortBy(e.target.value)}
-                                        className="w-full bg-[#161b22] text-white text-sm font-bold p-2.5 rounded-xl border border-white/10 outline-none focus:border-cyan-500 transition-colors cursor-pointer"
-                                    >
-                                        {sortOptions.map(opt => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
-                                    </select>
-                                </div>
-
-                                {(activeGenre || activeYear || sortBy !== 'score') && (
-                                    <button
-                                        onClick={() => {
-                                            setActiveGenre(null);
-                                            setActiveYear(null);
-                                            setSortBy('score');
-                                        }}
-                                        className="mt-6 text-[10px] font-black text-gray-500 hover:text-white transition-colors underline underline-offset-4 uppercase tracking-widest px-2"
-                                    >
-                                        איפוס הגדרות
-                                    </button>
-                                )}
-                            </div>
+                        {!isNewAndPopular && (activeGenre || activeYearRange || sortBy !== 'score') && (
+                            <button onClick={resetFilters} className="text-gray-500 hover:text-white text-xs font-bold flex items-center gap-1 transition-colors">
+                                <X className="w-3 h-3" /> איפוס הכל
+                            </button>
                         )}
                     </div>
+
+                    {/* Expandable Filter Panel */}
+                    {!isNewAndPopular && isFilterExpanded && (
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-6 mb-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl animate-fade-in shadow-2xl">
+                            {/* Genres */}
+                            <div className="space-y-4">
+                                <h4 className="text-cyan-400 text-xs font-black uppercase tracking-widest">ז'אנרים</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    <button onClick={() => setActiveGenre(null)} className={`px-3 py-1.5 rounded-xl text-xs font-bold transition ${!activeGenre ? 'bg-white text-black' : 'bg-[#161b22] text-gray-400 hover:text-white border border-white/5'}`}>הכל</button>
+                                    {allGenres.map(g => (
+                                        <button
+                                            key={g}
+                                            onClick={() => setActiveGenre(activeGenre === g ? null : g)}
+                                            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition ${activeGenre === g ? 'bg-white text-black' : 'bg-[#161b22] text-gray-400 hover:text-white border border-white/5'}`}
+                                        >
+                                            {g}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Years */}
+                            <div className="space-y-4">
+                                <h4 className="text-cyan-400 text-xs font-black uppercase tracking-widest">תאריך יציאה</h4>
+                                <div className="grid grid-cols-2 gap-2">
+                                    {yearFilters.map(yf => (
+                                        <button
+                                            key={yf.label}
+                                            onClick={() => setActiveYearRange(activeYearRange === yf.value ? null : yf.value)}
+                                            className={`px-4 py-2.5 rounded-xl text-xs font-bold transition text-right ${activeYearRange === yf.value ? 'bg-white text-black' : 'bg-[#161b22] text-gray-400 hover:text-white border border-white/5'}`}
+                                        >
+                                            {yf.label}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Sorting */}
+                            <div className="space-y-4">
+                                <h4 className="text-cyan-400 text-xs font-black uppercase tracking-widest">מיון לפי</h4>
+                                <div className="flex flex-col gap-2">
+                                    {sortOptions.map(opt => (
+                                        <button
+                                            key={opt.value}
+                                            onClick={() => setSortBy(opt.value)}
+                                            className={`px-4 py-2.5 rounded-xl text-xs font-bold transition text-right flex items-center justify-between ${sortBy === opt.value ? 'bg-cyan-500/10 text-cyan-400 border border-cyan-500/30' : 'bg-[#161b22] text-gray-400 hover:text-white border border-white/5'}`}
+                                        >
+                                            {opt.label}
+                                            {sortBy === opt.value && <div className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]" />}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
 
                 <div className="pointer-events-auto">
@@ -246,21 +232,10 @@ export const BrowsePage: React.FC<BrowsePageProps> = ({
                             />
                         ))
                     ) : (
-                        <div className="text-center py-20 text-gray-500 text-xl">
-                            לא נמצאו תכנים בקטגוריה זו.
+                        <div className="text-center py-32 border border-dashed border-white/10 mx-4 md:mx-12 rounded-3xl bg-white/5 backdrop-blur-sm">
+                            <p className="text-gray-500 text-xl font-bold mb-4">לא נמצאו תכנים התואמים את המסננים שבחרת.</p>
+                            <button onClick={resetFilters} className="px-6 py-2 bg-white text-black rounded-full font-black text-sm hover:scale-105 transition-transform">נקה מסננים</button>
                         </div>
-                    )}
-
-                    {!isNewAndPopular && !activeGenre && filteredContent.length > 5 && (
-                        <MovieRow
-                            title="כל התוכן"
-                            movies={filteredContent}
-                            onSelect={onSelect}
-                            myListIds={myListIds}
-                            likedIds={likedIds}
-                            onToggleList={onToggleList}
-                            onToggleLike={onToggleLike}
-                        />
                     )}
                 </div>
             </div>
