@@ -12,17 +12,13 @@
 
   <!-- SECURITY HARDENING (RESTRICTIVE POLICY) -->
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://api.dicebear.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https://* blob:; connect-src 'self' https://*; frame-src 'self' https://www.youtube.com https://youtube.com https://youtu.be https://drive.google.com https://docs.google.com https://strmup.cc https://streamup.cc https://upn.one https://upns.pro https://upns.live https://filemoon.sx https://hglink.to https://mega.nz https://silkysub.com https://mp4upload.com; frame-ancestors 'none';">
+    content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://api.dicebear.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: https://* blob:; connect-src 'self' https://*; frame-src 'self' https://www.youtube.com https://youtube.com https://youtu.be https://drive.google.com https://docs.google.com https://strmup.cc https://streamup.cc https://upn.one https://upns.pro https://upns.live https://filemoon.sx https://hglink.to https://mega.nz https://silkysub.com https://mp4upload.com; frame-ancestors 'none';">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-
   <title>EyalAtiaTV</title>
   <!-- Tailwind CDN is kept for fallback, but local build will use the installed package -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
       --background-base: #0d1117;
@@ -44,7 +40,7 @@
       background-color: var(--background-base);
       color: var(--text-white);
       overflow-x: hidden;
-      font-family: 'Rubik', sans-serif;
+      font-family: 'SF-Hebrew', sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       /* TV Optimization: Prevent rubber-banding and scroll chaining */

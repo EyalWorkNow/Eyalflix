@@ -1,4 +1,11 @@
 /* Global Styles & Design System */
+@font-face {
+    font-family: 'SF-Hebrew';
+    src: url('/SF-Hebrew.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
     --background-base: #0d1117;
@@ -7,7 +14,7 @@
     --glow-color: rgba(34, 211, 238, 0.4);
     --text-white: #f0f6fc;
     --text-secondary: #8b949e;
-    
+
     /* Animation Durations */
     --transition-fast: 0.2s;
     --transition-base: 0.4s;
@@ -53,7 +60,7 @@
     height: 100%;
     z-index: -1;
     background-color: var(--background-base);
-    background-image: 
+    background-image:
         radial-gradient(at 0% 0%, rgba(34, 211, 238, 0.15) 0px, transparent 50%),
         radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.1) 0px, transparent 50%),
         radial-gradient(at 100% 100%, rgba(34, 211, 238, 0.15) 0px, transparent 50%),
@@ -63,9 +70,17 @@
 }
 
 @keyframes mesh-shimmer {
-    0% { transform: scale(1) translate(0, 0); }
-    50% { transform: scale(1.1) translate(20px, -20px); }
-    100% { transform: scale(1) translate(-20px, 20px); }
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    50% {
+        transform: scale(1.1) translate(20px, -20px);
+    }
+
+    100% {
+        transform: scale(1) translate(-20px, 20px);
+    }
 }
 
 /* Page Transitions */
@@ -112,5 +127,6 @@
 .heading-gradient {
     background: linear-gradient(to right, #fff, #9ca3af);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
