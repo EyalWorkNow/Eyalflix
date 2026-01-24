@@ -128,7 +128,8 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
                 setSimulatedTime(prev => {
                     const newTime = prev + 1;
                     if (onProgress) onProgress(newTime, duration);
-                    if (duration > 0 && newTime >= duration * 0.95 && !completedTriggered) {
+                    // 90% threshold for Next Up
+                    if (duration > 0 && newTime >= duration * 0.90 && !completedTriggered) {
                         setCompletedTriggered(true);
                         if (onComplete) onComplete();
                         if (nextItem) setShowNextUp(true);
@@ -189,8 +190,16 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
                 const startParam = urlObj.searchParams.get('start') || (startTime > 0 ? Math.floor(startTime) : null);
                 if (videoId) finalSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1${startParam ? `&start=${startParam}` : ''}`;
             } else if (startTime > 0) {
-                // Generic attempt for other providers that might support #t= or ?start=
-                finalSrc = internalUrl.includes('?') ? `${internalUrl}&start=${Math.floor(startTime)}` : `${internalUrl}?start=${Math.floor(startTime)}`;
+                // Generic attempt: Try both standard query param and hash param (common for direct files)
+                // Use #t= for generic video files/Drive if ?start= didn't work in specific blocks
+                const hasQuery = internalUrl.includes('?');
+                if (internalUrl.includes('drive.google.com')) {
+                    finalSrc = `${internalUrl}&t=${Math.floor(startTime)}s`;
+                } else if (hasQuery) {
+                    finalSrc = `${internalUrl}&start=${Math.floor(startTime)}`;
+                } else {
+                    finalSrc = `${internalUrl}?start=${Math.floor(startTime)}`;
+                }
             }
             return finalSrc;
         } catch (e) { return ''; }

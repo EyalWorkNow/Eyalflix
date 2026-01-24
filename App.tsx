@@ -280,7 +280,14 @@ function AppContent() {
                     startTime={activeVideoId ? activeProfile?.watchHistory[activeVideoId]?.currentTime : 0}
                     onPlayNext={(url, title) => handlePlayVideo(url, title)}
                     onProgress={(time, dur) => {
-                        if (activeVideoId) updateWatchProgress(activeVideoId, { contentId: activeVideoId, currentTime: time, duration: dur, lastWatched: new Date().toISOString() });
+                        if (activeVideoId && dur > 0) {
+                            updateWatchProgress(activeVideoId, {
+                                contentId: activeVideoId,
+                                currentTime: time,
+                                duration: dur,
+                                lastWatched: new Date().toISOString()
+                            });
+                        }
                     }}
                 />
             )}
