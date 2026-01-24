@@ -26,7 +26,7 @@ class MockAuthService {
                         uid: savedUid,
                         email: 'user@demo.com',
                         displayName: 'Demo User',
-                        photoURL: `https://api.dicebear.com/7.x/avataaars/svg?seed=${savedUid}`
+                        photoURL: `/userimg/Gemini_Generated_Image_vkzj4svkzj4svkzj.png`
                     };
                 }
             }
@@ -54,7 +54,7 @@ const authService = new MockAuthService();
 export const auth = authService;
 
 // Mock Config Objects
-export const app = {}; 
+export const app = {};
 export const analytics = null;
 export const googleProvider = { providerId: 'google.com' };
 
@@ -69,7 +69,7 @@ export const signInWithPopup = async (authObj: any, provider: any) => {
         uid: 'google-' + Date.now().toString(36),
         email: 'google@user.com',
         displayName: 'Google User',
-        photoURL: 'https://api.dicebear.com/7.x/avataaars/svg?seed=google'
+        photoURL: `/userimg/Gemini_Generated_Image_vkzj4svkzj4svkzj.png`
     };
     authService.currentUser = user;
     authService.notify();
@@ -83,7 +83,7 @@ export const signInWithEmailAndPassword = async (authObj: any, email: string, pa
         uid: 'email-' + Date.now().toString(36),
         email: email,
         displayName: email.split('@')[0],
-        photoURL: `https://api.dicebear.com/7.x/avataaars/svg?seed=${email}`
+        photoURL: `/userimg/Gemini_Generated_Image_vkzj4svkzj4svkzj.png`
     };
     authService.currentUser = user;
     authService.notify();

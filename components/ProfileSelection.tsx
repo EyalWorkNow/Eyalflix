@@ -25,7 +25,7 @@ export const ProfileSelection: React.FC = () => {
         } else {
             setSelectedProfileId(null);
             setTempName('');
-            setTempAvatar('https://api.dicebear.com/7.x/avataaars/svg?seed=Main');
+            setTempAvatar('/userimg/Gemini_Generated_Image_vkzj4svkzj4svkzj.png');
         }
     };
 

@@ -65,7 +65,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const defaultProfile: UserProfile = {
         id: 'p1',
         name: 'Main',
-        avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=Main`,
+        avatar: `/userimg/Gemini_Generated_Image_vkzj4svkzj4svkzj.png`,
         watchHistory: {},
         myList: [],
         likedContent: [],
@@ -206,7 +206,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const newProfile: UserProfile = {
       id: `p${Date.now()}`,
       name: sanitizedName,
-      avatar: avatar || `https://api.dicebear.com/7.x/avataaars/svg?seed=${name}`,
+      avatar: avatar || `/userimg/Gemini_Generated_Image_vkzj4svkzj4svkzj.png`,
       watchHistory: {},
       myList: [],
       likedContent: [],

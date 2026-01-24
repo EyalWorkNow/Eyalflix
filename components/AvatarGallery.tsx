@@ -3,23 +3,16 @@ import React from 'react';
 import { X, Search, Sparkles } from 'lucide-react';
 
 export const ANIME_AVATARS = [
-    { id: 'luffy', name: 'Luffy', url: 'https://cdn.pixabay.com/photo/2021/11/02/10/43/luffy-6762955_1280.png', category: 'Shonen' },
-    { id: 'zoro', name: 'Zoro', url: 'https://i.pinimg.com/736x/8d/d5/4d/8dd54d3cd2c4c375635f299d86506d34.jpg', category: 'Shonen' },
-    { id: 'naruto', name: 'Naruto', url: 'https://wallpapers.com/images/hd/naruto-profile-pictures-p67m02i0v16w8n6t.jpg', category: 'Shonen' },
-    { id: 'sasuke', name: 'Sasuke', url: 'https://i.pinimg.com/736x/ec/9a/c0/ec9ac0e6f6631ad1875155f6966144e0.jpg', category: 'Shonen' },
-    { id: 'gojo', name: 'Gojo', url: 'https://i.pinimg.com/736x/21/cf/3e/21cf3e680c65538e1467beaf8515c0a1.jpg', category: 'Shonen' },
-    { id: 'tanjiro', name: 'Tanjiro', url: 'https://i.pinimg.com/736x/2d/31/54/2d31542f7c6e6d30d17d599b5377f074.jpg', category: 'Shonen' },
-    { id: 'nezuko', name: 'Nezuko', url: 'https://i.pinimg.com/736x/0a/63/05/0a63056094caeaeb9338f7147895f573.jpg', category: 'Cute' },
-    { id: 'mikasa', name: 'Mikasa', url: 'https://i.pinimg.com/736x/6f/91/92/6f91925b6833cc180e90c8e31006ee74.jpg', category: 'Badass' },
-    { id: 'anya', name: 'Anya', url: 'https://i.pinimg.com/736x/2b/96/96/2b96968db86cb3f9a785da27e69f80a4.jpg', category: 'Cute' },
-    { id: 'chopper', name: 'Chopper', url: 'https://i.pinimg.com/736x/91/96/96/9196968db86cb3f9a785da27e69f80a4.jpg', category: 'Cute' },
-    { id: 'pikachu', name: 'Pikachu', url: 'https://i.pinimg.com/736x/f6/b6/b6/f6b6b6b6b6b6b6b6b6b6b6b6b6b6b6b6.jpg', category: 'Cute' },
-    { id: 'goku', name: 'Goku', url: 'https://i.pinimg.com/736x/1a/1a/1a/1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a.jpg', category: 'Shonen' },
-].map(a => ({
-    ...a,
-    url: a.id === 'chopper' ? 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/bb3a8833850498.56ba69ac33f26.png' :
-        a.id === 'luffy' ? 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png' : a.url
-}));
+    { id: 'avatar1', name: 'Identity 1', url: '/userimg/Gemini_Generated_Image_6pv23g6pv23g6pv2.png', category: 'Premium' },
+    { id: 'avatar2', name: 'Identity 2', url: '/userimg/Gemini_Generated_Image_dxhs28dxhs28dxhs.png', category: 'Premium' },
+    { id: 'avatar3', name: 'Identity 3', url: '/userimg/Gemini_Generated_Image_escb7qescb7qescb.png', category: 'Premium' },
+    { id: 'avatar4', name: 'Identity 4', url: '/userimg/Gemini_Generated_Image_fhgjghfhgjghfhgj.png', category: 'Premium' },
+    { id: 'avatar5', name: 'Identity 5', url: '/userimg/Gemini_Generated_Image_idaru5idaru5idar.png', category: 'Premium' },
+    { id: 'avatar6', name: 'Identity 6', url: '/userimg/Gemini_Generated_Image_qfdh3uqfdh3uqfdh.png', category: 'Premium' },
+    { id: 'avatar7', name: 'Identity 7', url: '/userimg/Gemini_Generated_Image_v5mat9v5mat9v5ma.png', category: 'Premium' },
+    { id: 'avatar8', name: 'Identity 8', url: '/userimg/Gemini_Generated_Image_vkzj4svkzj4svkzj.png', category: 'Premium' },
+    { id: 'avatar9', name: 'Identity 9', url: '/userimg/Gemini_Generated_Image_y3fty4y3fty4y3ft.png', category: 'Premium' },
+];
 
 interface AvatarGalleryProps {
     onSelect: (url: string) => void;
@@ -28,7 +21,7 @@ interface AvatarGalleryProps {
 }
 
 export const AvatarGallery: React.FC<AvatarGalleryProps> = ({ onSelect, onClose, currentAvatar }) => {
-    const categories = ['All', 'Shonen', 'Cute', 'Badass'];
+    const categories = ['All', 'Premium'];
     const [activeCategory, setActiveCategory] = React.useState('All');
 
     const filteredAvatars = ANIME_AVATARS.filter(a =>
@@ -59,8 +52,8 @@ export const AvatarGallery: React.FC<AvatarGalleryProps> = ({ onSelect, onClose,
                         key={cat}
                         onClick={() => setActiveCategory(cat)}
                         className={`px-6 py-2 rounded-full font-bold transition-all border ${activeCategory === cat
-                                ? 'bg-cyan-500 border-cyan-500 text-black shadow-[0_0_20px_rgba(34,211,238,0.4)]'
-                                : 'bg-white/5 border-white/10 text-gray-400 hover:border-white/30 hover:text-white'
+                            ? 'bg-cyan-500 border-cyan-500 text-black shadow-[0_0_20px_rgba(34,211,238,0.4)]'
+                            : 'bg-white/5 border-white/10 text-gray-400 hover:border-white/30 hover:text-white'
                             }`}
                     >
                         {cat}
