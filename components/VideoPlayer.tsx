@@ -172,7 +172,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
         };
 
         const progressInterval = setInterval(() => {
-            if (!loading && !error && !showNextUp) {
+            if (!error && !showNextUp) {
                 setSimulatedTime(prev => {
                     const newTime = prev + 1;
                     // Throttle updates: save progress only every 10 seconds to prevent rate limiting
@@ -202,7 +202,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
             if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
             clearInterval(progressInterval);
         };
-    }, [showSettings, showEpisodes, isLocked, isPiP, showNextUp, loading, error, duration, completedTriggered, onProgress, onComplete, nextItem]);
+    }, [showSettings, showEpisodes, isLocked, isPiP, showNextUp, error, duration, completedTriggered, onProgress, onComplete, nextItem]);
 
     const toggleFullscreen = () => {
         if (!document.fullscreenElement) {
@@ -231,7 +231,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
                 // If it's not an external link and not in allowed domains, check if it's a blocked provider
                 const blockedProviders = ['filemoon.sx', 'strmup.cc', 'streamup.cc', 'upn.one', 'upns.pro', 'upns.live', 'hglink.to', 'mega.nz', 'silkysub.com', 'mp4upload.com'];
                 if (blockedProviders.some(domain => urlObj.hostname.includes(domain))) {
-                    setIsExternalPlayer(true); // Set flag to use external player
+                    // setIsExternalPlayer(true); // Set flag to use external player
                     return ''; // Return empty to prevent iframe from loading
                 }
                 return ''; // Not allowed and not a blocked provider
