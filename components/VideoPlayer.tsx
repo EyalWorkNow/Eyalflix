@@ -262,9 +262,9 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
             }
             // Other providers: Add timestamp if resume point exists
             else if (simulatedTime > 0 && !urlObj.hostname.includes('drive.google.com')) {
-                const hasQuery = urlObj.search.length > 0;
-                const separator = hasQuery ? '&' : '?';
-                finalSrc = `${internalUrl}${separator}start=${Math.floor(simulatedTime)}`;
+                const u = new URL(internalUrl);
+                u.searchParams.set('start', Math.floor(simulatedTime).toString());
+                finalSrc = u.toString();
             }
             return finalSrc;
         } catch (e) { return ''; }
