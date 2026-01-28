@@ -21,12 +21,16 @@ class MockAuthService {
         try {
             if (typeof window !== 'undefined') {
                 const savedUid = localStorage.getItem('eyalatiatv_user_uid');
-                if (savedUid) {
+                const savedEmail = localStorage.getItem('eyalatiatv_user_email');
+                const savedDisplayName = localStorage.getItem('eyalatiatv_user_displayName');
+                const savedPhotoURL = localStorage.getItem('eyalatiatv_user_photoURL');
+
+                if (savedUid && savedEmail) {
                     this.currentUser = {
                         uid: savedUid,
-                        email: 'user@demo.com',
-                        displayName: 'Demo User',
-                        photoURL: `/userimg/Gemini_Generated_Image_vkzj4svkzj4svkzj.png`
+                        email: savedEmail,
+                        displayName: savedDisplayName || savedEmail.split('@')[0],
+                        photoURL: savedPhotoURL || `/userimg/Gemini_Generated_Image_vkzj4svkzj4svkzj.png`
                     };
                 }
             }
@@ -60,18 +64,41 @@ export const googleProvider = { providerId: 'google.com' };
 
 // --- Auth Functions Implementation ---
 
+// Helper: Generate consistent UID from email (simple hash for mock purposes)
+const generateUidFromEmail = (email: string): string => {
+    let hash = 0;
+    for (let i = 0; i < email.length; i++) {
+        const chr = email.charCodeAt(i);
+        hash = ((hash << 5) - hash) + chr;
+        hash |= 0; // Convert to 32bit integer
+    }
+    return 'uid-' + Math.abs(hash).toString(36);
+};
+
 export const getAuth = () => authService;
 
 export const signInWithPopup = async (authObj: any, provider: any) => {
     console.log("Mock: Signing in with Popup");
     await new Promise(resolve => setTimeout(resolve, 500)); // Simulating network delay
+
+    // Check if user exists in localStorage
+    const googleEmail = 'google@user.com';
+    const uid = generateUidFromEmail(googleEmail);
+
     const user: User = {
-        uid: 'google-' + Date.now().toString(36),
-        email: 'google@user.com',
+        uid,
+        email: googleEmail,
         displayName: 'Google User',
         photoURL: `/userimg/Gemini_Generated_Image_vkzj4svkzj4svkzj.png`
     };
     authService.currentUser = user;
+
+    // Save to localStorage for persistence
+    if (typeof window !== 'undefined') {
+        localStorage.setItem('eyalatiatv_user_displayName', user.displayName || '');
+        localStorage.setItem('eyalatiatv_user_photoURL', user.photoURL || '');
+    }
+
     authService.notify();
     return { user };
 };
@@ -79,13 +106,24 @@ export const signInWithPopup = async (authObj: any, provider: any) => {
 export const signInWithEmailAndPassword = async (authObj: any, email: string, pass: string) => {
     console.log("Mock: Signing in with Email");
     await new Promise(resolve => setTimeout(resolve, 500));
+
+    // Generate consistent UID from email
+    const uid = generateUidFromEmail(email);
+
     const user: User = {
-        uid: 'email-' + Date.now().toString(36),
+        uid,
         email: email,
         displayName: email.split('@')[0],
         photoURL: `/userimg/Gemini_Generated_Image_vkzj4svkzj4svkzj.png`
     };
     authService.currentUser = user;
+
+    // Save to localStorage for persistence
+    if (typeof window !== 'undefined') {
+        localStorage.setItem('eyalatiatv_user_displayName', user.displayName || '');
+        localStorage.setItem('eyalatiatv_user_photoURL', user.photoURL || '');
+    }
+
     authService.notify();
     return { user };
 };
@@ -98,6 +136,13 @@ export const createUserWithEmailAndPassword = async (authObj: any, email: string
 export const signOut = async (authObj: any) => {
     console.log("Mock: Signing Out");
     authService.currentUser = null;
+
+    // Clear all user data from localStorage
+    if (typeof window !== 'undefined') {
+        localStorage.removeItem('eyalatiatv_user_displayName');
+        localStorage.removeItem('eyalatiatv_user_photoURL');
+    }
+
     authService.notify();
 };
 

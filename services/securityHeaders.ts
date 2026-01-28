@@ -31,6 +31,7 @@ export const RECOMMENDED_SECURITY_HEADERS = {
         "font-src 'self' https://fonts.gstatic.com",
         "img-src 'self' data: https://* blob:",
         "connect-src 'self' https://*",
+        "frame-src 'self' https://*.youtube.com https://youtube.com https://youtu.be https://*.google.com https://*.googleusercontent.com https://drive.google.com https://docs.google.com https://*.strmup.cc https://strmup.cc https://*.streamup.cc https://streamup.cc https://*.upn.one https://upn.one https://*.upns.pro https://upns.pro https://*.upns.live https://upns.live https://*.filemoon.sx https://filemoon.sx https://*.hglink.to https://hglink.to https://*.mega.nz https://mega.nz https://*.silkysub.com https://silkysub.com https://*.mp4upload.com https://mp4upload.com",
         "frame-ancestors 'none'",
         "base-uri 'self'",
         "form-action 'self'",

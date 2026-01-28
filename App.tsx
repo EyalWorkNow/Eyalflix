@@ -8,12 +8,12 @@ import { ContentDetails } from './components/ContentDetails';
 import { SettingsPage } from './components/SettingsPage';
 import { BrowsePage } from './components/BrowsePage';
 import { LoginPage } from './components/LoginPage';
-import { Movie } from './types';
+import { Movie, Episode } from './types';
 import { SkeletonHomePage } from './components/skeletons/SkeletonHomePage';
 import { getAllContent, getPersonalizedCategories, getPersonalizedHero } from './constants';
 import { Hero } from './components/Hero';
 import { MovieRow } from './components/MovieRow';
-import { Zap, Brain, Coffee, Ghost } from 'lucide-react';
+import { Zap, Brain, Coffee, Ghost, Check, AlertTriangle } from 'lucide-react';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ProfileSelection } from './components/ProfileSelection';
 import { Onboarding } from './components/Onboarding';
@@ -30,10 +30,16 @@ function AppContent() {
     const [activeVideoTitle, setActiveVideoTitle] = useState<string>('');
     const [activeVideoId, setActiveVideoId] = useState<string | null>(null);
     const [activeVideoDuration, setActiveVideoDuration] = useState<number>(0);
+    const [activeVideoType, setActiveVideoType] = useState<'movie' | 'series'>('movie');
     const [nextEpisode, setNextEpisode] = useState<NextContent | null>(null);
-    const { user, loading: authLoading, activeProfile, updateWatchProgress, toggleMyList, toggleLikedContent, updatePreference } = useAuth();
+    const { user, loading: authLoading, activeProfile, isFirstTime, createFirstProfile, updateWatchProgress, toggleMyList, toggleLikedContent, updatePreference } = useAuth();
     const [recentlyViewedIds, setRecentlyViewedIds] = useState<string[]>([]);
-    const [toastMessage, setToastMessage] = useState<string | null>(null);
+    const [toast, setToast] = useState<{ message: string, type: 'success' | 'info' | 'error' } | null>(null);
+
+    const showToast = (message: string, type: 'success' | 'info' | 'error' = 'success') => {
+        setToast({ message, type });
+        setTimeout(() => setToast(null), 3000);
+    };
 
     useEffect(() => {
         if (activeProfile) {
@@ -46,16 +52,20 @@ function AppContent() {
     useEffect(() => {
         if (!authLoading) {
             if (user) {
-                if (currentView === 'login') setCurrentView('home');
+                // Check if user is first-time and needs onboarding
+                if (isFirstTime && currentView !== 'onboarding') {
+                    setCurrentView('onboarding');
+                } else if (currentView === 'login') {
+                    setCurrentView('home');
+                }
             } else {
                 if (currentView !== 'login') setCurrentView('login');
             }
         }
-    }, [user, authLoading, currentView]);
+    }, [user, authLoading, currentView, isFirstTime]);
 
     const handleContentSelect = (movie: Movie) => {
         setSelectedContent(movie);
-        // We still track recently viewed at the movie/series level for the "Continue Watching" row
         setRecentlyViewedIds(prev => [movie.id, ...prev.filter(id => id !== movie.id)].slice(0, 10));
     };
 
@@ -65,29 +75,52 @@ function AppContent() {
         return isNaN(minutes) ? 0 : minutes * 60;
     };
 
-    const handlePlayVideo = (url: string, title: string = '', startTime: number = 0) => {
-        let foundMovie: Movie | null = null;
-        let videoId: string | null = null;
-        const all = getAllContent();
+    const [activeVideoEpisodes, setActiveVideoEpisodes] = useState<Episode[]>([]);
 
-        for (const m of all) {
-            if (m.videoUrl === url) { foundMovie = m; videoId = m.id; break; }
-            if (m.seasons?.some(s => s.episodes.some(e => e.videoUrl === url))) {
-                foundMovie = m;
-                // For series, we find the specific episode ID
-                for (const s of m.seasons) {
-                    const ep = s.episodes.find(e => e.videoUrl === url);
-                    if (ep) {
-                        videoId = ep.id;
-                        break;
-                    }
+    const handlePlayVideo = (url: string, title: string = '', startTime: number = 0, context?: Movie) => {
+        let foundMovie: Movie | null = context || null;
+        let videoId: string | null = null;
+        let episodesList: Episode[] = [];
+
+        // If context provided, use it directly (FAST PATH)
+        if (foundMovie) {
+            if (foundMovie.type === 'series' && foundMovie.seasons) {
+                episodesList = foundMovie.seasons.flatMap(s => s.episodes);
+                // Find specific episode ID within context
+                const ep = episodesList.find(e => e.videoUrl === url);
+                videoId = ep ? ep.id : foundMovie.id;
+            } else {
+                videoId = foundMovie.id;
+            }
+        }
+        // Fallback: Search in all content (SLOW PATH)
+        else {
+            const all = getAllContent();
+            for (const m of all) {
+                // Check finding in episodes FIRST (Deep Search)
+                if (m.seasons?.some(s => s.episodes.some(e => e.videoUrl === url))) {
+                    foundMovie = m;
+                    episodesList = m.seasons.flatMap(s => s.episodes);
+                    const ep = episodesList.find(e => e.videoUrl === url);
+                    if (ep) videoId = ep.id;
+                    break;
                 }
-                break;
+
+                // Then check top-level match
+                if (m.videoUrl === url) {
+                    foundMovie = m;
+                    videoId = m.id;
+                    if (m.type === 'series' && m.seasons) {
+                        episodesList = m.seasons.flatMap(s => s.episodes);
+                    }
+                    break;
+                }
             }
         }
 
         if (foundMovie) {
-            videoId = foundMovie.id;
+            setActiveVideoEpisodes(episodesList);
+            setActiveVideoType(foundMovie.type);
             let next: NextContent | null = null;
 
             if (foundMovie.type === 'series') {
@@ -100,7 +133,6 @@ function AppContent() {
                         title = `${foundMovie.title}: ${ep.title}`;
                         setActiveVideoDuration(parseDuration(ep.duration) || 3600);
 
-                        // Find next episode
                         let nextEp = season.episodes[epIdx + 1];
                         if (!nextEp && seasons[sIdx + 1]) {
                             nextEp = seasons[sIdx + 1].episodes[0];
@@ -130,9 +162,20 @@ function AppContent() {
         setActiveVideoId(videoId);
     };
 
+    const handleToggleList = (id: string) => {
+        toggleMyList(id);
+        const isAdded = activeProfile?.myList.includes(id);
+        showToast(isAdded ? 'הוסר מהרשימה שלי' : 'נוסף לרשימה שלי', isAdded ? 'info' : 'success');
+    };
+
+    const handleToggleLike = (id: string) => {
+        toggleLikedContent(id);
+        const isLiked = activeProfile?.likedContent.includes(id);
+        showToast(isLiked ? 'הלייק הוסר' : 'אהבת את התוכן!', isLiked ? 'info' : 'success');
+    };
+
     const handleContentPlay = (movie: Movie) => {
         if (movie.type === 'series') {
-            // Find last watched episode or default to 1x1
             const progressKeys = activeProfile ? Object.keys(activeProfile.watchHistory) : [];
             let lastEp: string | null = null;
             let latestWatchedDate = 0;
@@ -157,12 +200,12 @@ function AppContent() {
             if (targetEp) {
                 const prog = activeProfile?.watchHistory[targetEp.id];
                 const start = prog && (prog.currentTime / prog.duration < 0.95) ? prog.currentTime : 0;
-                handlePlayVideo(targetEp.videoUrl, `${movie.title}: ${targetEp.title}`, start);
+                handlePlayVideo(targetEp.videoUrl, `${movie.title}: ${targetEp.title}`, start, movie);
             }
         } else if (movie.videoUrl) {
             const prog = activeProfile?.watchHistory[movie.id];
             const start = prog && (prog.currentTime / prog.duration < 0.95) ? prog.currentTime : 0;
-            handlePlayVideo(movie.videoUrl, movie.title, start);
+            handlePlayVideo(movie.videoUrl, movie.title, start, movie);
         }
     };
 
@@ -170,8 +213,9 @@ function AppContent() {
         if (currentView === 'login') return <LoginPage onRegisterSuccess={() => setCurrentView('onboarding')} />;
         if (currentView === 'onboarding') return (
             <Onboarding
-                onComplete={(p) => {
-                    updatePreference('favoriteGenres', p);
+                onComplete={(data) => {
+                    createFirstProfile(data.name, data.avatar, data.preferences);
+                    showToast(`ברוך הבא, ${data.name}! 🎉`, 'success');
                     setCurrentView('home');
                 }}
             />
@@ -184,8 +228,8 @@ function AppContent() {
             onPlay: handleContentPlay,
             myListIds: activeProfile?.myList || [],
             likedIds: activeProfile?.likedContent || [],
-            onToggleList: toggleMyList,
-            onToggleLike: toggleLikedContent
+            onToggleList: handleToggleList,
+            onToggleLike: handleToggleLike
         };
 
         switch (currentView) {
@@ -234,7 +278,6 @@ function AppContent() {
                     .map(m => {
                         let finalProgress = 0;
                         if (m.type === 'series') {
-                            // Find latest watched episode progress
                             let latestDate = 0;
                             m.seasons?.forEach(s => s.episodes.forEach(e => {
                                 const p = activeProfile?.watchHistory[e.id];
@@ -274,9 +317,11 @@ function AppContent() {
                 <VideoPlayer
                     videoUrl={activeVideoUrl} title={activeVideoTitle}
                     onClose={() => setActiveVideoUrl(null)}
-                    type="movie"
+                    type={activeVideoType}
                     duration={activeVideoDuration}
                     nextItem={nextEpisode}
+                    episodes={activeVideoEpisodes}
+                    currentEpisodeId={activeVideoId || undefined}
                     startTime={activeVideoId ? activeProfile?.watchHistory[activeVideoId]?.currentTime : 0}
                     onPlayNext={(url, title) => handlePlayVideo(url, title)}
                     onProgress={(time, dur) => {
@@ -295,14 +340,23 @@ function AppContent() {
                 <ContentDetails
                     movie={selectedContent}
                     onClose={() => setSelectedContent(null)}
-                    onPlay={url => handlePlayVideo(url, selectedContent.title)}
+                    onPlay={(url, context) => handlePlayVideo(url, selectedContent.title, 0, context)}
                     onSelect={handleContentSelect}
                     isAdded={activeProfile?.myList.includes(selectedContent.id) || false}
                     isLiked={activeProfile?.likedContent.includes(selectedContent.id) || false}
-                    onToggleList={() => toggleMyList(selectedContent.id)}
-                    onToggleLike={() => toggleLikedContent(selectedContent.id)}
+                    onToggleList={() => handleToggleList(selectedContent.id)}
+                    onToggleLike={() => handleToggleLike(selectedContent.id)}
                     spoilerProtection={activeProfile?.preferences.spoilerProtection}
                 />
+            )}
+
+            {/* Toast System Rendering */}
+            {toast && (
+                <div className={`fixed bottom-24 md:bottom-12 left-1/2 -translate-x-1/2 z-[300] flex items-center gap-3 px-6 py-4 rounded-2xl shadow-2xl backdrop-blur-xl border border-white/10 animate-slide-up ${toast.type === 'success' ? 'bg-cyan-500/20 text-cyan-400' : toast.type === 'error' ? 'bg-red-500/20 text-red-400' : 'bg-white/10 text-white'}`}>
+                    {toast.type === 'success' && <Check className="w-5 h-5" />}
+                    {toast.type === 'error' && <AlertTriangle className="w-5 h-5" />}
+                    <span className="font-bold text-lg">{toast.message}</span>
+                </div>
             )}
         </div>
     );
