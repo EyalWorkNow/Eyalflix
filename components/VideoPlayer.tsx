@@ -312,15 +312,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
             )}
 
             <div className={`w-full h-full relative bg-black flex items-center justify-center transition-all duration-700 ease-out ${!isPiP && aspectRatio === 'cover' ? 'scale-110' : 'scale-100'}`}>
-                {loading && !error && (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center z-10 bg-black">
-                        <div className="relative w-24 h-24 mb-6">
-                            <div className="absolute inset-0 border-4 border-cyan-500/20 rounded-full"></div>
-                            <div className="absolute inset-0 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin shadow-[0_0_30px_rgba(34,211,238,0.4)]"></div>
-                        </div>
-                        <div className="text-cyan-400 font-bold tracking-[0.2em] animate-pulse">LOADING CONTENT</div>
-                    </div>
-                )}
+
                 {secureUrl ? (
                     <iframe ref={iframeRef} src={secureUrl} className="w-full h-full border-0 focus:outline-none" allowFullScreen allow="autoplay; encrypted-media; picture-in-picture" referrerPolicy="origin" onLoad={() => setLoading(false)} onError={() => { setError(true); setLoading(false); }} />
                 ) : (
